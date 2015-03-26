@@ -171,7 +171,9 @@ class ListArr1 : public InterfejsADT<typ> {
     RozmiarT=1;
     tab = new typ[RozmiarT];
     RozmiarL = 0;
-}
+  }
+  
+
 
 };
 

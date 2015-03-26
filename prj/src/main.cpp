@@ -42,16 +42,28 @@
  * Ilość prób = ilość rozmiarów prób
  */
 #define ILOSC_PROB 3
-
-int main(int argc, char *argv[]) {
-  unsigned int iloscDanych[ILOSC_PROB] = {1, 10, 1000};
-  std::string nazwaPlikuStat[3] = {"LinkLista.dat" , "ListArr1.dat", "ListArr2x.dat"};
-  Framework *I;
-  Lista<int> *LL = new Lista<int>;
-  ListArr1<int> *LA1 = new ListArr1<int>;
+using namespace std;
+int main(int argc, char *argv[]) 
+{
+  
+  unsigned int iloscDanych[ILOSC_PROB] = {1, 10, 10};
+  //std::string nazwaPlikuStat[3] = {"LinkLista.dat" , "ListArr1.dat", "ListArr2x.dat"};
+  // Framework *I;
+  // // Lista<int> *LL = new Lista<int>;
+  // ListArr1<int> *LA1 = new ListArr1<int>;
   ListArr2x<int> *LA2 = new ListArr2x<int>;
-  Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
-
+  // Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
+  srand(time(NULL));
+  for(unsigned int i = 0; i <iloscDanych[2] ;++i)
+    {
+      LA2 -> push(rand()%100,i);
+    }
+  cout << "\nPrzed sortowaniem" << endl;
+  LA2->Pokaz();
+  cout << "\nPo sortowaniu" << endl;
+  LA2 -> sortuj(0,(int)LA2->size());
+  LA2 -> Pokaz();
+  /*
   for(int j=0; j<3; j++) { 
     switch(j) {
     case 0: I = LL; break;
@@ -61,5 +73,6 @@ int main(int argc, char *argv[]) {
     }
     B -> Test(I, nazwaPlikuStat[j]);
   }
+  */ 
 return 0;
 }

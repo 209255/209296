@@ -207,6 +207,44 @@ class ListArr2x : public InterfejsADT<typ> {
     tab = new typ[RozmiarT];
     RozmiarL = 0;
   }
-
+//**************************************************************
+void zamien(unsigned int i,unsigned int j)
+  {
+    typ temp = tab[i];
+    tab[i] = tab[j];
+    tab[j] = temp;
+}
+//**************************************************************
+void sortuj(int lewy, int prawy1)
+{
+  int prawy = (int) prawy1;
+  int i,j;
+  typ piwot;
+  i = (lewy + prawy )/ 2;
+  piwot = tab[i];
+  tab[i] = tab[prawy];
+  for(j = i = lewy; i <prawy; ++i)
+    if(tab[i] < piwot)
+      {
+	zamien(i,j);
+	++j;
+      }
+  tab[prawy] = tab[j]; tab[j] = piwot;
+  if(lewy < j - 1)
+    sortuj(lewy, j - 1);
+  if(j + 1 < prawy) 
+    sortuj(j + 1, prawy);
+}
+//**************************************************************
+void Pokaz()
+{
+  if(RozmiarL == 0)
+    std::cout << "Brak elementow do wyswietlenia" << std::endl;
+  else{
+    for(unsigned int i = 0; i < RozmiarL; ++i)
+      std::cout << tab[i] << std::endl;
+  }
+}
+//**************************************************************
 };
 
