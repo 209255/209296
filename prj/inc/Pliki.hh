@@ -47,4 +47,5 @@ void OtworzPlikOut(const char *nazwaPliku, std::fstream &plik);
  */
 void LosujIntDoPliku(const unsigned int n, const unsigned int zakres);
 
+
 #endif

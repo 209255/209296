@@ -86,18 +86,18 @@ public:
 void Test(Framework *I,std::string nazwaPliku) {
   std::clock_t poczatek, koniec;
   double suma;
-
-  for(size_t j = 0; j < IleProb; ++j) {
-  suma = 0;
-    for(size_t k = 0; k < IlePowtorzen; ++k) {
+  for(int j = 0; j < IleProb; ++j) {
+    suma = 0;
+   for(int k = 0; k < IlePowtorzen; ++k) {
+      I -> WczytajDane("dane.dat",IleDanych[j]);
       poczatek = std::clock();
-      I -> Start(IleDanych[j]);
+      I -> Start();
       koniec = std::clock();
-      suma = suma + (koniec - poczatek);
+      suma +=(koniec - poczatek);
       I -> Zwolnij();
     }
    (*stat)[j] = (suma/IlePowtorzen)/(double)(CLOCKS_PER_SEC/1000);
-  }
+   }
  stat -> ZapiszStaty(nazwaPliku);
  }
 };

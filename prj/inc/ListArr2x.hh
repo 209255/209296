@@ -8,6 +8,9 @@
  */
 
 #include "InterfejsADT.hh"
+#include <fstream>
+#include <cstdlib>
+#define ILE 3
 
 /*!
  * \brief
@@ -15,36 +18,199 @@
  *
  * Modeluje pojęcie Listy opartej na dynamicznej tablicy.
  * Dodając elementy zwiększa tablicę dwukrotnie, jeżeli brakuje miejsca.
-a */
+ */
 template < class typ>
 class ListArr2x : public InterfejsADT<typ> {
-
+//**************************************************************
   /*!
    * \brief
    * Wkaźnik na dynamiczną tablicę
    *
    * Wskaźnik na dynamiczną tablicę tworzącą ListęArr2x
    */
+//**************************************************************
   typ *tab;
-
+//**************************************************************
   /*!
    * \brief
    * Rozmiar tablicy
    *
    * Aktualny rozmiar tablicy.
    */
+//**************************************************************
   unsigned int RozmiarT;
-
+//**************************************************************
   /*!
    * \brief
    * Rozmiar Listy
    *
    * Aktualny rozmiar ListyArr2x
    */
+//**************************************************************
   unsigned int RozmiarL;
+//**************************************************************
+ /*!
+  *\brief Sortowanie przez Wstawianie 
+  * Metoda ma za zadanie posortowac tablice przyjmowana jako argument
+  *\param[in] T - Wskaznik na tablice z danymi wejsciowymi
+  *\param[in] n - ilosc
+  */
+//**********************************************************************
+ void Wstaw_Sort(typ *T,int n)
+  {
+    int x;
+    int i;
+    for(int j = n-2; j>=0; j--)
+      {
+	x =T[j];
+	i = j+1;
+	while((i < n) && (x > T[i]))
+	  {
+	    T[i-1] = T[i];
+	    i++;
+	  }
+	T[i-1] = x;
+      }
+  }
+//**********************************************************************
+  /*!
+   *\brief Mediana
+   * Metoda wyznaczajaca mediana dla tablicy 3 elementowej.
+   * Jest to metoda pomocnicza, wykorzystywana  przy optymalizacji
+   * doboru pivotu w sortowaniu szybkim
+   * \return Zwraca indeks na ktorym znajduje sie mediana w tablicy wejsciowej
+   */
+//**********************************************************************
+  int Mediana(typ *W)
+  {
+    int j = 0;
+    typ Temp[ILE];
+    for(int i = 0; i < ILE; i++)
+      Temp[i] = W[i];
+    Wstaw_Sort(Temp,ILE);
+    while(Temp[1]!=W[j]) j++;
+    return j;
+  }
+//**********************************************************************
+  /*!
+   *\brief
+   * Metoda testująca czas
+   *
+   * Metoda testująca czas wczytania n elementów na ListęArr1
+   *
+   * \param[in] k - ilość elementów do wczytania
+   */
+//**************************************************************
+  void StartMsort( unsigned int k) {
+    typ * Temp = new typ[size()];
+    MSort(Temp,0,(k-1));
+    delete [] Temp;
+}
+//**************************************************************
+  /*!
+   *\brief
+   * Metoda testująca czas
+   *
+   * Metoda testująca czas wczytania n elementów na ListęArr1
+   */
+//**************************************************************
+  void Start()
+  {
+    QsortOpt(0,size()-1);
+  }
+  /*!
+   *\brief Metoda zamieniajaca 
+   * Metoda ma za zadanie zamienic miejscami elementy wybrane przez 
+   * argumenty wywolania
+   *
+   *\param[in] i - Adres elementu podlegajacy zamianie
+   *\param[in] j - Adres elementu podlegajacy zamianie
+   */
+//**************************************************************
+void Zamien(typ & i,typ & j)
+  {
+    typ temp = i;
+    i = j;
+    j = temp;
+  }
+  /*!
+   *\brief Metoda segregujaca
+   *
+   * Metoda ma za zadanie wybor elementu, ktory ma byc uzyty do podzialu
+   * i przenosi wszytskie elementy mniejsze na lewo od tego elementu, a wieksze elementy na prawo od wybranego elementu
+   *\param[in] p - poczatkowy indeks podzbiotru
+   *\param[in] k - koncowy indeks podzbioru
+   *\return
+   *
+   */
+//**************************************************************
+  int Partycjowanie(int p,int k)
+  {
+    typ Pivot = tab[p];
+    int i = p; 
+    int j = k;
+    while(1)
+      {
+	while(tab[j] > Pivot) j--;
+	while(tab[i] < Pivot) i++;
+	if( i < j ){
+	  Zamien(tab[i],tab[j]);
+	  i++; j--;}
+      
+	else return j;
+      }
+  }
+//**************************************************************
+  /*!
+   *\brief Metoda Dzielaca tablice
+   *
+   * Metoda ma za zadanie przekopiowac zawartosc zbiotu glownego do 
+   * tablicy tymczasowej.Nastepnie operujac na kopii ustawia wskazniki
+   * na poczatki kolejnych zbiorow i porownywane sa wskaane wartosci.
+   * Mniejsze wpisujemy do zbioru glownego i przesuwamy odpowiedni wskaznik
+   * Czynnos wykonujemy rekurencyjnie az do momentu gdy jeden ze wskaznikow
+   * osiagnie koniec zbioru
+   *
+   *\param[in] Temp - Wskaznik na tablice pomocnicza
+   *\param[in] l - Poczatkowy indeks tablicy
+   *\param[in] s - Srodkowy indeks tablicy
+   *\param[in] p - Koncowy indks tablicy
+   */
+//**************************************************************
+  void Merge(typ *Temp,int l,int s,int p)
+  {
+    int i,j;
+    for(i = s+1; i >l; i--)
+      Temp[i-1] = tab[i-1];
+    for(j = s; j < p ;j++)
+      Temp[p+s-j] = tab[j+1];
+    for(int k = l;k <=p; k++)
+      if(Temp[j] < Temp[i])
+	tab[k] = Temp[j--];
+      else
+	tab[k] = Temp[i++];
+  }
+//**************************************************************
+  /*!
+   * \brief
+   * Zwalnia pamięć
+   * 
+   * Zwalnia pamięć zaalokowaną przez ListArr1
+   */
+//**************************************************************
+  void Zwolnij() { 
+   
+    delete[] tab;
+    RozmiarT=1;
+    tab = new typ[RozmiarT];
+    RozmiarL = 0;
+    
+  }
+//**************************************************************
+ 
+public:
 
- public:
-
+//**************************************************************
   /*!
    * \brief
    * Konstruktor bezarumentowy
@@ -52,12 +218,13 @@ class ListArr2x : public InterfejsADT<typ> {
    * Kontruktor alokujący tablicę jednoelementową z której będzie
    * tworzona lista
    */
+//**************************************************************
   ListArr2x() {
     RozmiarT = 1;
     tab = new typ[RozmiarT];
     RozmiarL = 0;
   }
-
+//**************************************************************
   /*!
    * \brief
    * Dodaje element do ListyArr1
@@ -69,9 +236,12 @@ class ListArr2x : public InterfejsADT<typ> {
    *                   jeżeli chcesz umieścić na początku listy podaj
    *                   wartość 0, na końcu warość size()
    */
+//**************************************************************
   void push (typ dana, unsigned int pole) {
     if(pole < 0 || pole > RozmiarL) {
-      std::cerr << "Blad dodania elementu na ListArr2x. Bledny nr pola. Zakres poprawnych wartosci pola: 0 - " << RozmiarL << std::endl;
+      std::cerr << "Blad dodania elementu na ListArr2x."
+		<<" Bledny nr pola. Zakres poprawnych wartosci pola: 0 - " 
+		<< RozmiarL << std::endl;
     }
     else if(RozmiarL == 0) {
       tab[0] = dana;
@@ -107,7 +277,7 @@ class ListArr2x : public InterfejsADT<typ> {
       }
     }
   }
-
+//**************************************************************
   /*!
    * \brief
    * Pobiera element z ListyArr1
@@ -119,14 +289,16 @@ class ListArr2x : public InterfejsADT<typ> {
    *
    * retval - zwraca wartosc pobranej danej lub '-1' w przyadku bledu
    */
+//**************************************************************
   typ pop(unsigned int pole) {
     if(RozmiarL == 0) {
-      std::cerr << "Blad! Nie mozna pobrac elementu z pustej listy!" << std::endl;
-      return -1;
+      std::cerr << "Blad! Nie mozna pobrac elementu z pustej listy!" 
+		<< std::endl; return -1;
     }
     else if(pole < 0 || pole > (RozmiarL-1)) {
-      std::cerr << "Blad pobrania elementu. Blednny nr pola. zakres popranwych wartosci pola: 0 - " << RozmiarL-1 << std::endl;
-      return -1;
+      std::cerr << "Blad pobrania elementu. "
+		<< "Blednny nr pola. zakres popranwych wartosci pola: 0 - " 
+		<< RozmiarL-1 << std::endl; return -1;
     }
     else if(4*RozmiarL >= RozmiarT ) {
       if(pole == (RozmiarL-1)) {
@@ -160,7 +332,7 @@ class ListArr2x : public InterfejsADT<typ> {
     std::cout << "Blad usuniecia z listy" << std::endl;
     return -1;
   }
-
+//**************************************************************
   /*!
    * \brief
    * Wielkość listy
@@ -169,21 +341,9 @@ class ListArr2x : public InterfejsADT<typ> {
    * 
    * \retval - zwraca liczbę elementów ListyArr1
    */
+//**************************************************************
   unsigned int size() { return RozmiarL; } 
-
-  /*!
-   * \brief
-   * Metoda testująca czas
-   *
-   * Metoda testująca czas wczytania n elementów na ListęArr1
-   *
-   * \param[in] k - ilość elementów do wczytania
-   */
-  void Start(const unsigned int k) {
-    for (unsigned int i = 0; i < k; i++)
-      this -> push(3, this->RozmiarL);
-}
-
+//**************************************************************
   /*!
    * \brief
    * Wczytuje dane z pliku
@@ -193,58 +353,113 @@ class ListArr2x : public InterfejsADT<typ> {
    * param[in] nazwaPliku - nazwa pliku z danymi
    * param[in] n - ilość danych do wczytania, 0 oznacza wszystkie dane z pliku
    */
-  void WczytajDane(const char *nazwaPliku, unsigned int n) {;}
-
-  /*!
-   * \brief
-   * Zwalnia pamięć
-   * 
-   * Zwalnia pamięć zaalokowaną przez ListArr1
-   */
-  void Zwolnij() { 
-    delete[] tab;
-    RozmiarT=1;
-    tab = new typ[RozmiarT];
-    RozmiarL = 0;
+//**************************************************************
+  void WczytajDane(const std::string PlikIn, unsigned int n) 
+  {
+    //std:: cout << "Wczytuje" << std::endl;
+    typ k;
+    std::ifstream Plik_in;
+    Plik_in.open(PlikIn.c_str(),std::ios::in);
+    if(!Plik_in)
+      {
+      std::cerr << "Blad przy otwieraniu Pliku: " << PlikIn << std::endl;
+      }
+    else
+      {
+	for(unsigned int i = 0; i< n; ++i)
+	  {
+	    Plik_in >> k;
+	    push(k,size());
+	    if(Plik_in.eof())
+	      {
+		std::cout << "Napotkany EOF przed wczytaniem wszytskich danych" 
+			  << std::endl;
+	      }
+	  }
+      }
+    Plik_in.close();
+  }
+//************************************************************** 	 
+/*!
+ *\brief Metoda wykorzystujaca sortowanei szybkie
+ *\param[in] l - poczatkowy indeks tablicy 
+ *\param[in] h - koncowy indeks tablicy
+ */
+//**************************************************************	  
+  void Qsort(int l,int h)
+  {
+    int p;
+    if( l < h)
+      {
+	p = Partycjowanie(l,h);
+	Qsort(l,p);
+	Qsort(p+1,h);
+      }
   }
 //**************************************************************
-void zamien(unsigned int i,unsigned int j)
-  {
-    typ temp = tab[i];
-    tab[i] = tab[j];
-    tab[j] = temp;
-}
+  /*!
+   *\brief Zotymalizowane Sortowanie Szybkie
+   *
+   * Metoda modeluje algorytm sorotwanie szybkiego z zaimplementowanym
+   * algorytmem doboru pivotu, tak aby nie zostal wybrany najmniejszy 
+   * element w danym podzbiorze.
+   *\parma[in] lewy -poczatkowy indeks pozbioru
+   *\param[in] prawy - koncowy indeks podzbioru
+   */
 //**************************************************************
-void sortuj(int lewy, int prawy1)
+void QsortOpt(int lewy, int prawy1)
 {
-  int prawy = (int) prawy1;
-  int i,j;
-  typ piwot;
-  i = (lewy + prawy )/ 2;
-  piwot = tab[i];
-  tab[i] = tab[prawy];
-  for(j = i = lewy; i <prawy; ++i)
-    if(tab[i] < piwot)
-      {
-	zamien(i,j);
-	++j;
-      }
-  tab[prawy] = tab[j]; tab[j] = piwot;
-  if(lewy < j - 1)
-    sortuj(lewy, j - 1);
-  if(j + 1 < prawy) 
-    sortuj(j + 1, prawy);
+  int Index[] = {lewy, (lewy+prawy1)/2,prawy1}; 
+  int m = Mediana(Index);
+  typ Pivot = tab[Index[m]];
+  int i = lewy;
+  int j = prawy1;
+  do
+    {
+      while(tab[i] < Pivot) ++i;
+      while(tab[j] > Pivot) --j;
+      if( i <= j )
+	{
+	  Zamien(tab[i],tab[j]);
+	  ++i;--j;
+	}
+    }
+  while( i <= j );
+  if(j > lewy) QsortOpt(lewy,j);
+  if(i < prawy1) QsortOpt(i,prawy1);
 }
-//**************************************************************
+//****************************************************************************************
+/*!
+ *\brief Metoda wypisujaca elemeny listy
+ *
+ *Metoda ma za zadanie wypisac wszystkie elementy znajdujace sie obecnie 
+ * na liscie danych
+ */
+//****************************************************************************************
 void Pokaz()
 {
   if(RozmiarL == 0)
     std::cout << "Brak elementow do wyswietlenia" << std::endl;
   else{
-    for(unsigned int i = 0; i < RozmiarL; ++i)
+    for(unsigned int i = size()-10; i < size(); ++i)
       std::cout << tab[i] << std::endl;
   }
 }
-//**************************************************************
+//**************************************************************  
+void MSort(typ * T,int p,int k)
+  {
+    int sr;
+    if(p < k)
+      {
+	sr = (k+p)/2;
+	//Podzial na Lewa i prawa tablice
+	MSort(T,p,sr);
+	MSort(T,sr+1,k);
+	//Scalanie posortowanych tablic
+	Merge(T,p,sr,k);
+      } 
+  }
+//**************************************************************      
+  
 };
 

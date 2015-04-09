@@ -61,7 +61,7 @@ public:
    * \param[in] nazwaPliku - nazwa pliku z danymi
    * \param[in] n - ilość danych do wczytania
    */
-  void WczytajDane(const char *nazwaPliku, unsigned int n) = 0;
+  void WczytajDane(const std::string nazwaPliku, unsigned int n) = 0;
 
   /*!
    * \brief 
@@ -72,8 +72,8 @@ public:
    *
    * \param[in] k - ilość elementów dla których mają zostać wykonane obliczenia.
    */
-  void Start(const unsigned int k) = 0;
-
+  void StartMsort(const unsigned int k) = 0;
+  void Start() = 0;
   /*!
    * \brief
    * Zwalnia pamięć
@@ -81,7 +81,7 @@ public:
    * Zwalnia pamięć zajmowaną przez daną strukturę
    */
   virtual void Zwolnij () = 0;
-
+  virtual void Pokaz() = 0;
 
 
 };

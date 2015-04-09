@@ -35,7 +35,7 @@ public:
    * \param[in] nazwaPliku - nazwa pliku z danymi
    * \param[in] n - ilość danych do wczytania
    */
-  virtual void WczytajDane(const char *nazwaPliku, unsigned int n) = 0;
+  virtual void WczytajDane(const std::string nazwaPliku, unsigned int n) = 0;
 
   /*!
    * \brief 
@@ -46,8 +46,8 @@ public:
    *
    * \param[in] k - ilość elementów dla których mają zostać wykonane obliczenia.
    */
-  virtual void Start(const unsigned int k) = 0;
-
+  virtual void StartMsort(unsigned int k) = 0;
+  virtual void Start() = 0;
   /*!
    * \brief
    * Zwalnia pamięć po teście
@@ -55,7 +55,8 @@ public:
    * Zwalnia pamięć zajmowaną przez objekty wykorzytsane do testów
    */
   virtual void Zwolnij() = 0;
-
+  virtual void Pokaz() = 0;
+  
 };
 
 #endif

@@ -41,38 +41,20 @@
  * 
  * Ilość prób = ilość rozmiarów prób
  */
-#define ILOSC_PROB 3
+#define ILOSC_PROB 5
 using namespace std;
 int main(int argc, char *argv[]) 
 {
-  
-  unsigned int iloscDanych[ILOSC_PROB] = {1, 10, 10};
-  //std::string nazwaPlikuStat[3] = {"LinkLista.dat" , "ListArr1.dat", "ListArr2x.dat"};
-  // Framework *I;
-  // // Lista<int> *LL = new Lista<int>;
-  // ListArr1<int> *LA1 = new ListArr1<int>;
+
+  std::string nazwaPlikuStat[] = {"ListArr2x.txt"};
+  unsigned int iloscDanych[ILOSC_PROB] = {100,1000,10000,100000,1000000};
   ListArr2x<int> *LA2 = new ListArr2x<int>;
-  // Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
-  srand(time(NULL));
-  for(unsigned int i = 0; i <iloscDanych[2] ;++i)
-    {
-      LA2 -> push(rand()%100,i);
-    }
-  cout << "\nPrzed sortowaniem" << endl;
-  LA2->Pokaz();
-  cout << "\nPo sortowaniu" << endl;
-  LA2 -> sortuj(0,(int)LA2->size());
-  LA2 -> Pokaz();
-  /*
-  for(int j=0; j<3; j++) { 
-    switch(j) {
-    case 0: I = LL; break;
-    case 1: I = LA1; break;
-    case 2: I = LA2; break;
-    default: std::cerr << "Brak przypisania wkaznika" << std::endl;
-    }
-    B -> Test(I, nazwaPlikuStat[j]);
-  }
-  */ 
+  Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
+  Framework *I;
+  //LosujIntDoPliku(10000000,100);
+  I = LA2;
+  B ->Test(I,nazwaPlikuStat[0]);
+  
+ 
 return 0;
 }
