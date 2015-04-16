@@ -41,13 +41,13 @@
  * 
  * Ilość prób = ilość rozmiarów prób
  */
-#define ILOSC_PROB 5
+#define ILOSC_PROB 6
 using namespace std;
 int main(int argc, char *argv[]) 
 {
 
   std::string nazwaPlikuStat[] = {"ListArr2x.txt"};
-  unsigned int iloscDanych[ILOSC_PROB] = {100,1000,10000,100000,1000000};
+  unsigned int iloscDanych[ILOSC_PROB] = {100,1000,10000,100000,1000000,10000000};
   ListArr2x<int> *LA2 = new ListArr2x<int>;
   Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
   Framework *I;

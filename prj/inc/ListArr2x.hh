@@ -116,7 +116,7 @@ class ListArr2x : public InterfejsADT<typ> {
 //**************************************************************
   void Start()
   {
-    QsortOpt(0,size()-1);
+    SortowanieKopiec(size()-1);
   }
   /*!
    *\brief Metoda zamieniajaca 
@@ -207,7 +207,33 @@ void Zamien(typ & i,typ & j)
     
   }
 //**************************************************************
- 
+  /*!
+   *
+   */
+//**************************************************************
+   void Kopiec(int Rozmiar, int i)
+  {
+    int Duzy;
+    int lewy = 2*i+1;
+    int prawy = (2*i)+2;
+    if(lewy <= Rozmiar && tab[lewy] > tab[i])
+      Duzy = lewy;
+    else Duzy = i;
+    if(prawy <= Rozmiar && tab[prawy] > tab[Duzy])
+      Duzy = prawy;
+    if(Duzy!= i)
+      {
+	Zamien(tab[Duzy],tab[i]);
+	Kopiec(Rozmiar,Duzy);
+      }
+  }
+//**************************************************************
+  void BudujKopiec(int Rozmiar)
+  {
+    for(int i = Rozmiar/2 -1; i >= 0; --i)
+      Kopiec(Rozmiar,i);
+  }
+//**************************************************************
 public:
 
 //**************************************************************
@@ -441,7 +467,7 @@ void Pokaz()
   if(RozmiarL == 0)
     std::cout << "Brak elementow do wyswietlenia" << std::endl;
   else{
-    for(unsigned int i = size()-10; i < size(); ++i)
+    for(unsigned int i = 0; i < size(); ++i)
       std::cout << tab[i] << std::endl;
   }
 }
@@ -459,7 +485,27 @@ void MSort(typ * T,int p,int k)
 	Merge(T,p,sr,k);
       } 
   }
+//************************************************************** 
+ /*!
+  *\brief Metoda sortowania przez Kopcowanie
+  *
+  * Metoda realizujaca sortowanie rosnace,wykorzystujac przy tym 
+  * kopiec.
+  *
+  * \param[in] Rozmiar -  Rozmiar kopca do zbudowania,
+  * ilość danych do posortowania.
+  */
 //**************************************************************      
-  
+  void SortowanieKopiec(int Rozmiar)
+  {
+    BudujKopiec(Rozmiar);
+    for(unsigned int i = Rozmiar; i > 0; --i)
+      {
+	Zamien(tab[0],tab[i]);
+	--Rozmiar;
+	Kopiec(Rozmiar,0);
+      }
+  }
+//**************************************************************
 };
 

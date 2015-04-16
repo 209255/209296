@@ -90,9 +90,13 @@ void Test(Framework *I,std::string nazwaPliku) {
     suma = 0;
    for(int k = 0; k < IlePowtorzen; ++k) {
       I -> WczytajDane("dane.dat",IleDanych[j]);
+      // std::cout << "Przed" << std::endl;
+      //I -> Pokaz();
       poczatek = std::clock();
       I -> Start();
       koniec = std::clock();
+      //std::cout << "Po: " << std::endl;
+      // I -> Pokaz();
       suma +=(koniec - poczatek);
       I -> Zwolnij();
     }
