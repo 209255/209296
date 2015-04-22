@@ -1,0 +1,307 @@
+\hypertarget{class_lista}{\subsection{Lista$<$ typ $>$ Class Template Reference}
+\label{class_lista}\index{Lista$<$ typ $>$@{Lista$<$ typ $>$}}
+}
+
+
+Modeluje pojęcie listy.  
+
+
+
+
+{\ttfamily \#include $<$Lista.\-hh$>$}
+
+Inheritance diagram for Lista$<$ typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_lista}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_lista_1_1_element}{Element}
+\begin{DoxyCompactList}\small\item\em Modeluje jeden element Listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lista_a23a5b3313a893057276942e74f330b89}{Lista} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor puste listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_afcc18699707e00f35d73fa53eaa9f1da}{Zwolnij} ()
+\begin{DoxyCompactList}\small\item\em Destruktor listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a4f6959cec316c8882a1dfc64d92480c1}{push} (typ dana, unsigned int pole)
+\begin{DoxyCompactList}\small\item\em Dodaje daną do Listy. \end{DoxyCompactList}\item 
+typ \hyperlink{class_lista_aea1df940db61c9565cc6f95a6d3df202}{pop} (unsigned int pole)
+\begin{DoxyCompactList}\small\item\em Usuwa element z Listy. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_lista_a29244b4a79de727a53c23e84bca6d61e}{size} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza rozmiar Listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a8dd8489d2db5ce989ffd71268a11e18c}{Wczytaj\-Dane} (const char $\ast$nazwa\-Pliku, unsigned int n=0)
+\begin{DoxyCompactList}\small\item\em Wczytuje dane z pliku. \end{DoxyCompactList}\item 
+typ \hyperlink{class_lista_a3ffb056a10d97afbe52bb8a3ba6fbb6a}{operator\mbox{[}$\,$\mbox{]}} (size\-\_\-t pole) const 
+\begin{DoxyCompactList}\small\item\em Wyciąga wartość elementu Listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_aa5f8153e21cbd4569f4e16a3c466e947}{Start} (const unsigned int k)
+\begin{DoxyCompactList}\small\item\em Proces obliczeniowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_lista_1_1_element}{Element} $\ast$ \hyperlink{class_lista_af0b9911cad81701e55a4290a3941fa29}{Poczatek}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na pierwszy element Listy. \end{DoxyCompactList}\item 
+\hyperlink{struct_lista_1_1_element}{Element} $\ast$ \hyperlink{class_lista_a5c0ab4649945504ec400bb028f95ae1a}{Koniec}
+\begin{DoxyCompactList}\small\item\em Wzkaźnik na ostatni element listy. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_lista_a3bc5134ce062dfd20cc7747d34f3ff16}{Rozmiar}
+\begin{DoxyCompactList}\small\item\em Aktualny rozmiar Listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class typ$>$class Lista$<$ typ $>$}
+
+Modeluje pojęcie listy. 
+
+Modeluje pojęcie listy zadeklarowanego w szablonie typu Uwaga! Listę indeksujemy od 0. 
+
+Definition at line 24 of file Lista.\-hh.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{class_lista_a23a5b3313a893057276942e74f330b89}{\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\paragraph[{Lista}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ {\bf Lista}$<$ typ $>$\-::{\bf Lista} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a23a5b3313a893057276942e74f330b89}
+
+
+Konstruktor puste listy. 
+
+Konstruktor bezargumentowy pustej listy tworzy objekt z wskaźnikiem początek pokazującym na N\-U\-L\-L. 
+
+Definition at line 98 of file Lista.\-hh.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_lista_a3ffb056a10d97afbe52bb8a3ba6fbb6a}{\index{Lista@{Lista}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Lista@{Lista}}
+\paragraph[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ typ {\bf Lista}$<$ typ $>$\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{pole}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a3ffb056a10d97afbe52bb8a3ba6fbb6a}
+
+
+Wyciąga wartość elementu Listy. 
+
+Wyłuskuje wartość danego elementu z Listy
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pole} & -\/ \char`\"{}indeks\char`\"{} z którego chcemy pobrać wartość indeksujemy od 0!\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/} & zwraca wartość elementu z danego pola lub '-\/1' w przypadku błedu \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 284 of file Lista.\-hh.
+
+\hypertarget{class_lista_aea1df940db61c9565cc6f95a6d3df202}{\index{Lista@{Lista}!pop@{pop}}
+\index{pop@{pop}!Lista@{Lista}}
+\paragraph[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ typ {\bf Lista}$<$ typ $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_lista_aea1df940db61c9565cc6f95a6d3df202}
+
+
+Usuwa element z Listy. 
+
+Usuwa interesujący nas element z Listy. Jeżeli chcesz usunąć pierwszy element wywołaj pole nr '0'. Dla ostatniego elementu wywołaj pole nr '\hyperlink{class_lista_a29244b4a79de727a53c23e84bca6d61e}{Lista.\-size()}-\/1'.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pole} & -\/ numer elementu Listy z którego chcemy pobrać daną\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em zwraca} & wartość danego elementu listy lub '-\/1' w przypadku błędu \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_aa5a81a01c32577d986320524bcd091f0}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 190 of file Lista.\-hh.
+
+\hypertarget{class_lista_a4f6959cec316c8882a1dfc64d92480c1}{\index{Lista@{Lista}!push@{push}}
+\index{push@{push}!Lista@{Lista}}
+\paragraph[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Lista}$<$ typ $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{typ}]{dana, }
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_lista_a4f6959cec316c8882a1dfc64d92480c1}
+
+
+Dodaje daną do Listy. 
+
+Dodaje daną podaną jako pierwszy argument wywołania na określone drugim argumentem miejsce w Liście
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dana} & -\/ dana którą chcemy dodać do listy \\
+\hline
+\mbox{\tt in}  & {\em pole} & -\/ numer elementu listy na który chcemy dodać daną (sieze() jeżeli na koniec) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_abae6ef55c501edc4ca4e0faf4436b0df}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 142 of file Lista.\-hh.
+
+\hypertarget{class_lista_a29244b4a79de727a53c23e84bca6d61e}{\index{Lista@{Lista}!size@{size}}
+\index{size@{size}!Lista@{Lista}}
+\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ unsigned int {\bf Lista}$<$ typ $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_lista_a29244b4a79de727a53c23e84bca6d61e}
+
+
+Sprawdza rozmiar Listy. 
+
+Sprawdza ile aktualnie elementów znajduję się na Liście
+
+
+\begin{DoxyRetVals}{Return values}
+{\em zwraca} & ilosć elementów znadjuących się aktualnie na liście \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_a871cc26c895ce229ad04f7897fe4ba48}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 240 of file Lista.\-hh.
+
+\hypertarget{class_lista_aa5f8153e21cbd4569f4e16a3c466e947}{\index{Lista@{Lista}!Start@{Start}}
+\index{Start@{Start}!Lista@{Lista}}
+\paragraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Lista}$<$ typ $>$\-::Start (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_aa5f8153e21cbd4569f4e16a3c466e947}
+
+
+Proces obliczeniowy. 
+
+Wykonuje proces oblcizeniowy, którego czas wykonania jest mierzony na potrzeby laboratoriów P\-A\-M\-S\-I W tym wypakdu tworzy Listę k elementową wypełnioną stałą liczbą '3'.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em k} & -\/ ilość danych dla których ma zostać przeprowadzona precedura obnliczeniowa \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 306 of file Lista.\-hh.
+
+\hypertarget{class_lista_a8dd8489d2db5ce989ffd71268a11e18c}{\index{Lista@{Lista}!Wczytaj\-Dane@{Wczytaj\-Dane}}
+\index{Wczytaj\-Dane@{Wczytaj\-Dane}!Lista@{Lista}}
+\paragraph[{Wczytaj\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Lista}$<$ typ $>$\-::Wczytaj\-Dane (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nazwa\-Pliku, }
+\item[{unsigned int}]{n = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_lista_a8dd8489d2db5ce989ffd71268a11e18c}
+
+
+Wczytuje dane z pliku. 
+
+Wczytuje dane zamieszczone w pliku do Listy. Każdą nową daną umieszcza na końcu listy.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nazwa\-Pliku} & -\/ nazwa pliku z danymi \\
+\hline
+\mbox{\tt in}  & {\em n} & -\/ ilość danych do wczytania (domyślnie 0 -\/ wysztkie dane z pliku, zmiana wartości nie ma wpływu na działanie metody w aktualnej wersji \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 254 of file Lista.\-hh.
+
+\hypertarget{class_lista_afcc18699707e00f35d73fa53eaa9f1da}{\index{Lista@{Lista}!Zwolnij@{Zwolnij}}
+\index{Zwolnij@{Zwolnij}!Lista@{Lista}}
+\paragraph[{Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Lista}$<$ typ $>$\-::Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_lista_afcc18699707e00f35d73fa53eaa9f1da}
+
+
+Destruktor listy. 
+
+Zwalnia zaalokowana przez liste pamiec
+
+Zwalnia pamięć
+
+Zwalnia pamięć zajmowaną przez listę 
+
+Implements \hyperlink{class_interfejs_a_d_t_a75427479b00e3d4a0c5f9615216262ea}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 122 of file Lista.\-hh.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{class_lista_a5c0ab4649945504ec400bb028f95ae1a}{\index{Lista@{Lista}!Koniec@{Koniec}}
+\index{Koniec@{Koniec}!Lista@{Lista}}
+\paragraph[{Koniec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ {\bf Element}$\ast$ {\bf Lista}$<$ typ $>$\-::Koniec\hspace{0.3cm}{\ttfamily [private]}}}\label{class_lista_a5c0ab4649945504ec400bb028f95ae1a}
+
+
+Wzkaźnik na ostatni element listy. 
+
+Wskaźnik na ostatni element listy 
+
+Definition at line 79 of file Lista.\-hh.
+
+\hypertarget{class_lista_af0b9911cad81701e55a4290a3941fa29}{\index{Lista@{Lista}!Poczatek@{Poczatek}}
+\index{Poczatek@{Poczatek}!Lista@{Lista}}
+\paragraph[{Poczatek}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ {\bf Element}$\ast$ {\bf Lista}$<$ typ $>$\-::Poczatek\hspace{0.3cm}{\ttfamily [private]}}}\label{class_lista_af0b9911cad81701e55a4290a3941fa29}
+
+
+Wskaźnik na pierwszy element Listy. 
+
+Wskaźnik na pierwszy element Listy 
+
+Definition at line 71 of file Lista.\-hh.
+
+\hypertarget{class_lista_a3bc5134ce062dfd20cc7747d34f3ff16}{\index{Lista@{Lista}!Rozmiar@{Rozmiar}}
+\index{Rozmiar@{Rozmiar}!Lista@{Lista}}
+\paragraph[{Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ unsigned int {\bf Lista}$<$ typ $>$\-::Rozmiar\hspace{0.3cm}{\ttfamily [private]}}}\label{class_lista_a3bc5134ce062dfd20cc7747d34f3ff16}
+
+
+Aktualny rozmiar Listy. 
+
+Przechowuje aktualną ilość Elemenetów znajujących się na Liście 
+
+Definition at line 86 of file Lista.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_lista_8hh}{Lista.\-hh}\end{DoxyCompactItemize}

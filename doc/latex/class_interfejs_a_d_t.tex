@@ -1,0 +1,229 @@
+\hypertarget{class_interfejs_a_d_t}{\subsection{Interfejs\-A\-D\-T$<$ typ $>$ Class Template Reference}
+\label{class_interfejs_a_d_t}\index{Interfejs\-A\-D\-T$<$ typ $>$@{Interfejs\-A\-D\-T$<$ typ $>$}}
+}
+
+
+{\ttfamily \#include $<$Interfejs\-A\-D\-T.\-hh$>$}
+
+Inheritance diagram for Interfejs\-A\-D\-T$<$ typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.564885cm]{class_interfejs_a_d_t}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_interfejs_a_d_t_abae6ef55c501edc4ca4e0faf4436b0df}{push} (typ dana, unsigned int pole)=0
+\begin{DoxyCompactList}\small\item\em Dodaje kolejny element. \end{DoxyCompactList}\item 
+virtual typ \hyperlink{class_interfejs_a_d_t_aa5a81a01c32577d986320524bcd091f0}{pop} (unsigned int pole)=0
+\begin{DoxyCompactList}\small\item\em Pobiera element. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{class_interfejs_a_d_t_a871cc26c895ce229ad04f7897fe4ba48}{size} ()=0
+\begin{DoxyCompactList}\small\item\em Liczność elemetów. \end{DoxyCompactList}\item 
+void \hyperlink{class_interfejs_a_d_t_ae37b5d3abf3a7a85adf02e42e09df875}{Wczytaj\-Dane} (const std\-::string nazwa\-Pliku, unsigned int n)=0
+\begin{DoxyCompactList}\small\item\em Wczytanie danych z pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_interfejs_a_d_t_a7fc6b6c9b0606a24846b7e744ee8a823}{Start\-Msort} (const unsigned int k)=0
+\begin{DoxyCompactList}\small\item\em Wykonanie części obliczeniowej programu. \end{DoxyCompactList}\item 
+void \hyperlink{class_interfejs_a_d_t_ae4f4f725bf09c5b258bc0d12e0f589d8}{Start} ()=0
+\item 
+virtual void \hyperlink{class_interfejs_a_d_t_a75427479b00e3d4a0c5f9615216262ea}{Zwolnij} ()=0
+\begin{DoxyCompactList}\small\item\em Zwalnia pamięć \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_interfejs_a_d_t_a22e091ad4cdcade33f9fa579a90ebf79}{Pokaz} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class typ$>$class Interfejs\-A\-D\-T$<$ typ $>$}
+
+\textbackslash{} brief Definiuje interfejs użytkownika
+
+Definiuje interfejs użytkownika dla listy, stosu i kolejki. 
+
+Definition at line 13 of file Interfejs\-A\-D\-T.\-hh.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_interfejs_a_d_t_a22e091ad4cdcade33f9fa579a90ebf79}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!Pokaz@{Pokaz}}
+\index{Pokaz@{Pokaz}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{Pokaz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ virtual void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::Pokaz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_a22e091ad4cdcade33f9fa579a90ebf79}
+
+
+Implements \hyperlink{class_framework_ac1aff3a993eda9a110495d4a9d636900}{Framework}.
+
+
+
+Implemented in \hyperlink{class_list_arr2x_a5f2644455c4c3a1ee9f1752a74857241}{List\-Arr2x$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_aa5a81a01c32577d986320524bcd091f0}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!pop@{pop}}
+\index{pop@{pop}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ virtual typ {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_aa5a81a01c32577d986320524bcd091f0}
+
+
+Pobiera element. 
+
+Pobiera element z typu danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pole} & -\/ !!!\-D\-O\-S\-T\-E\-P\-N\-E T\-Y\-L\-K\-O D\-L\-A L\-I\-S\-T\-Y!!! nr pola z ktore pobiera element\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em zwraca} & wartość danego elementu \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \hyperlink{class_list_arr2x_a6462ac1f547b7a090e54629539ce2dda}{List\-Arr2x$<$ typ $>$}, \hyperlink{class_lista_aea1df940db61c9565cc6f95a6d3df202}{Lista$<$ typ $>$}, \hyperlink{class_kolejka_a9c41aaf09b6a9a336e33cb49486a2bf8}{Kolejka$<$ typ $>$}, \hyperlink{class_stos_ab18e88e29805390208e6587e7858ced1}{Stos$<$ typ $>$}, and \hyperlink{class_list_arr1_acbc2f02d8ee4389cfd202beeddfae82c}{List\-Arr1$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_abae6ef55c501edc4ca4e0faf4436b0df}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!push@{push}}
+\index{push@{push}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ virtual void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{typ}]{dana, }
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_abae6ef55c501edc4ca4e0faf4436b0df}
+
+
+Dodaje kolejny element. 
+
+Dodaje kolejny element do typu danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dana} & -\/ element który chcemy dorzucić do naszego typu \\
+\hline
+\mbox{\tt in}  & {\em pole} & -\/ !!!\-D\-O\-S\-T\-E\-P\-N\-E T\-Y\-L\-K\-O D\-L\-A L\-I\-S\-T\-Y!!! nr pola na które chcemy dodać element \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_list_arr2x_a6aa004e56bdaf72de719d682b4069011}{List\-Arr2x$<$ typ $>$}, \hyperlink{class_kolejka_a9a58ac1ae2cd978f29cc31343e437343}{Kolejka$<$ typ $>$}, \hyperlink{class_lista_a4f6959cec316c8882a1dfc64d92480c1}{Lista$<$ typ $>$}, \hyperlink{class_stos_aa365a8b36117a4ebc99236de643a3354}{Stos$<$ typ $>$}, and \hyperlink{class_list_arr1_a9b8bfbeae4e0b93ab47398d0282447b5}{List\-Arr1$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_a871cc26c895ce229ad04f7897fe4ba48}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!size@{size}}
+\index{size@{size}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ virtual unsigned int {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_a871cc26c895ce229ad04f7897fe4ba48}
+
+
+Liczność elemetów. 
+
+Informuje o licznośći elementów obecnie przechowywanych
+
+
+\begin{DoxyRetVals}{Return values}
+{\em zwraca} & ilość przechowywanych elementów \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \hyperlink{class_list_arr2x_a6097d85211e74053506d4a5dce86f26c}{List\-Arr2x$<$ typ $>$}, \hyperlink{class_lista_a29244b4a79de727a53c23e84bca6d61e}{Lista$<$ typ $>$}, \hyperlink{class_kolejka_aed97a8e2e6d7092a36cdc55c89df64f2}{Kolejka$<$ typ $>$}, \hyperlink{class_stos_aea130eb6d93369ac9f8cc5936509a4c1}{Stos$<$ typ $>$}, and \hyperlink{class_list_arr1_a42b97b706c07e85f866bafd6ebc9b440}{List\-Arr1$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_ae4f4f725bf09c5b258bc0d12e0f589d8}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!Start@{Start}}
+\index{Start@{Start}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_ae4f4f725bf09c5b258bc0d12e0f589d8}
+
+
+Implements \hyperlink{class_framework_a4d29e27b546088b26c1645a53adff349}{Framework}.
+
+
+
+Implemented in \hyperlink{class_list_arr2x_ad73276a597d78b636119378ee408129d}{List\-Arr2x$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_a7fc6b6c9b0606a24846b7e744ee8a823}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!Start\-Msort@{Start\-Msort}}
+\index{Start\-Msort@{Start\-Msort}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{Start\-Msort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::Start\-Msort (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_a7fc6b6c9b0606a24846b7e744ee8a823}
+
+
+Wykonanie części obliczeniowej programu. 
+
+Metoda w której implementowana jest część obliczeniowa programu, której czas wykonania zostanie zmierzony.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em k} & -\/ ilość elementów dla których mają zostać wykonane obliczenia. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_framework_a883b9c2c7258021f9e8c55e02a9d8c60}{Framework}.
+
+
+
+Implemented in \hyperlink{class_list_arr2x_adfd1dd69dadd19ac04ede03dba454fb5}{List\-Arr2x$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_ae37b5d3abf3a7a85adf02e42e09df875}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!Wczytaj\-Dane@{Wczytaj\-Dane}}
+\index{Wczytaj\-Dane@{Wczytaj\-Dane}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{Wczytaj\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::Wczytaj\-Dane (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{nazwa\-Pliku, }
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_ae37b5d3abf3a7a85adf02e42e09df875}
+
+
+Wczytanie danych z pliku. 
+
+Wczytuje zadaną ilość danych do przetworzenia z pliku o zadanej nazwie.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nazwa\-Pliku} & -\/ nazwa pliku z danymi \\
+\hline
+\mbox{\tt in}  & {\em n} & -\/ ilość danych do wczytania \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_framework_a6ca4333f327109885071b5291486b492}{Framework}.
+
+
+
+Implemented in \hyperlink{class_list_arr2x_afd6469fa733da21b70981fa4dfae9c12}{List\-Arr2x$<$ typ $>$}.
+
+\hypertarget{class_interfejs_a_d_t_a75427479b00e3d4a0c5f9615216262ea}{\index{Interfejs\-A\-D\-T@{Interfejs\-A\-D\-T}!Zwolnij@{Zwolnij}}
+\index{Zwolnij@{Zwolnij}!InterfejsADT@{Interfejs\-A\-D\-T}}
+\paragraph[{Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ virtual void {\bf Interfejs\-A\-D\-T}$<$ typ $>$\-::Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_interfejs_a_d_t_a75427479b00e3d4a0c5f9615216262ea}
+
+
+Zwalnia pamięć 
+
+Zwalnia pamięć zajmowaną przez daną strukturę 
+
+Implements \hyperlink{class_framework_a6ae437019d35e0524adbeecc484f327a}{Framework}.
+
+
+
+Implemented in \hyperlink{class_list_arr2x_a4e922603e7ed26334ee19cbca3c5056d}{List\-Arr2x$<$ typ $>$}, \hyperlink{class_list_arr1_a613d2338847bd5d3b1383892d74280e7}{List\-Arr1$<$ typ $>$}, \hyperlink{class_kolejka_a87be5cc66cf0f4c813b489c0a11c4b35}{Kolejka$<$ typ $>$}, \hyperlink{class_lista_afcc18699707e00f35d73fa53eaa9f1da}{Lista$<$ typ $>$}, and \hyperlink{class_stos_a1cfa859cdeddb64a9b49ec7526c5ac5a}{Stos$<$ typ $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_interfejs_a_d_t_8hh}{Interfejs\-A\-D\-T.\-hh}\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+\hypertarget{class_benchmark}{\subsection{Benchmark$<$ typ $>$ Class Template Reference}
+\label{class_benchmark}\index{Benchmark$<$ typ $>$@{Benchmark$<$ typ $>$}}
+}
+
+
+Modeluje pojęcie Benchmarku.  
+
+
+
+
+{\ttfamily \#include $<$Benchmark.\-hh$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_benchmark_a3649dc431341a349e84485ca11ed22c3}{Benchmark} (const unsigned int ile\-Prob, unsigned int $\ast$ile\-Danych, unsigned int ile\-Powtorzen)
+\begin{DoxyCompactList}\small\item\em Konstruktor 2 argumentowy. \end{DoxyCompactList}\item 
+void \hyperlink{class_benchmark_a44e1cf8d5a7f74ce37f3714116077068}{Test} (\hyperlink{class_framework}{Framework} $\ast$I, std\-::string nazwa\-Pliku)
+\begin{DoxyCompactList}\small\item\em Testowanie algorytmu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_statystyka}{Statystyka} $\ast$ \hyperlink{class_benchmark_aa808f4e600325e1ed21fcc5766ce5a8b}{stat}
+\begin{DoxyCompactList}\small\item\em Statystyki testu. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_benchmark_ab53d909a3f18b43037cc18f700858d8e}{Ile\-Prob}
+\begin{DoxyCompactList}\small\item\em Ilość prób. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{class_benchmark_a971e10e52bc909625093057d16b80ee9}{Ile\-Danych}
+\begin{DoxyCompactList}\small\item\em Tablica liczności serii. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_benchmark_a47772159994c8b218be46062b8b81487}{Ile\-Powtorzen}
+\begin{DoxyCompactList}\small\item\em Ilość powtórzeń \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class typ$>$class Benchmark$<$ typ $>$}
+
+Modeluje pojęcie Benchmarku. 
+
+Modeluje pojęcie Benchmarku czyli objektu mierzącego czas wykonywania algoytmu 
+
+Definition at line 24 of file Benchmark.\-hh.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{class_benchmark_a3649dc431341a349e84485ca11ed22c3}{\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\index{Benchmark@{Benchmark}!Benchmark@{Benchmark}}
+\paragraph[{Benchmark}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ {\bf Benchmark}$<$ typ $>$\-::{\bf Benchmark} (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{ile\-Prob, }
+\item[{unsigned int $\ast$}]{ile\-Danych, }
+\item[{unsigned int}]{ile\-Powtorzen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_benchmark_a3649dc431341a349e84485ca11ed22c3}
+
+
+Konstruktor 2 argumentowy. 
+
+Tworzy objekt klasy \hyperlink{class_benchmark}{Benchmark} i inicjuje nową statystykę dla objektu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ile\-Prob} & -\/ ilość prób, które zostaną wykonane \\
+\hline
+\mbox{\tt in}  & {\em ile\-Danych} & -\/ wkaźnik na tablice z licznościami kolejnych serii \\
+\hline
+\mbox{\tt in}  & {\em ile\-Powtorzen} & -\/ ilość powtórzeń każdej serii \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file Benchmark.\-hh.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_benchmark_a44e1cf8d5a7f74ce37f3714116077068}{\index{Benchmark@{Benchmark}!Test@{Test}}
+\index{Test@{Test}!Benchmark@{Benchmark}}
+\paragraph[{Test}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ void {\bf Benchmark}$<$ typ $>$\-::Test (
+\begin{DoxyParamCaption}
+\item[{{\bf Framework} $\ast$}]{I, }
+\item[{std\-::string}]{nazwa\-Pliku}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_benchmark_a44e1cf8d5a7f74ce37f3714116077068}
+
+
+Testowanie algorytmu. 
+
+Metoda testuje algorytm w okreslonej liczbie serii i powtórzeniach pomiary zapisuje do pliku podanego pez użytkownika
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em I} & -\/ objekt klasy na której zostanie przeprowadzony test \\
+\hline
+\mbox{\tt in}  & {\em nazwa\-Pliku} & -\/ nazwa pliku do którego zostaną zapisane statystyki \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file Benchmark.\-hh.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{class_benchmark_a971e10e52bc909625093057d16b80ee9}{\index{Benchmark@{Benchmark}!Ile\-Danych@{Ile\-Danych}}
+\index{Ile\-Danych@{Ile\-Danych}!Benchmark@{Benchmark}}
+\paragraph[{Ile\-Danych}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ unsigned int$\ast$ {\bf Benchmark}$<$ typ $>$\-::Ile\-Danych\hspace{0.3cm}{\ttfamily [private]}}}\label{class_benchmark_a971e10e52bc909625093057d16b80ee9}
+
+
+Tablica liczności serii. 
+
+Tablica z licznościami elementów dla kojenych serii 
+
+Definition at line 47 of file Benchmark.\-hh.
+
+\hypertarget{class_benchmark_a47772159994c8b218be46062b8b81487}{\index{Benchmark@{Benchmark}!Ile\-Powtorzen@{Ile\-Powtorzen}}
+\index{Ile\-Powtorzen@{Ile\-Powtorzen}!Benchmark@{Benchmark}}
+\paragraph[{Ile\-Powtorzen}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ unsigned int {\bf Benchmark}$<$ typ $>$\-::Ile\-Powtorzen\hspace{0.3cm}{\ttfamily [private]}}}\label{class_benchmark_a47772159994c8b218be46062b8b81487}
+
+
+Ilość powtórzeń 
+
+Ilość powtórzeń każdej serii 
+
+Definition at line 55 of file Benchmark.\-hh.
+
+\hypertarget{class_benchmark_ab53d909a3f18b43037cc18f700858d8e}{\index{Benchmark@{Benchmark}!Ile\-Prob@{Ile\-Prob}}
+\index{Ile\-Prob@{Ile\-Prob}!Benchmark@{Benchmark}}
+\paragraph[{Ile\-Prob}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ unsigned int {\bf Benchmark}$<$ typ $>$\-::Ile\-Prob\hspace{0.3cm}{\ttfamily [private]}}}\label{class_benchmark_ab53d909a3f18b43037cc18f700858d8e}
+
+
+Ilość prób. 
+
+Ilość powtórzeń każdej seriii 
+
+Definition at line 39 of file Benchmark.\-hh.
+
+\hypertarget{class_benchmark_aa808f4e600325e1ed21fcc5766ce5a8b}{\index{Benchmark@{Benchmark}!stat@{stat}}
+\index{stat@{stat}!Benchmark@{Benchmark}}
+\paragraph[{stat}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ$>$ {\bf Statystyka}$\ast$ {\bf Benchmark}$<$ typ $>$\-::stat\hspace{0.3cm}{\ttfamily [private]}}}\label{class_benchmark_aa808f4e600325e1ed21fcc5766ce5a8b}
+
+
+Statystyki testu. 
+
+Pole przechowuje wyniki testów 
+
+Definition at line 31 of file Benchmark.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_benchmark_8hh}{Benchmark.\-hh}\end{DoxyCompactItemize}

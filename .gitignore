@@ -26,3 +26,23 @@
 *.exe
 *.out
 *.app
+
+# Addidional files
+*~
+#*#
+*.o
+prj/dane.dat
+*.tex
+*.eps
+*.sty
+*.log
+*.idx
+*.ilg
+*.ind
+*.aux
+doc/latex/Makefile
+*.toc
+doc/Makefile
+class*pdf
+*.dat
+*.txt

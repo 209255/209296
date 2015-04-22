@@ -1,0 +1,260 @@
+\hypertarget{class_stos}{\subsection{Stos$<$ typ $>$ Class Template Reference}
+\label{class_stos}\index{Stos$<$ typ $>$@{Stos$<$ typ $>$}}
+}
+
+
+Modeluje pojęcie Stosu.  
+
+
+
+
+{\ttfamily \#include $<$Stos.\-hh$>$}
+
+Inheritance diagram for Stos$<$ typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stos}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_stos_1_1_element}{Element}
+\begin{DoxyCompactList}\small\item\em Modeluje jeden element Stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_stos_afc525fb8a9f8f80fda9bf0f846c078c4}{Stos} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor pustego Stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a1cfa859cdeddb64a9b49ec7526c5ac5a}{Zwolnij} ()
+\begin{DoxyCompactList}\small\item\em Destruktor Stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_aa365a8b36117a4ebc99236de643a3354}{push} (typ dana, unsigned int pole=0)
+\begin{DoxyCompactList}\small\item\em Dodaje daną do Listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_ab18e88e29805390208e6587e7858ced1}{pop} (unsigned int pole=0)
+\begin{DoxyCompactList}\small\item\em Usuwa element ze Stosu. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stos_aea130eb6d93369ac9f8cc5936509a4c1}{size} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza rozmiar Stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_aacdee7eebeb5f142f1418fee04253ef3}{Wczytaj\-Dane} (const char $\ast$nazwa\-Pliku, unsigned int n)
+\begin{DoxyCompactList}\small\item\em Wczytuje dane z pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a226985a6573d2f5d82e3813be6c3ccf5}{Start} (const unsigned int k)
+\begin{DoxyCompactList}\small\item\em Proces obliczeniowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_stos_1_1_element}{Element} $\ast$ \hyperlink{class_stos_a99a2b9b4cff5d01c77cfa7937bdc3675}{Poczatek}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na pierwszy element Stosu. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stos_af27f11e8c75d948bfa667353019ae653}{Rozmiar}
+\begin{DoxyCompactList}\small\item\em Aktualny rozmiar Stosu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class typ$>$class Stos$<$ typ $>$}
+
+Modeluje pojęcie Stosu. 
+
+Modeluje pojęcie Stosu. 
+
+Definition at line 22 of file Stos.\-hh.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{class_stos_afc525fb8a9f8f80fda9bf0f846c078c4}{\index{Stos@{Stos}!Stos@{Stos}}
+\index{Stos@{Stos}!Stos@{Stos}}
+\paragraph[{Stos}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ {\bf Stos}$<$ typ $>$\-::{\bf Stos} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_afc525fb8a9f8f80fda9bf0f846c078c4}
+
+
+Konstruktor pustego Stosu. 
+
+Konstruktor bezargumentowy pustego Stosu tworzy objekt z wskaźnikiem początek pokazującym na N\-U\-L\-L. 
+
+Definition at line 88 of file Stos.\-hh.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_stos_ab18e88e29805390208e6587e7858ced1}{\index{Stos@{Stos}!pop@{pop}}
+\index{pop@{pop}!Stos@{Stos}}
+\paragraph[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Stos}$<$ typ $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pole = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_ab18e88e29805390208e6587e7858ced1}
+
+
+Usuwa element ze Stosu. 
+
+Usuwa 'górny' element Stosu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pole} & -\/ numer elementu Listy z którego chcemy pobrać daną \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_aa5a81a01c32577d986320524bcd091f0}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 151 of file Stos.\-hh.
+
+\hypertarget{class_stos_aa365a8b36117a4ebc99236de643a3354}{\index{Stos@{Stos}!push@{push}}
+\index{push@{push}!Stos@{Stos}}
+\paragraph[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Stos}$<$ typ $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{typ}]{dana, }
+\item[{unsigned int}]{pole = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_aa365a8b36117a4ebc99236de643a3354}
+
+
+Dodaje daną do Listy. 
+
+Dodaje daną podaną jako argument wywołania
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dana} & -\/ dana którą chcemy dodać do Stosu \\
+\hline
+\mbox{\tt in}  & {\em pole} & -\/ numer elementu Stosu na który chcemy dodać daną, domyślnie -\/ 0, zmiana argumentu wywołania nie ma wpływu na działanie metody \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_abae6ef55c501edc4ca4e0faf4436b0df}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 132 of file Stos.\-hh.
+
+\hypertarget{class_stos_aea130eb6d93369ac9f8cc5936509a4c1}{\index{Stos@{Stos}!size@{size}}
+\index{size@{size}!Stos@{Stos}}
+\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ unsigned int {\bf Stos}$<$ typ $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_aea130eb6d93369ac9f8cc5936509a4c1}
+
+
+Sprawdza rozmiar Stosu. 
+
+Sprawdza ile aktualnie elementów znajduję się na Stosie
+
+
+\begin{DoxyRetVals}{Return values}
+{\em zwraca} & ilosć elementów znadjuących się aktualnie na Stosie \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \hyperlink{class_interfejs_a_d_t_a871cc26c895ce229ad04f7897fe4ba48}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 177 of file Stos.\-hh.
+
+\hypertarget{class_stos_a226985a6573d2f5d82e3813be6c3ccf5}{\index{Stos@{Stos}!Start@{Start}}
+\index{Start@{Start}!Stos@{Stos}}
+\paragraph[{Start}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Stos}$<$ typ $>$\-::Start (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_a226985a6573d2f5d82e3813be6c3ccf5}
+
+
+Proces obliczeniowy. 
+
+Wykonuje proces oblcizeniowy, którego czas wykonania jest mierzony na potrzeby laboratoriów P\-A\-M\-S\-I W tym wypakdu tworzy \hyperlink{class_stos}{Stos} k elementowy wypełniony stałą liczbą '3'.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em k} & -\/ ilość danych dla których ma zostać przeprowadzona precedura obnliczeniowa \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 203 of file Stos.\-hh.
+
+\hypertarget{class_stos_aacdee7eebeb5f142f1418fee04253ef3}{\index{Stos@{Stos}!Wczytaj\-Dane@{Wczytaj\-Dane}}
+\index{Wczytaj\-Dane@{Wczytaj\-Dane}!Stos@{Stos}}
+\paragraph[{Wczytaj\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Stos}$<$ typ $>$\-::Wczytaj\-Dane (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{nazwa\-Pliku, }
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_aacdee7eebeb5f142f1418fee04253ef3}
+
+
+Wczytuje dane z pliku. 
+
+Wczytuje dane zamieszczone w pliku do Stosu. Każdą nową daną umieszcza na 'górze' Stosu.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em nazwa\-Pliku} & -\/ nazwa pliku z danymi \\
+\hline
+\mbox{\tt in}  & {\em n} & -\/ ilość danych do wczytania \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file Stos.\-hh.
+
+\hypertarget{class_stos_a1cfa859cdeddb64a9b49ec7526c5ac5a}{\index{Stos@{Stos}!Zwolnij@{Zwolnij}}
+\index{Zwolnij@{Zwolnij}!Stos@{Stos}}
+\paragraph[{Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ void {\bf Stos}$<$ typ $>$\-::Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_a1cfa859cdeddb64a9b49ec7526c5ac5a}
+
+
+Destruktor Stosu. 
+
+Zwalnia zaalokowana przez \hyperlink{class_stos}{Stos} pamiec
+
+Zwalnia pamięć
+
+Zwalnia pamięć zajmowaną przez \hyperlink{class_stos}{Stos} 
+
+Implements \hyperlink{class_interfejs_a_d_t_a75427479b00e3d4a0c5f9615216262ea}{Interfejs\-A\-D\-T$<$ typ $>$}.
+
+
+
+Definition at line 112 of file Stos.\-hh.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{class_stos_a99a2b9b4cff5d01c77cfa7937bdc3675}{\index{Stos@{Stos}!Poczatek@{Poczatek}}
+\index{Poczatek@{Poczatek}!Stos@{Stos}}
+\paragraph[{Poczatek}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ {\bf Element}$\ast$ {\bf Stos}$<$ typ $>$\-::Poczatek\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_a99a2b9b4cff5d01c77cfa7937bdc3675}
+
+
+Wskaźnik na pierwszy element Stosu. 
+
+Wskaźnik na pierwszy element Stosu 
+
+Definition at line 68 of file Stos.\-hh.
+
+\hypertarget{class_stos_af27f11e8c75d948bfa667353019ae653}{\index{Stos@{Stos}!Rozmiar@{Rozmiar}}
+\index{Rozmiar@{Rozmiar}!Stos@{Stos}}
+\paragraph[{Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class typ $>$ unsigned int {\bf Stos}$<$ typ $>$\-::Rozmiar\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_af27f11e8c75d948bfa667353019ae653}
+
+
+Aktualny rozmiar Stosu. 
+
+Przechowuje aktualną ilość Elemenetów znajujących się na Stosie 
+
+Definition at line 76 of file Stos.\-hh.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_stos_8hh}{Stos.\-hh}\end{DoxyCompactItemize}

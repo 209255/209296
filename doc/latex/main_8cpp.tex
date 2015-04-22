@@ -1,0 +1,76 @@
+\hypertarget{main_8cpp}{\subsection{/home/bartolomeo/209296/prj/src/main.cpp File Reference}
+\label{main_8cpp}\index{/home/bartolomeo/209296/prj/src/main.\-cpp@{/home/bartolomeo/209296/prj/src/main.\-cpp}}
+}
+
+
+Moduł główny programu.  
+
+
+{\ttfamily \#include \char`\"{}../inc/\-Lista.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-Stos.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-Kolejka.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-List\-Arr1.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-List\-Arr2x.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-Statystyka.\-hh\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../inc/\-Benchmark.\-hh\char`\"{}}\\*
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cpp_a923942350ba378e49a53193355cb5ec0}{I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N}~10
+\begin{DoxyCompactList}\small\item\em Ilośc powtórzeń danej próby. \end{DoxyCompactList}\item 
+\#define \hyperlink{main_8cpp_a345eda6ce2b2009daa29315332defd2a}{I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B}~5
+\begin{DoxyCompactList}\small\item\em Ilość prób. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Moduł główny programu. Program wkonuje serię 10 pomiarów czasu wykonania metody start dla różncyh wielkości problemu obliczeniowego, dla każdego zaimplemetowanego typu danych -\/ Link\-Lista, Lista\-Arr1, Lista\-Arr2x. Procedura obliczeniowa polega na utworzeniu 'objektu' przechoującego n danych (stałych liczb). statystykę pomiarów zapisuje do pliku o nazwie \char`\"{}\-Typ\-Daych.\-dat\char`\"{}. gdzie \char`\"{}\-Typ\-Danych\char`\"{} to odpowiednio \hyperlink{class_lista}{Lista}, Lista\-Arr1 i Lista\-Arr2x
+
+O\-B\-SŁ\-U\-G\-A P\-R\-O\-G\-R\-A\-M\-U\-: Aby wywołać program należy w lini poleceń wywołać jego nazę np\-: \char`\"{}./a.\-out\char`\"{} 
+
+Definition in file \hyperlink{main_8cpp_source}{main.\-cpp}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{main_8cpp_a923942350ba378e49a53193355cb5ec0}{\index{main.\-cpp@{main.\-cpp}!I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N@{I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N}}
+\index{I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N@{I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N}!main.cpp@{main.\-cpp}}
+\paragraph[{I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-L\-O\-S\-C\-\_\-\-P\-O\-W\-T\-O\-R\-Z\-E\-N~10}}\label{main_8cpp_a923942350ba378e49a53193355cb5ec0}
+
+
+Ilośc powtórzeń danej próby. 
+
+Ilośc powtórzeń danej próby 
+
+Definition at line 36 of file main.\-cpp.
+
+\hypertarget{main_8cpp_a345eda6ce2b2009daa29315332defd2a}{\index{main.\-cpp@{main.\-cpp}!I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B@{I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B}}
+\index{I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B@{I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B}!main.cpp@{main.\-cpp}}
+\paragraph[{I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-L\-O\-S\-C\-\_\-\-P\-R\-O\-B~5}}\label{main_8cpp_a345eda6ce2b2009daa29315332defd2a}
+
+
+Ilość prób. 
+
+Ilość prób = ilość rozmiarów prób 
+
+Definition at line 44 of file main.\-cpp.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Definition at line 46 of file main.\-cpp.
+
