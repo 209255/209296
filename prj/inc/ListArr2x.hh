@@ -192,11 +192,17 @@ class ListArr2x : public InterfejsADT<typ> {
     RozmiarL = 0;
   }
 //**************************************************************
-  /*!
-   *
-   */
+/*!
+ *\brief Metoda skladajaca kopiec
+ *
+ * Metoda ma za zadanie poprze porownywanie i ustawianie elementow
+ * odtworzenie porzadku kopcowego.
+ *
+ *\param[in] Rozmiar - Rozmar kopca
+ *\param[in] i - indeks ostatniego elementu podzbioru
+ */
 //**************************************************************
-  void Kopiec(int Rozmiar, int i)
+  void Kopiec(int Rozmiar,const int i)
   {
     int Duzy;
     int lewy = 2*i+1;
@@ -213,6 +219,15 @@ class ListArr2x : public InterfejsADT<typ> {
       }
   }
 //**************************************************************
+ /*!
+   *\brief Metoda tworzaca kopiec
+   *
+   * Metoda ma za zadanie utworzyc abstrakycjny kopiec
+   * z tablicy o podanym poprzez argument rozmiarze
+   *
+   \param[in] Rozmiar - Rozmiar kopca
+   */
+//**************************************************************
   void BudujKopiec(int Rozmiar)
   {
     for(int i = Rozmiar/2 -1; i >= 0; --i)
@@ -225,11 +240,15 @@ public:
 //**************************************************************
  /*!
   *\brief Sortowanie przez Wstawianie 
-  * Metoda ma za zadanie posortowac tablice przyjmowana jako argument
+  * Metoda ma za zadanie posortowac tablice przyjmowana 
+  * jako argument
   *\param[in] T - Wskaznik na tablice z danymi wejsciowymi
-  *\param[in] n - ilosc
+  *\param[in] l - Poczatkowy indeks elementu sortowanego
+  *               podzbioru
+  *\param[in] p - koncowy indeks elementu sortowanego 
+  *               podzbioru
   */
-//**********************************************************************
+//***************************************************************
   void Wstaw_Sort(typ * W,int l,int p)
   {
     typ temp;
@@ -383,7 +402,8 @@ public:
    * Wczytuje dane z pliku do ListArr1
    *
    * param[in] nazwaPliku - nazwa pliku z danymi
-   * param[in] n - ilość danych do wczytania, 0 oznacza wszystkie dane z pliku
+   * param[in] n - ilość danych do wczytania, 
+   * 0 oznacza wszystkie dane z pliku
    */
 //**************************************************************
   void WczytajDane(const std::string PlikIn, unsigned int n) 
@@ -435,7 +455,7 @@ public:
    * Metoda modeluje algorytm sorotwanie szybkiego z zaimplementowanym
    * algorytmem doboru pivotu, tak aby nie zostal wybrany najmniejszy 
    * element w danym podzbiorze.
-   *\parma[in] lewy -poczatkowy indeks pozbioru
+   *\parma[in] lewy - poczatkowy indeks pozbioru
    *\param[in] prawy - koncowy indeks podzbioru
    */
 //**************************************************************
@@ -460,14 +480,14 @@ public:
     if(j > lewy) QsortOpt(lewy,j);
     if(i < prawy1) QsortOpt(i,prawy1);
   }
-//****************************************************************************************
+//**************************************************************
 /*!
  *\brief Metoda wypisujaca elemeny listy
  *
- *Metoda ma za zadanie wypisac wszystkie elementy znajdujace sie obecnie 
- * na liscie danych
+ * Metoda ma za zadanie wypisac wszystkie elementy znajdujace sie 
+ * obecnie na liscie danych
  */
-//****************************************************************************************
+//***************************************************************
   void Pokaz()
   {
     if(RozmiarL == 0)
@@ -512,6 +532,26 @@ public:
 	Kopiec(Rozmiar,0);
       }
   }
+//**************************************************************
+/*!
+ *\brief Metoda sortowania hybrydowego
+ *
+ * Metoda ta jest implementacja algorytmu sortowania
+ * hybrydowego, bedacego polaczeniem sortowania szybkiego
+ * i sortowania przez wstawianie
+ * Po zakonczeniu rekurencyjnych wywolan Partycjowania,
+ * tablica jest podzielona na szereg malych podzbiorow o 
+ * o rozmiarze nie przekraczajacemu ustalonego progu.
+ * Zbioru sa porozdzielana elementami ktore wykorzystywane byly
+ * jako elementy osiowe.
+ * Dla czesciowo posortowanej tablicy wywolywane jest sortowanie 
+ * przez wstawianie, ktore jest wydajne dla tablic o malych 
+ * rozmiarach
+ *
+ *\param[in] l - indeks poczatkowego elementu pozbioru
+ *\param[in] h - indeks koncowego elementu podzbioru
+ */
+
 //**************************************************************
   void Sortowanie_Hybrydowe(int l, int h)
   {

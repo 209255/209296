@@ -95,8 +95,8 @@ void Test(Framework *I,std::string nazwaPliku) {
       poczatek = std::clock();
       I -> Start();
       koniec = std::clock();
-      // std::cout << "Po: " << std::endl;
-      // I -> Pokaz();
+      //  std::cout << "Po: " << std::endl;
+      //I -> Pokaz();
       suma +=(koniec - poczatek);
       I -> Zwolnij();
     }
