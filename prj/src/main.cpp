@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
   ListArr2x<int> *LA2 = new ListArr2x<int>;
   Benchmark<int> *B = new Benchmark<int>(ILOSC_PROB, iloscDanych, ILOSC_POWTORZEN);
   Framework *I;
-  //  LosujIntDoPliku(10000000,100);
+  // LosujIntDoPliku(10000000,100);
   I = LA2;
   B ->Test(I,nazwaPlikuStat[0]);
   

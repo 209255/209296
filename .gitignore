@@ -46,3 +46,4 @@ doc/Makefile
 class*pdf
 *.dat
 *.txt
+*.png
