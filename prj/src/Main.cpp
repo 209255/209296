@@ -1,4 +1,4 @@
-#include"StrukturyBenchmark.hh"
+a#include"StrukturyBenchmark.hh"
 #include "Wyniki.hh"
 #include "HSort.hh"
 #include "HybSort.hh"
@@ -11,10 +11,12 @@
 #define ILOSC_PROB 5
 unsigned int Tablica_Rozmiarow[] = {100,1000,10000,100000,1000000};
 using namespace std;
+
 /*!
  *\file
  *\brief funkcja glowna programu
  */
+
 int main()
 {
   QSort<int> *k = new QSort<int>;

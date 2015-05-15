@@ -1,5 +1,23 @@
 #ifndef QSORT_HH
 #define QSORT_HH
+//************************************************************** 
+/*!
+ *\file Sortowanie Szybkie
+ *
+ * Plik zawiera implementacje algorymu sortowania 
+ * szybkiego
+ */
+//************************************************************** 
+
+//************************************************************** 
+/*!
+ *\brief Modeluje sortowanie szybkie
+ *
+ * Klasa zawiera implementacje algorytmu
+ * sortowania szybkiego
+ */
+//************************************************************** 
+
 template<class Typ>
 class QSort:public ISortable<Typ>
 {
@@ -55,7 +73,16 @@ class QSort:public ISortable<Typ>
 //**************************************************************
 
 public:
-
+//**************************************************************
+/*!
+ *\brief Metoda inicjalizujaca sortowanie szybkie
+ *
+ * Metoda ma za zadanie zainicjalizowac algorytm sortowania 
+ * szybkiego dla wybranej struktury danych
+ *
+ * \param[in] Kontener - rodzaj kontenera,ktory zostanie 
+ * posortowany
+ */
 //**************************************************************
   void _Sort(Iterable<Typ> *Kontener)
   {

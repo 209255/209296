@@ -1,5 +1,23 @@
 #ifndef HSORT_HH
 #define HSORT_HH
+//************************************************************** 
+/*!
+ *\file Sortowanie przez kopcowanie
+ *
+ * Plik zawiera implementacje algorymu sortowania 
+ * przez kopcowanie
+ */
+//************************************************************** 
+
+//************************************************************** 
+/*!
+ *\brief Modeluje sortowanie przez kopcowanie
+ *
+ * Klasa zawiera implementacje algorytmu
+ * sortowania przez kopcowanie
+ */
+//************************************************************** 
+
 template<class Typ>
 class HSort: public ISortable<Typ>
 {
@@ -69,7 +87,16 @@ class HSort: public ISortable<Typ>
 //****************************************************************
 
 public:
-
+//****************************************************************
+/*!
+ *\brief Metoda inicjalizujaca sortowanie przez kopcowanie
+ *
+ * Metoda ma za zadanie zainicjalizowac algorytm sortowania 
+ * przez kopcowania dla wybranej struktury danych
+ *
+ * \param[in] Kontener - rodzaj kontenera,ktory zostanie 
+ * posortowany
+ */
 //****************************************************************
   void _Sort(Iterable<Typ> *Kontener)
   {

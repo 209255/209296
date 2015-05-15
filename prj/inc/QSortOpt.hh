@@ -1,6 +1,24 @@
 #ifndef QSORTOPT_HH
 #define QSORTOPT_HH
 #define ILE 3
+
+//************************************************************** 
+/*!
+ *\file Sortowanie szybkie z opytymalizacja
+ *
+ * Plik zawiera implementacje algorymu sortowania 
+ * szybkiego z optymalizjacja
+ */
+//************************************************************** 
+
+//************************************************************** 
+/*!
+ *\brief Modeluje sortowanie szybkie z optymalizacja
+ *
+ * Klasa zawiera implementacje algorytmu
+ * sortowania szybkiego z optymalizacja
+ */
+//************************************************************** 
 template <class Typ>
 class QSortOpt:public ISortable<Typ>
 {
@@ -65,6 +83,16 @@ class QSortOpt:public ISortable<Typ>
 
 public:
 
+//***************************************************************
+/*!
+ *\brief Metoda inicjalizujaca sortowanie szybkie z optymalizacja
+ *
+ * Metoda ma za zadanie zainicjalizowac algorytm sortowania 
+ * szybkiego z optymalizacja dla wybranej struktury danych
+ *
+ * \param[in] Kontener - rodzaj kontenera,ktory zostanie 
+ * posortowany
+ */
 //***************************************************************
   void _Sort(Iterable<Typ> *Kontener)
   {

@@ -30,13 +30,26 @@ private:
 //****************************************************************************************
 /*!
  *\brief Pole StrulturyBenchmark
- * Pole zawiera wskaźnik na Struktury, za pomoca niego i metod wirtualnych beda wywolywane 
+ * Pole zawiera wskaźnik na interfejs sortujacy, 
+ * za pomoca niego i metod wirtualnych beda wywolywane 
  * odpowiednie dla danej strktury metody
  */
 //****************************************************************************************
   ISortable<Typ> *I;
 //****************************************************************************************
+/*!
+ *\brief Pole StrulturyBenchmark
+ * Pole zawiera wskaźnik na Struktury, za pomoca niego i metod wirtualnych beda wywolywane 
+ * odpowiednie dla danej strktury metody
+ */
+//****************************************************************************************
   Struktury<Typ> *S;
+//****************************************************************************************
+/*!
+ *\brief Pole StrulturyBenchmark
+ * Pole zawiera wskaźnik na Iterable, za pomoca niego i metod wirtualnych beda wywolywane 
+ * odpowiednie dla danej strktury metody
+ */
 //****************************************************************************************
   Iterable<Typ> *T;
 //****************************************************************************************
@@ -48,13 +61,45 @@ private:
 //****************************************************************************************
   int * _Wartosci;
 //****************************************************************************************
+/*!
+ *\brief Pole StrukturyBenchmark
+ *
+ *Pole zawiera liste obserwatorow,ktore obserwuja ten obiekt
+ */
+//****************************************************************************************
   std::list<IObserwator*> Obserwatorzy;
+//****************************************************************************************
+/*!
+ *\brief Pole StrukturyBenchmark
+ *
+ * Pole zawiera informacje o ilosci prob jakie zostana wykonane
+ */
 //****************************************************************************************
   unsigned int _IloscProb;
 //****************************************************************************************
+/*!
+ *\brief Pole StrukturyBenchmark
+ *
+ * Pole zawiera informacje o ilosci powtorzen jakie maja zosatc wykonane
+ * przy tescie 
+ */
+//****************************************************************************************
   unsigned int _IloscPowt;
 //****************************************************************************************
+/*!
+ *\brief Pole StrukturyBenchmark
+ *
+ * Pole zawiera wskaznik przechowujacy informcje dla jakiej ilosci danych
+ * maja zostac wykonane testy
+ */
+//****************************************************************************************
   unsigned int *_TablicaRozmiarow;
+//****************************************************************************************
+/*!
+ *\brief Pole StrukturyBenchmark
+ *
+ * Pole przechowuje informacje o ilosci testyowanych danych
+ */
 //****************************************************************************************
   unsigned int _IloscDanych;
 //****************************************************************************************
@@ -70,6 +115,13 @@ private:
   {
     I -> _Sort(T);
   }
+//****************************************************************************************
+/*!
+ *\brief Metoda wypelniajaca 
+ *Metoda ma za zadanie wypelnic dany kontener danymi
+ *
+ *\param[in] n - ilosc danych 
+ */
  //****************************************************************************************
   void _Zaladuj(const unsigned int n) const
   {
@@ -77,7 +129,22 @@ private:
       S -> _Push(_Wartosci[i],S ->_Rozmiar());
   }
 //**************************************************************************************** 
+/*!
+ *\brief Metoda zwalniajaca Pamiec
+ *
+ * Metoda ma za zadanie zwolnic pamiec przeznaczona na dane
+ * przechowywane w kontenerze
+ */
+//**************************************************************************************** 
   void _Zwolnij(){S -> _Zwolnij();}
+//**************************************************************************************** 
+/*!
+ *\brief Metoda informujaca obserwatorow
+ *
+ * Metoda ma za zadanie poinformowac wszystkich obserwatorow
+ * o zmianach, ktore sa istotne dla nich,
+ * jakie zostaly wykonane na obiekcie obserwowanym
+ */
 //****************************************************************************************
   void _PowiadomObserwatorow()
   {
@@ -89,6 +156,10 @@ private:
 
 public:
 
+/****************************************************************************************
+/*!
+ *\brief Konstruktor obiektu
+ */
 //****************************************************************************************
   StrukturyBenchmark(const unsigned int Proby,const unsigned int Powt,
 		     unsigned int *Rozmiary)
@@ -107,6 +178,14 @@ public:
       _Wartosci[i] = 0;
     }
   }
+/****************************************************************************************
+/*!
+ *\brief Metoda inicjalizujaca test
+ *
+ * Metoda ma za zadanie uruchomic okreslona ilosc
+ * razy testowana metode, czas jej wykonania jest zbierany
+ * przez klase zewnetrzna
+ */
 //****************************************************************************************
   void _WykonajTest()
 {
@@ -123,6 +202,14 @@ public:
     }
 }
 //****************************************************************************************
+/*!
+ *\brief Metoda Ustawiajaca
+ *
+ * Metoda ma za zadanie okreslic na jakich obiektach zostanie wykonana praca
+ * poprzez przypisanie do wskaznikow abstrakcyjnych interfejsow obiektow, ktore posiadaja
+ * dany interfejs
+ */
+//****************************************************************************************
   void _Ustaw(ISortable<Typ> *A,Struktury<Typ> *B,Iterable<Typ> *C){I = A,S = B,T = C;}
 //****************************************************************************************
 /*!\brief Metoda Wczytujaca dane
@@ -131,7 +218,6 @@ public:
  * argument nazwie oraz przypisac wskaznik do zaalokwanych w pamieci danych
  *
  *\param[in] PlikIn - nazwa pliku wejsciowego z danymi
- *\param[in] Ilosc - Ilosc danych jaka bedzie wczytywana
  */
 //****************************************************************************************
   void _Wczytaj(string PlikWart)
@@ -160,15 +246,40 @@ public:
       }
    }
 //****************************************************************************************
+/*!
+ *\brief Metoda dodajaca obserwator
+ *
+ * Metoda ma za zadanie dodac nowego  obserwatora do listy
+ * obserwatorow danego obiektu
+ *
+ *\param[in] O - wskaznik na dodawany obserwator
+ */
+//****************************************************************************************
   void _DodajObserwator(IObserwator *O)
   {
     Obserwatorzy.push_back(O);
   }
 //****************************************************************************************
+/*!
+ *\brief Metoda usuwajaca obserwator
+ *
+ * Metoda ma za zadanei usunac zadanego poprzez argument obserwatora z listy
+ * obserwatorow danego obiektu
+ *
+ *\param[in] O - wskaznik na obserwator,ktory ma zostac usuniety 
+ */
+//****************************************************************************************
   void _UsunObserwator(IObserwator *O)
   {
     Obserwatorzy.remove(O);
   }
+//****************************************************************************************
+/*!
+ *\brief Metoda generujaca dane
+ *
+ * Metoda ma za zadanie wygenerowac pseudolosowe dane 
+ * i zapisac je do pliku
+ */
 //****************************************************************************************
   void _Generator()const
 {

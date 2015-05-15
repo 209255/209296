@@ -51,9 +51,30 @@ protected:
 //****************************************************************************************
   virtual void _Wczytaj(string PlikWart) = 0;
 //****************************************************************************************
+/*!
+ *\brief Metoda wypelniajaca 
+ *Metoda ma za zadanie wypelnic dany kontener danymi
+ *
+ *\param[in] n - ilosc danych 
+ */
+//****************************************************************************************
   virtual void _Zaladuj(const unsigned int n)const = 0;
 //****************************************************************************************
+/*!
+ *\brief Metoda zwalniajaca Pamiec
+ *
+ * Metoda ma za zadanie zwolnic pamiec przeznaczona na dane
+ * przechowywane w kontenerze
+ */
+//****************************************************************************************
   virtual void _Zwolnij() = 0;
+//****************************************************************************************
+/*!
+ *\brief Metoda generujaca dane
+ *
+ * Metoda ma za zadanie wygenerowac pseudolosowe dane 
+ * i zapisac je do pliku
+ */
 //****************************************************************************************
   virtual void _Generator()const = 0;
 //****************************************************************************************

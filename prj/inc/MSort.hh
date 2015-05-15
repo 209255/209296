@@ -1,5 +1,24 @@
 #ifndef MSORT_HH
 #define MSORT_HH
+//************************************************************** 
+/*!
+ *\file Sortowanie przez scalanie
+ *
+ * Plik zawiera implementacje algorymu sortowania 
+ * przez kopcowanie
+ */
+//************************************************************** 
+
+//************************************************************** 
+/*!
+ *\brief Modeluje sortowanie przez scalanie
+ *
+ * Klasa zawiera implementacje algorytmu
+ * sortowania przez scalanie
+ */
+//************************************************************** 
+
+///////////////////////DEFINICJA KLASY/////////////////////////
 template<class Typ>
 class MSort:public ISortable<Typ>
 {
@@ -66,7 +85,16 @@ class MSort:public ISortable<Typ>
 //************************************************************** 
  
 public:
-
+//****************************************************************
+/*!
+ *\brief Metoda inicjalizujaca sortowanie przez scalanie
+ *
+ * Metoda ma za zadanie zainicjalizowac algorytm sortowania 
+ * przez scalanie dla wybranej struktury danych
+ *
+ * \param[in] Kontener - rodzaj kontenera,ktory zostanie 
+ * posortowany
+ */
 //**************************************************************  
   void _Sort(Iterable<Typ> *Kontener)
   {
@@ -76,5 +104,5 @@ public:
   }
 //**************************************************************  
 };
-
+/////////////////////KONIEC DEFINICJI//////////////////////////
 #endif

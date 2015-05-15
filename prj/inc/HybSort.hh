@@ -2,6 +2,24 @@
 #define HYBSORT_HH
 #define PROG 13
 #define ILE 3
+//************************************************************** 
+/*!
+ *\file Sortowania hybrydowego
+ *
+ * Plik zawiera implementacje algorymu sortowania 
+ * przez kopcowanie
+ */
+//************************************************************** 
+
+//************************************************************** 
+/*!
+ *\brief Modeluje sortowania hybrydowego
+ *
+ * Klasa zawiera implementacje algorytmu
+ * sortowania hybrydowego
+ */
+//************************************************************** 
+
 template <class Typ>
 class HybSort:public ISortable<Typ>
 {
@@ -121,7 +139,19 @@ class HybSort:public ISortable<Typ>
       }
   }
 //**************************************************************
+
 public:
+
+//****************************************************************
+/*!
+ *\brief Metoda inicjalizujaca sortowanie hybrydowe
+ *
+ * Metoda ma za zadanie zainicjalizowac algorytm sortowania 
+ * hybrydowego dla wybranej struktury danych
+ *
+ * \param[in] Kontener - rodzaj kontenera,ktory zostanie 
+ * posortowany
+ */
 //**************************************************************
   void _Sort(Iterable<Typ> *Kontener)
   {
