@@ -1,0 +1,112 @@
+\hypertarget{class_q_sort_opt}{\section{Q\-Sort\-Opt$<$ Typ $>$ Class Template Reference}
+\label{class_q_sort_opt}\index{Q\-Sort\-Opt$<$ Typ $>$@{Q\-Sort\-Opt$<$ Typ $>$}}
+}
+
+
+Modeluje sortowanie szybkie z optymalizacja.  
+
+
+
+
+{\ttfamily \#include $<$Q\-Sort\-Opt.\-hh$>$}
+
+Inheritance diagram for Q\-Sort\-Opt$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_sort_opt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_sort_opt_af9283edf949f7631c4f08f4b945370fa}{\-\_\-\-Sort} (\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$Kontener)
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca sortowanie szybkie z optymalizacja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_q_sort_opt_a1b932a3b24d6ae2c4228ac09abbdb751}{Partycjowanie} (int p, int k, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Zotymalizowane Sortowanie Szybkie. \end{DoxyCompactList}\item 
+void \hyperlink{class_q_sort_opt_a546c6bd644e84d54f87d9788a6a34836}{Qsort\-Opt} (int lewy, int prawy1, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\item 
+int \hyperlink{class_q_sort_opt_a10a7caacd69153bad656cb022f00c806}{Mediana} (Typ $\ast$W) const 
+\begin{DoxyCompactList}\small\item\em Mediana Metoda wyznaczajaca mediana dla tablicy 3 elementowej. Jest to metoda pomocnicza, wykorzystywana przy optymalizacji doboru pivotu w sortowaniu szybkim. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Q\-Sort\-Opt$<$ Typ $>$}
+
+Modeluje sortowanie szybkie z optymalizacja. 
+
+Klasa zawiera implementacje algorytmu sortowania szybkiego z optymalizacja 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_q_sort_opt_af9283edf949f7631c4f08f4b945370fa}{\index{Q\-Sort\-Opt@{Q\-Sort\-Opt}!\-\_\-\-Sort@{\-\_\-\-Sort}}
+\index{\-\_\-\-Sort@{\-\_\-\-Sort}!QSortOpt@{Q\-Sort\-Opt}}
+\subsubsection[{\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Q\-Sort\-Opt}$<$ Typ $>$\-::\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{Kontener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_q_sort_opt_af9283edf949f7631c4f08f4b945370fa}
+
+
+Metoda inicjalizujaca sortowanie szybkie z optymalizacja. 
+
+Metoda ma za zadanie zainicjalizowac algorytm sortowania szybkiego z optymalizacja dla wybranej struktury danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Kontener} & -\/ rodzaj kontenera,ktory zostanie posortowany \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_sortable_aca218e19355fb5d0e6ac7b29ea17dc59}{I\-Sortable$<$ Typ $>$}.
+
+\hypertarget{class_q_sort_opt_a10a7caacd69153bad656cb022f00c806}{\index{Q\-Sort\-Opt@{Q\-Sort\-Opt}!Mediana@{Mediana}}
+\index{Mediana@{Mediana}!QSortOpt@{Q\-Sort\-Opt}}
+\subsubsection[{Mediana}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int {\bf Q\-Sort\-Opt}$<$ Typ $>$\-::Mediana (
+\begin{DoxyParamCaption}
+\item[{Typ $\ast$}]{W}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_q_sort_opt_a10a7caacd69153bad656cb022f00c806}
+
+
+Mediana Metoda wyznaczajaca mediana dla tablicy 3 elementowej. Jest to metoda pomocnicza, wykorzystywana przy optymalizacji doboru pivotu w sortowaniu szybkim. 
+
+\begin{DoxyReturn}{Returns}
+Zwraca indeks na ktorym znajduje sie mediana w tablicy wejsciowej 
+\end{DoxyReturn}
+\hypertarget{class_q_sort_opt_a1b932a3b24d6ae2c4228ac09abbdb751}{\index{Q\-Sort\-Opt@{Q\-Sort\-Opt}!Partycjowanie@{Partycjowanie}}
+\index{Partycjowanie@{Partycjowanie}!QSortOpt@{Q\-Sort\-Opt}}
+\subsubsection[{Partycjowanie}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int {\bf Q\-Sort\-Opt}$<$ Typ $>$\-::Partycjowanie (
+\begin{DoxyParamCaption}
+\item[{int}]{p, }
+\item[{int}]{k, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_q_sort_opt_a1b932a3b24d6ae2c4228ac09abbdb751}
+
+
+Zotymalizowane Sortowanie Szybkie. 
+
+Metoda modeluje algorytm sorotwanie szybkiego z zaimplementowanym algorytmem doboru pivotu, tak aby nie zostal wybrany najmniejszy element w danym podzbiorze.
+
+\mbox{[}in\mbox{]} lewy -\/ poczatkowy indeks pozbioru 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em prawy} & -\/ koncowy indeks podzbioru \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_q_sort_opt_a546c6bd644e84d54f87d9788a6a34836}{\index{Q\-Sort\-Opt@{Q\-Sort\-Opt}!Qsort\-Opt@{Qsort\-Opt}}
+\index{Qsort\-Opt@{Qsort\-Opt}!QSortOpt@{Q\-Sort\-Opt}}
+\subsubsection[{Qsort\-Opt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Q\-Sort\-Opt}$<$ Typ $>$\-::Qsort\-Opt (
+\begin{DoxyParamCaption}
+\item[{int}]{lewy, }
+\item[{int}]{prawy1, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_q_sort_opt_a546c6bd644e84d54f87d9788a6a34836}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_q_sort_opt_8hh}{Q\-Sort\-Opt.\-hh}\end{DoxyCompactItemize}

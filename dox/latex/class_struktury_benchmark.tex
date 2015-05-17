@@ -1,0 +1,333 @@
+\hypertarget{class_struktury_benchmark}{\section{Struktury\-Benchmark$<$ Typ $>$ Class Template Reference}
+\label{class_struktury_benchmark}\index{Struktury\-Benchmark$<$ Typ $>$@{Struktury\-Benchmark$<$ Typ $>$}}
+}
+
+
+{\ttfamily \#include $<$Struktury\-Benchmark.\-hh$>$}
+
+Inheritance diagram for Struktury\-Benchmark$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_struktury_benchmark}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_struktury_benchmark_a7fee46e82c9b608cf799855f1013b9f8}{Struktury\-Benchmark} (const unsigned int Proby, const unsigned int Powt, unsigned int $\ast$Rozmiary)
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a1eae568d916544c7ceb7a8ec071b17ff}{\-\_\-\-Wykonaj\-Test} ()
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca test. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a92c72eeea5ac0da73a6f9f186a583294}{\-\_\-\-Ustaw} (\hyperlink{class_i_sortable}{I\-Sortable}$<$ Typ $>$ $\ast$A, \hyperlink{class_struktury}{Struktury}$<$ Typ $>$ $\ast$B, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$C)
+\begin{DoxyCompactList}\small\item\em Metoda Ustawiajaca. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a949e7eef56ff1dce1be1afac5fccc306}{\-\_\-\-Wczytaj} (string Plik\-Wart)
+\begin{DoxyCompactList}\small\item\em Metoda Wczytujaca dane. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a63247cc5616565e429f5abd09d887630}{\-\_\-\-Dodaj\-Obserwator} (\hyperlink{class_i_obserwator}{I\-Obserwator} $\ast$O)
+\begin{DoxyCompactList}\small\item\em Metoda dodajaca obserwator. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_af08fe671ed7528428ffcb8a4daf65197}{\-\_\-\-Usun\-Obserwator} (\hyperlink{class_i_obserwator}{I\-Obserwator} $\ast$O)
+\begin{DoxyCompactList}\small\item\em Metoda usuwajaca obserwator. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_aa5a6c92b86be3cd99177322c92329164}{\-\_\-\-Generator} () const 
+\begin{DoxyCompactList}\small\item\em Metoda generujaca dane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_struktury_benchmark_a437a5c4b2a1811f3067d1117ac2c2c0e}{\-\_\-\-Test} () const 
+\begin{DoxyCompactList}\small\item\em Metoda wykonujaca test dla odpowiedniej struktury. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a263ee44187c7efb212d031e97cd39bb1}{\-\_\-\-Zaladuj} (const unsigned int n) const 
+\begin{DoxyCompactList}\small\item\em Metoda wypelniajaca Metoda ma za zadanie wypelnic dany kontener danymi. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_a81596424109f9dbe028c3ad3496d04a1}{\-\_\-\-Zwolnij} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwalniajaca Pamiec. \end{DoxyCompactList}\item 
+void \hyperlink{class_struktury_benchmark_af5aa09efcf9a1727e0868930b97ede49}{\-\_\-\-Powiadom\-Obserwatorow} ()
+\begin{DoxyCompactList}\small\item\em Metoda informujaca obserwatorow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i_sortable}{I\-Sortable}$<$ Typ $>$ $\ast$ \hyperlink{class_struktury_benchmark_ab10e00df9ce397566d73f1a3697193f2}{I}
+\begin{DoxyCompactList}\small\item\em Pole Strultury\-Benchmark Pole zawiera wskaźnik na interfejs sortujacy, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. \end{DoxyCompactList}\item 
+\hyperlink{class_struktury}{Struktury}$<$ Typ $>$ $\ast$ \hyperlink{class_struktury_benchmark_aa71bb2ddb1fb6f9e07ef8423c6225464}{S}
+\begin{DoxyCompactList}\small\item\em Pole Strultury\-Benchmark Pole zawiera wskaźnik na \hyperlink{class_struktury}{Struktury}, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. \end{DoxyCompactList}\item 
+\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$ \hyperlink{class_struktury_benchmark_a1b7a323989d91e35099941977b688b22}{T}
+\begin{DoxyCompactList}\small\item\em Pole Strultury\-Benchmark Pole zawiera wskaźnik na \hyperlink{class_iterable}{Iterable}, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_struktury_benchmark_a98c2030555bbaa7fc7efe720bf22696c}{\-\_\-\-Wartosci}
+\begin{DoxyCompactList}\small\item\em Pole Strktury\-Benchmark Pole zawiera wskaznik na typ calkowity, sluzy on do alokowania pamieci dla wczytanych z pliku danych. \end{DoxyCompactList}\item 
+std\-::list$<$ \hyperlink{class_i_obserwator}{I\-Obserwator} $\ast$ $>$ \hyperlink{class_struktury_benchmark_a5c96eb86dfccdad59d41d478ca8d66c3}{Obserwatorzy}
+\begin{DoxyCompactList}\small\item\em Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_struktury_benchmark_a5b2aee5eb235c0ad6c56a4871aad6bd3}{\-\_\-\-Ilosc\-Prob}
+\begin{DoxyCompactList}\small\item\em Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_struktury_benchmark_a49d86123ea73ecc57bc161dcf40fba01}{\-\_\-\-Ilosc\-Powt}
+\begin{DoxyCompactList}\small\item\em Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \hyperlink{class_struktury_benchmark_a9077a191d28f29d9b2eba8d4e8f72ce8}{\-\_\-\-Tablica\-Rozmiarow}
+\begin{DoxyCompactList}\small\item\em Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_struktury_benchmark_a88384371e19a392f7d6d93a1ccadb115}{\-\_\-\-Ilosc\-Danych}
+\begin{DoxyCompactList}\small\item\em Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Struktury\-Benchmark$<$ Typ $>$}
+
+Klasa modeluje pojecie Benchmarku przeznaczonego dla struktur danych przechowujace dane 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_struktury_benchmark_a7fee46e82c9b608cf799855f1013b9f8}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!Struktury\-Benchmark@{Struktury\-Benchmark}}
+\index{Struktury\-Benchmark@{Struktury\-Benchmark}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{Struktury\-Benchmark}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::{\bf Struktury\-Benchmark} (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{Proby, }
+\item[{const unsigned int}]{Powt, }
+\item[{unsigned int $\ast$}]{Rozmiary}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_struktury_benchmark_a7fee46e82c9b608cf799855f1013b9f8}
+
+
+Konstruktor obiektu. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_struktury_benchmark_a63247cc5616565e429f5abd09d887630}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Dodaj\-Obserwator@{\-\_\-\-Dodaj\-Obserwator}}
+\index{\-\_\-\-Dodaj\-Obserwator@{\-\_\-\-Dodaj\-Obserwator}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Dodaj\-Obserwator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Dodaj\-Obserwator (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Obserwator} $\ast$}]{O}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_a63247cc5616565e429f5abd09d887630}
+
+
+Metoda dodajaca obserwator. 
+
+Metoda ma za zadanie dodac nowego obserwatora do listy obserwatorow danego obiektu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em O} & -\/ wskaznik na dodawany obserwator \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_obserwowany_a3e7c49a1b168ed5a3f84bd0c5ae27513}{I\-Obserwowany}.
+
+\hypertarget{class_struktury_benchmark_aa5a6c92b86be3cd99177322c92329164}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Generator@{\-\_\-\-Generator}}
+\index{\-\_\-\-Generator@{\-\_\-\-Generator}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_aa5a6c92b86be3cd99177322c92329164}
+
+
+Metoda generujaca dane. 
+
+Metoda ma za zadanie wygenerowac pseudolosowe dane i zapisac je do pliku 
+
+Implements \hyperlink{class_benchmark_interfejs_a69c431ffaa9d2ab995458cc8c6ae5c1f}{Benchmark\-Interfejs}.
+
+\hypertarget{class_struktury_benchmark_af5aa09efcf9a1727e0868930b97ede49}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Powiadom\-Obserwatorow@{\-\_\-\-Powiadom\-Obserwatorow}}
+\index{\-\_\-\-Powiadom\-Obserwatorow@{\-\_\-\-Powiadom\-Obserwatorow}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Powiadom\-Obserwatorow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Powiadom\-Obserwatorow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_af5aa09efcf9a1727e0868930b97ede49}
+
+
+Metoda informujaca obserwatorow. 
+
+Metoda ma za zadanie poinformowac wszystkich obserwatorow o zmianach, ktore sa istotne dla nich, jakie zostaly wykonane na obiekcie obserwowanym 
+
+Implements \hyperlink{class_i_obserwowany_addbe1bee0cae92b0c1348b2c6d0b525c}{I\-Obserwowany}.
+
+\hypertarget{class_struktury_benchmark_a437a5c4b2a1811f3067d1117ac2c2c0e}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Test@{\-\_\-\-Test}}
+\index{\-\_\-\-Test@{\-\_\-\-Test}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Test}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_a437a5c4b2a1811f3067d1117ac2c2c0e}
+
+
+Metoda wykonujaca test dla odpowiedniej struktury. 
+
+Metoda ma za zadanie wykonac zapelnienie struktury danymi o zadanej w argumencie ilosci 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & -\/ ilosc danych ktora zapelnona struktura \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_benchmark_interfejs_a614b8d69d8af00260210da6308769947}{Benchmark\-Interfejs}.
+
+\hypertarget{class_struktury_benchmark_a92c72eeea5ac0da73a6f9f186a583294}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Ustaw@{\-\_\-\-Ustaw}}
+\index{\-\_\-\-Ustaw@{\-\_\-\-Ustaw}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Ustaw}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Ustaw (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Sortable}$<$ Typ $>$ $\ast$}]{A, }
+\item[{{\bf Struktury}$<$ Typ $>$ $\ast$}]{B, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{C}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_struktury_benchmark_a92c72eeea5ac0da73a6f9f186a583294}
+
+
+Metoda Ustawiajaca. 
+
+Metoda ma za zadanie okreslic na jakich obiektach zostanie wykonana praca poprzez przypisanie do wskaznikow abstrakcyjnych interfejsow obiektow, ktore posiadaja dany interfejs \hypertarget{class_struktury_benchmark_af08fe671ed7528428ffcb8a4daf65197}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Usun\-Obserwator@{\-\_\-\-Usun\-Obserwator}}
+\index{\-\_\-\-Usun\-Obserwator@{\-\_\-\-Usun\-Obserwator}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Usun\-Obserwator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Usun\-Obserwator (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Obserwator} $\ast$}]{O}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_af08fe671ed7528428ffcb8a4daf65197}
+
+
+Metoda usuwajaca obserwator. 
+
+Metoda ma za zadanei usunac zadanego poprzez argument obserwatora z listy obserwatorow danego obiektu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em O} & -\/ wskaznik na obserwator,ktory ma zostac usuniety \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_obserwowany_a6e91b84d0502f038d287152a5d860aff}{I\-Obserwowany}.
+
+\hypertarget{class_struktury_benchmark_a949e7eef56ff1dce1be1afac5fccc306}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Wczytaj@{\-\_\-\-Wczytaj}}
+\index{\-\_\-\-Wczytaj@{\-\_\-\-Wczytaj}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Wczytaj}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Wczytaj (
+\begin{DoxyParamCaption}
+\item[{string}]{Plik\-Wart}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_a949e7eef56ff1dce1be1afac5fccc306}
+
+
+Metoda Wczytujaca dane. 
+
+Metoda ma za zadanie wczytac dane wejciowe o podanej przez argument nazwie oraz przypisac wskaznik do zaalokwanych w pamieci danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Plik\-In} & -\/ nazwa pliku wejsciowego z danymi \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_benchmark_interfejs_a7980830be212d0ea0ffd2e12b083cd06}{Benchmark\-Interfejs}.
+
+\hypertarget{class_struktury_benchmark_a1eae568d916544c7ceb7a8ec071b17ff}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Wykonaj\-Test@{\-\_\-\-Wykonaj\-Test}}
+\index{\-\_\-\-Wykonaj\-Test@{\-\_\-\-Wykonaj\-Test}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Wykonaj\-Test}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Wykonaj\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_struktury_benchmark_a1eae568d916544c7ceb7a8ec071b17ff}
+
+
+Metoda inicjalizujaca test. 
+
+Metoda ma za zadanie uruchomic okreslona ilosc razy testowana metode, czas jej wykonania jest zbierany przez klase zewnetrzna \hypertarget{class_struktury_benchmark_a263ee44187c7efb212d031e97cd39bb1}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Zaladuj@{\-\_\-\-Zaladuj}}
+\index{\-\_\-\-Zaladuj@{\-\_\-\-Zaladuj}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Zaladuj}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Zaladuj (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_a263ee44187c7efb212d031e97cd39bb1}
+
+
+Metoda wypelniajaca Metoda ma za zadanie wypelnic dany kontener danymi. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & -\/ ilosc danych \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_benchmark_interfejs_a25ad3aa17a7faa3489d82b9f7c763cce}{Benchmark\-Interfejs}.
+
+\hypertarget{class_struktury_benchmark_a81596424109f9dbe028c3ad3496d04a1}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}}
+\index{\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_struktury_benchmark_a81596424109f9dbe028c3ad3496d04a1}
+
+
+Metoda zwalniajaca Pamiec. 
+
+Metoda ma za zadanie zwolnic pamiec przeznaczona na dane przechowywane w kontenerze 
+
+Implements \hyperlink{class_benchmark_interfejs_a8a1165914a09368530183ffb968541f1}{Benchmark\-Interfejs}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_struktury_benchmark_a88384371e19a392f7d6d93a1ccadb115}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Ilosc\-Danych@{\-\_\-\-Ilosc\-Danych}}
+\index{\-\_\-\-Ilosc\-Danych@{\-\_\-\-Ilosc\-Danych}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Ilosc\-Danych}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Ilosc\-Danych\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a88384371e19a392f7d6d93a1ccadb115}
+
+
+Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. 
+
+Pole przechowuje informacje o ilosci testyowanych danych \hypertarget{class_struktury_benchmark_a49d86123ea73ecc57bc161dcf40fba01}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Ilosc\-Powt@{\-\_\-\-Ilosc\-Powt}}
+\index{\-\_\-\-Ilosc\-Powt@{\-\_\-\-Ilosc\-Powt}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Ilosc\-Powt}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Ilosc\-Powt\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a49d86123ea73ecc57bc161dcf40fba01}
+
+
+Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. 
+
+Pole zawiera informacje o ilosci powtorzen jakie maja zosatc wykonane przy tescie \hypertarget{class_struktury_benchmark_a5b2aee5eb235c0ad6c56a4871aad6bd3}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Ilosc\-Prob@{\-\_\-\-Ilosc\-Prob}}
+\index{\-\_\-\-Ilosc\-Prob@{\-\_\-\-Ilosc\-Prob}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Ilosc\-Prob}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Ilosc\-Prob\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a5b2aee5eb235c0ad6c56a4871aad6bd3}
+
+
+Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. 
+
+Pole zawiera informacje o ilosci prob jakie zostana wykonane \hypertarget{class_struktury_benchmark_a9077a191d28f29d9b2eba8d4e8f72ce8}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Tablica\-Rozmiarow@{\-\_\-\-Tablica\-Rozmiarow}}
+\index{\-\_\-\-Tablica\-Rozmiarow@{\-\_\-\-Tablica\-Rozmiarow}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Tablica\-Rozmiarow}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int$\ast$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Tablica\-Rozmiarow\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a9077a191d28f29d9b2eba8d4e8f72ce8}
+
+
+Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. 
+
+Pole zawiera wskaznik przechowujacy informcje dla jakiej ilosci danych maja zostac wykonane testy \hypertarget{class_struktury_benchmark_a98c2030555bbaa7fc7efe720bf22696c}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!\-\_\-\-Wartosci@{\-\_\-\-Wartosci}}
+\index{\-\_\-\-Wartosci@{\-\_\-\-Wartosci}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{\-\_\-\-Wartosci}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int$\ast$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::\-\_\-\-Wartosci\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a98c2030555bbaa7fc7efe720bf22696c}
+
+
+Pole Strktury\-Benchmark Pole zawiera wskaznik na typ calkowity, sluzy on do alokowania pamieci dla wczytanych z pliku danych. 
+
+\hypertarget{class_struktury_benchmark_ab10e00df9ce397566d73f1a3697193f2}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!I@{I}}
+\index{I@{I}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{I}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf I\-Sortable}$<$Typ$>$$\ast$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::I\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_ab10e00df9ce397566d73f1a3697193f2}
+
+
+Pole Strultury\-Benchmark Pole zawiera wskaźnik na interfejs sortujacy, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. 
+
+\hypertarget{class_struktury_benchmark_a5c96eb86dfccdad59d41d478ca8d66c3}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!Obserwatorzy@{Obserwatorzy}}
+\index{Obserwatorzy@{Obserwatorzy}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{Obserwatorzy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ std\-::list$<${\bf I\-Obserwator}$\ast$$>$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::Obserwatorzy\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a5c96eb86dfccdad59d41d478ca8d66c3}
+
+
+Pole \hyperlink{class_struktury_benchmark}{Struktury\-Benchmark}. 
+
+Pole zawiera liste obserwatorow,ktore obserwuja ten obiekt \hypertarget{class_struktury_benchmark_aa71bb2ddb1fb6f9e07ef8423c6225464}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!S@{S}}
+\index{S@{S}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{S}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf Struktury}$<$Typ$>$$\ast$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::S\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_aa71bb2ddb1fb6f9e07ef8423c6225464}
+
+
+Pole Strultury\-Benchmark Pole zawiera wskaźnik na \hyperlink{class_struktury}{Struktury}, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. 
+
+\hypertarget{class_struktury_benchmark_a1b7a323989d91e35099941977b688b22}{\index{Struktury\-Benchmark@{Struktury\-Benchmark}!T@{T}}
+\index{T@{T}!StrukturyBenchmark@{Struktury\-Benchmark}}
+\subsubsection[{T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf Iterable}$<$Typ$>$$\ast$ {\bf Struktury\-Benchmark}$<$ Typ $>$\-::T\hspace{0.3cm}{\ttfamily [private]}}}\label{class_struktury_benchmark_a1b7a323989d91e35099941977b688b22}
+
+
+Pole Strultury\-Benchmark Pole zawiera wskaźnik na \hyperlink{class_iterable}{Iterable}, za pomoca niego i metod wirtualnych beda wywolywane odpowiednie dla danej strktury metody. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_struktury_benchmark_8hh}{Struktury\-Benchmark.\-hh}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_q_sort}{\section{Q\-Sort$<$ Typ $>$ Class Template Reference}
+\label{class_q_sort}\index{Q\-Sort$<$ Typ $>$@{Q\-Sort$<$ Typ $>$}}
+}
+
+
+Modeluje sortowanie szybkie.  
+
+
+
+
+{\ttfamily \#include $<$Q\-Sort.\-hh$>$}
+
+Inheritance diagram for Q\-Sort$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_sort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_sort_a059dc69db4a44032648c766e20c92126}{\-\_\-\-Sort} (\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$Kontener)
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca sortowanie szybkie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_q_sort_ad65785cc38373aa2ac7750c26b85cdd3}{Qsort} (int l, int h, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda bedaca implementacja algorytmu sortowania szybkiego. \end{DoxyCompactList}\item 
+int \hyperlink{class_q_sort_ae579d127add3ee9b5a004752fee8d20c}{Partycjowanie} (int p, int k, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda segregujaca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Q\-Sort$<$ Typ $>$}
+
+Modeluje sortowanie szybkie. 
+
+Klasa zawiera implementacje algorytmu sortowania szybkiego 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_q_sort_a059dc69db4a44032648c766e20c92126}{\index{Q\-Sort@{Q\-Sort}!\-\_\-\-Sort@{\-\_\-\-Sort}}
+\index{\-\_\-\-Sort@{\-\_\-\-Sort}!QSort@{Q\-Sort}}
+\subsubsection[{\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Q\-Sort}$<$ Typ $>$\-::\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{Kontener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_q_sort_a059dc69db4a44032648c766e20c92126}
+
+
+Metoda inicjalizujaca sortowanie szybkie. 
+
+Metoda ma za zadanie zainicjalizowac algorytm sortowania szybkiego dla wybranej struktury danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Kontener} & -\/ rodzaj kontenera,ktory zostanie posortowany \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_sortable_aca218e19355fb5d0e6ac7b29ea17dc59}{I\-Sortable$<$ Typ $>$}.
+
+\hypertarget{class_q_sort_ae579d127add3ee9b5a004752fee8d20c}{\index{Q\-Sort@{Q\-Sort}!Partycjowanie@{Partycjowanie}}
+\index{Partycjowanie@{Partycjowanie}!QSort@{Q\-Sort}}
+\subsubsection[{Partycjowanie}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int {\bf Q\-Sort}$<$ Typ $>$\-::Partycjowanie (
+\begin{DoxyParamCaption}
+\item[{int}]{p, }
+\item[{int}]{k, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_q_sort_ae579d127add3ee9b5a004752fee8d20c}
+
+
+Metoda segregujaca. 
+
+Metoda ma za zadanie wybor elementu, ktory ma byc uzyty do podzialu i przenosi wszytskie elementy mniejsze na lewo od tego elementu, a wieksze elementy na prawo od wybranego elementu 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p} & -\/ poczatkowy indeks podzbiotru \\
+\hline
+\mbox{\tt in}  & {\em k} & -\/ koncowy indeks podzbioru \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_q_sort_ad65785cc38373aa2ac7750c26b85cdd3}{\index{Q\-Sort@{Q\-Sort}!Qsort@{Qsort}}
+\index{Qsort@{Qsort}!QSort@{Q\-Sort}}
+\subsubsection[{Qsort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Q\-Sort}$<$ Typ $>$\-::Qsort (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{int}]{h, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_q_sort_ad65785cc38373aa2ac7750c26b85cdd3}
+
+
+Metoda bedaca implementacja algorytmu sortowania szybkiego. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l} & -\/ poczatkowy indeks tablicy \\
+\hline
+\mbox{\tt in}  & {\em h} & -\/ koncowy indeks tablicy \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_q_sort_8hh}{Q\-Sort.\-hh}\end{DoxyCompactItemize}

@@ -1,0 +1,279 @@
+\hypertarget{class_list_arr2x}{\section{List\-Arr2x$<$ Typ $>$ Class Template Reference}
+\label{class_list_arr2x}\index{List\-Arr2x$<$ Typ $>$@{List\-Arr2x$<$ Typ $>$}}
+}
+
+
+Modeluje pojęcie Listy (array)  
+
+
+
+
+{\ttfamily \#include $<$List\-Arr2x.\-hh$>$}
+
+Inheritance diagram for List\-Arr2x$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_list_arr2x}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_list_arr2x_aa9169ef242cd69e31f4800213e403d53}{List\-Arr2x} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezarumentowy. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_arr2x_aac4d1cdaa29d7d3d0a85aa469281d784}{\-\_\-\-Push} (Typ dana, unsigned int pole)
+\begin{DoxyCompactList}\small\item\em Dodaje element do Listy\-Arr1. \end{DoxyCompactList}\item 
+Typ \hyperlink{class_list_arr2x_a4383548c83e707ba59d8d49ab051e8f8}{\-\_\-\-Pop} (unsigned int pole)
+\begin{DoxyCompactList}\small\item\em Pobiera element z Listy\-Arr1. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_list_arr2x_aa9d38356df7fec58f282ec00148bd6db}{\-\_\-\-Rozmiar} () const 
+\begin{DoxyCompactList}\small\item\em Wielkość listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_arr2x_a89de3396a3038ccd4ba2e632e194ae78}{Wczytaj\-Dane} (const std\-::string Plik\-In, unsigned int n)
+\begin{DoxyCompactList}\small\item\em Wczytuje dane z pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_arr2x_a1de6b30e511fef970573d06989bdbf30}{\-\_\-\-Pokaz} () const 
+\begin{DoxyCompactList}\small\item\em Metoda wypisujaca elemeny listy. \end{DoxyCompactList}\item 
+const Typ \hyperlink{class_list_arr2x_a1d441a5e86d979c8093543218faa13b3}{Wartosc} (unsigned int i) const 
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca wartosc. \end{DoxyCompactList}\item 
+Typ \& \hyperlink{class_list_arr2x_a18b7381c3fff0f489bd21dca90870f6f}{Adres} (unsigned int i)
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca referencje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_list_arr2x_a5864b6c097b593e0c126a79837f8fb19}{\-\_\-\-Zamien} (unsigned int i, unsigned int j)
+\begin{DoxyCompactList}\small\item\em Metoda zamieniajaca Metoda ma za zadanie zamienic miejscami elementy wybrane przez argumenty wywolania. \end{DoxyCompactList}\item 
+void \hyperlink{class_list_arr2x_aec30c6d499f26d03e94e001e1358ee18}{\-\_\-\-Zwolnij} ()
+\begin{DoxyCompactList}\small\item\em Zwalnia pamięć \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Typ $\ast$ \hyperlink{class_list_arr2x_a6079e03d75b837d563aac676b80a9da2}{tab}
+\begin{DoxyCompactList}\small\item\em Wkaźnik na dynamiczną tablicę \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_list_arr2x_ac414e40eb15aaa95be5fe2c534a9a8b7}{Rozmiar\-T}
+\begin{DoxyCompactList}\small\item\em Rozmiar tablicy. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_list_arr2x_abc3468541635f4153c24b76ef573cd65}{Rozmiar\-L}
+\begin{DoxyCompactList}\small\item\em Rozmiar Listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class List\-Arr2x$<$ Typ $>$}
+
+Modeluje pojęcie Listy (array) 
+
+Modeluje pojęcie Listy opartej na dynamicznej tablicy. Dodając elementy zwiększa tablicę dwukrotnie, jeżeli brakuje miejsca. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_list_arr2x_aa9169ef242cd69e31f4800213e403d53}{\index{List\-Arr2x@{List\-Arr2x}!List\-Arr2x@{List\-Arr2x}}
+\index{List\-Arr2x@{List\-Arr2x}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{List\-Arr2x}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf List\-Arr2x}$<$ Typ $>$\-::{\bf List\-Arr2x} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_list_arr2x_aa9169ef242cd69e31f4800213e403d53}
+
+
+Konstruktor bezarumentowy. 
+
+Kontruktor alokujący tablicę jednoelementową z której będzie tworzona lista 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_list_arr2x_a1de6b30e511fef970573d06989bdbf30}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Pokaz@{\-\_\-\-Pokaz}}
+\index{\-\_\-\-Pokaz@{\-\_\-\-Pokaz}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Pokaz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Pokaz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_a1de6b30e511fef970573d06989bdbf30}
+
+
+Metoda wypisujaca elemeny listy. 
+
+Metoda ma za zadanie wypisac wszystkie elementy znajdujace sie obecnie na liscie danych 
+
+Implements \hyperlink{class_struktury_a9a4290d332a6a613f92d4d4bfe2577ae}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_a4383548c83e707ba59d8d49ab051e8f8}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Pop@{\-\_\-\-Pop}}
+\index{\-\_\-\-Pop@{\-\_\-\-Pop}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_a4383548c83e707ba59d8d49ab051e8f8}
+
+
+Pobiera element z Listy\-Arr1. 
+
+Pobiera element z Listy\-Arr2x usuwając go z niej i zmniejszając rozmiar o połowę w przypadku przekroczenia stosunku 1\-:4 (Rozmiar\-L\-:Rozmiar\-T)
+
+param\mbox{[}in\mbox{]} -\/ pole -\/ nr pola z którgo chcemy pobrać element (indeksowane od 0)
+
+retval -\/ zwraca wartosc pobranej danej lub '-\/1' w przyadku bledu 
+
+Implements \hyperlink{class_struktury_a536345360bdb841d5462b578fe758b73}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_aac4d1cdaa29d7d3d0a85aa469281d784}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Push@{\-\_\-\-Push}}
+\index{\-\_\-\-Push@{\-\_\-\-Push}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Push (
+\begin{DoxyParamCaption}
+\item[{Typ}]{dana, }
+\item[{unsigned int}]{pole}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_aac4d1cdaa29d7d3d0a85aa469281d784}
+
+
+Dodaje element do Listy\-Arr1. 
+
+Dodaje nowy element do Listy\-Arr1
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dana} & -\/ element który chcemy umieścić na liście \\
+\hline
+\mbox{\tt in}  & {\em pole} & -\/ nr pola na którym chcemy umieścić element jeżeli chcesz umieścić na początku listy podaj wartość 0, na końcu warość size() \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_struktury_aac09c019a75dd7bfda2f313733300c4c}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_aa9d38356df7fec58f282ec00148bd6db}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}}
+\index{\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Rozmiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_aa9d38356df7fec58f282ec00148bd6db}
+
+
+Wielkość listy. 
+
+Informuje o ilości elementów znajdujących się na Liście\-Arr1
+
+
+\begin{DoxyRetVals}{Return values}
+{\em -\/} & zwraca liczbę elementów Listy\-Arr1 \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \hyperlink{class_struktury_a3ed3c70e26cefc242633abc13097acce}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_a5864b6c097b593e0c126a79837f8fb19}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Zamien@{\-\_\-\-Zamien}}
+\index{\-\_\-\-Zamien@{\-\_\-\-Zamien}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Zamien}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Zamien (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_a5864b6c097b593e0c126a79837f8fb19}
+
+
+Metoda zamieniajaca Metoda ma za zadanie zamienic miejscami elementy wybrane przez argumenty wywolania. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/ Adres elementu podlegajacy zamianie \\
+\hline
+\mbox{\tt in}  & {\em j} & -\/ Adres elementu podlegajacy zamianie \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_iterable_a631b741c6f81ae09f823c86f9eed9f7b}{Iterable$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_aec30c6d499f26d03e94e001e1358ee18}{\index{List\-Arr2x@{List\-Arr2x}!\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}}
+\index{\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{\-\_\-\-Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf List\-Arr2x}$<$ Typ $>$\-::\-\_\-\-Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_aec30c6d499f26d03e94e001e1358ee18}
+
+
+Zwalnia pamięć 
+
+Zwalnia pamięć zaalokowaną przez List\-Arr1 
+
+Implements \hyperlink{class_struktury_aa85ab98de0f8bb1c257e6d1723d107f5}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_a18b7381c3fff0f489bd21dca90870f6f}{\index{List\-Arr2x@{List\-Arr2x}!Adres@{Adres}}
+\index{Adres@{Adres}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{Adres}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ\& {\bf List\-Arr2x}$<$ Typ $>$\-::Adres (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_a18b7381c3fff0f489bd21dca90870f6f}
+
+
+Metoda zwracajaca referencje. 
+
+Metoda ma za zadanie zwrocic referencje do pola kontenera zadanego poprzez argument metody 
+
+Implements \hyperlink{class_iterable_a7e56512db9ef2691198e1914a4ddb300}{Iterable$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_a1d441a5e86d979c8093543218faa13b3}{\index{List\-Arr2x@{List\-Arr2x}!Wartosc@{Wartosc}}
+\index{Wartosc@{Wartosc}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{Wartosc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ const Typ {\bf List\-Arr2x}$<$ Typ $>$\-::Wartosc (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_list_arr2x_a1d441a5e86d979c8093543218faa13b3}
+
+
+Metoda zwracajaca wartosc. 
+
+Metoda ma za zadanei zwrocic wartosc,kryjaca sie pod danym indeksem dla dowolnego kontenera posiadajacego interfejs.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/\-Indeks z ktorego zostanie odczytana wartosc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca wartosc, kryjaca sie pod danym indeksem konteneru 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_iterable_a6b75a7c8c41e1f13e6eff2276af62aeb}{Iterable$<$ Typ $>$}.
+
+\hypertarget{class_list_arr2x_a89de3396a3038ccd4ba2e632e194ae78}{\index{List\-Arr2x@{List\-Arr2x}!Wczytaj\-Dane@{Wczytaj\-Dane}}
+\index{Wczytaj\-Dane@{Wczytaj\-Dane}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{Wczytaj\-Dane}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf List\-Arr2x}$<$ Typ $>$\-::Wczytaj\-Dane (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{Plik\-In, }
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_list_arr2x_a89de3396a3038ccd4ba2e632e194ae78}
+
+
+Wczytuje dane z pliku. 
+
+Wczytuje dane z pliku do List\-Arr1
+
+param\mbox{[}in\mbox{]} nazwa\-Pliku -\/ nazwa pliku z danymi param\mbox{[}in\mbox{]} n -\/ ilość danych do wczytania, 0 oznacza wszystkie dane z pliku 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_list_arr2x_abc3468541635f4153c24b76ef573cd65}{\index{List\-Arr2x@{List\-Arr2x}!Rozmiar\-L@{Rozmiar\-L}}
+\index{Rozmiar\-L@{Rozmiar\-L}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{Rozmiar\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf List\-Arr2x}$<$ Typ $>$\-::Rozmiar\-L\hspace{0.3cm}{\ttfamily [private]}}}\label{class_list_arr2x_abc3468541635f4153c24b76ef573cd65}
+
+
+Rozmiar Listy. 
+
+Aktualny rozmiar Listy\-Arr2x \hypertarget{class_list_arr2x_ac414e40eb15aaa95be5fe2c534a9a8b7}{\index{List\-Arr2x@{List\-Arr2x}!Rozmiar\-T@{Rozmiar\-T}}
+\index{Rozmiar\-T@{Rozmiar\-T}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{Rozmiar\-T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf List\-Arr2x}$<$ Typ $>$\-::Rozmiar\-T\hspace{0.3cm}{\ttfamily [private]}}}\label{class_list_arr2x_ac414e40eb15aaa95be5fe2c534a9a8b7}
+
+
+Rozmiar tablicy. 
+
+Aktualny rozmiar tablicy. \hypertarget{class_list_arr2x_a6079e03d75b837d563aac676b80a9da2}{\index{List\-Arr2x@{List\-Arr2x}!tab@{tab}}
+\index{tab@{tab}!ListArr2x@{List\-Arr2x}}
+\subsubsection[{tab}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ$\ast$ {\bf List\-Arr2x}$<$ Typ $>$\-::tab\hspace{0.3cm}{\ttfamily [private]}}}\label{class_list_arr2x_a6079e03d75b837d563aac676b80a9da2}
+
+
+Wkaźnik na dynamiczną tablicę 
+
+Wskaźnik na dynamiczną tablicę tworzącą Listę\-Arr2x 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_list_arr2x_8hh}{List\-Arr2x.\-hh}\end{DoxyCompactItemize}

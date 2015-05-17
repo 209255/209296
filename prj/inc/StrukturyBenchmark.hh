@@ -155,10 +155,34 @@ private:
 //****************************************************************************************
 
 public:
+//****************************************************************************************
+  StrukturyBenchmark()
+  {
+    _IloscProb = 0;
+    _IloscPowt = 0;
+    _TablicaRozmiarow = NULL;
+    _IloscDanych = 0;
+    _Wartosci = NULL;
+    std::list<IObserwator *>::iterator it;
+    for(it = Obserwatorzy.begin(); it != Obserwatorzy.end(); ++it)
+      (*it) = NULL;
+  }
+//****************************************************************************************
+  virtual ~StrukturyBenchmark()
+  {
+    delete[] _Wartosci;
+    delete [] _TablicaRozmiarow;
+    _Wartosci = NULL;
+    _TablicaRozmiarow = NULL;
 
-/****************************************************************************************
+    std::list<IObserwator *>::iterator it;
+    for(it = Obserwatorzy.begin(); it != Obserwatorzy.end(); ++it)
+      (*it) = NULL;
+    }
+//****************************************************************************************
 /*!
  *\brief Konstruktor obiektu
+ *
  */
 //****************************************************************************************
   StrukturyBenchmark(const unsigned int Proby,const unsigned int Powt,
@@ -178,7 +202,7 @@ public:
       _Wartosci[i] = 0;
     }
   }
-/****************************************************************************************
+//****************************************************************************************
 /*!
  *\brief Metoda inicjalizujaca test
  *

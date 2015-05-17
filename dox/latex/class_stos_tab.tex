@@ -1,0 +1,274 @@
+\hypertarget{class_stos_tab}{\section{Stos\-Tab$<$ Typ $>$ Class Template Reference}
+\label{class_stos_tab}\index{Stos\-Tab$<$ Typ $>$@{Stos\-Tab$<$ Typ $>$}}
+}
+
+
+{\ttfamily \#include $<$Stos\-Tab.\-hh$>$}
+
+Inheritance diagram for Stos\-Tab$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stos_tab}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stos_tab_aec0cb259c6f044fa7d3b367dc1baca5c}{\-\_\-\-Zwolnij} ()
+\item 
+\hyperlink{class_stos_tab_a347bc350ea6ff8ad86b853895db5e7a9}{Stos\-Tab} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor Podczas tworzenia obiektu tej klasy automatycznie alokowana jest tablica o rozmiarze 1 oraz ustawienie obecnej liczby elementow listy na 0. \end{DoxyCompactList}\item 
+\hyperlink{class_stos_tab_a5972345c1b71597d11330f8953dec03d}{Stos\-Tab} (const \hyperlink{class_stos_tab}{Stos\-Tab} \&K)
+\begin{DoxyCompactList}\small\item\em Konstruktor Kopiujacy. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_stos_tab_a580b0a918a829377698f475a5f75457b}{$\sim$\-Stos\-Tab} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_tab_a1b3c30902f28bf819ea5864c85ebede9}{\-\_\-\-Pokaz} () const 
+\begin{DoxyCompactList}\small\item\em Metoda wypisujaca elemeny Stosu. \end{DoxyCompactList}\item 
+Typ \hyperlink{class_stos_tab_a43e5e031570e69dc27fc11feca969645}{\-\_\-\-Pop} (unsigned int Pozycja=0)
+\begin{DoxyCompactList}\small\item\em Metoda sciagajaca element ze stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_tab_a73c95fc8151510c21c5567e85296ea31}{\-\_\-\-Push} (Typ k, unsigned int Pozycja=0)
+\begin{DoxyCompactList}\small\item\em Metoda dodajaca elemet do tablicy. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stos_tab_a51b2da61d6c4c2085646b84395c2d3c0}{\-\_\-\-Rozmiar} () const 
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca rozmiar listy. \end{DoxyCompactList}\item 
+const Typ \hyperlink{class_stos_tab_aeae02936cdfdb3df20084174817b85dd}{Wartosc} (unsigned int Index) const 
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca wartosc. \end{DoxyCompactList}\item 
+Typ \& \hyperlink{class_stos_tab_ad19a954bb9cc9c32b42e4046c422984a}{Adres} (unsigned int Index)
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca referencje. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_tab_a6ce0e7f4dabae776f69fb0540ff7d8a4}{\-\_\-\-Zamien} (unsigned int i, unsigned int j)
+\begin{DoxyCompactList}\small\item\em Metoda zamieniajaca Metoda ma za zadanie zamienic miejscami elementy wybrane przez argumenty wywolania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Typ $\ast$ \hyperlink{class_stos_tab_ab6a9150fc50f2eb508a6c8026816631b}{\-\_\-\-L}
+\begin{DoxyCompactList}\small\item\em Pole klasy \hyperlink{class_stos_tab}{Stos\-Tab}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stos_tab_abb7d52d46fdaf90dc2f3acb421bf7af6}{\-\_\-\-Rozmiar\-L}
+\begin{DoxyCompactList}\small\item\em Pole Klasy \hyperlink{class_stos_tab}{Stos\-Tab}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stos_tab_a4db33c7f5b5f57b4d755a1beb59852dc}{\-\_\-\-Rozmiar\-T}
+\begin{DoxyCompactList}\small\item\em Pole Klasy \hyperlink{class_stos_tab}{Stos\-Tab}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_stos_tab_a347bc350ea6ff8ad86b853895db5e7a9}{\index{Stos\-Tab@{Stos\-Tab}!Stos\-Tab@{Stos\-Tab}}
+\index{Stos\-Tab@{Stos\-Tab}!StosTab@{Stos\-Tab}}
+\subsubsection[{Stos\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf Stos\-Tab}$<$ Typ $>$\-::{\bf Stos\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_tab_a347bc350ea6ff8ad86b853895db5e7a9}
+
+
+Konstruktor Podczas tworzenia obiektu tej klasy automatycznie alokowana jest tablica o rozmiarze 1 oraz ustawienie obecnej liczby elementow listy na 0. 
+
+\hypertarget{class_stos_tab_a5972345c1b71597d11330f8953dec03d}{\index{Stos\-Tab@{Stos\-Tab}!Stos\-Tab@{Stos\-Tab}}
+\index{Stos\-Tab@{Stos\-Tab}!StosTab@{Stos\-Tab}}
+\subsubsection[{Stos\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ {\bf Stos\-Tab}$<$ Typ $>$\-::{\bf Stos\-Tab} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Stos\-Tab}$<$ Typ $>$ \&}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_tab_a5972345c1b71597d11330f8953dec03d}
+
+
+Konstruktor Kopiujacy. 
+
+\hypertarget{class_stos_tab_a580b0a918a829377698f475a5f75457b}{\index{Stos\-Tab@{Stos\-Tab}!$\sim$\-Stos\-Tab@{$\sim$\-Stos\-Tab}}
+\index{$\sim$\-Stos\-Tab@{$\sim$\-Stos\-Tab}!StosTab@{Stos\-Tab}}
+\subsubsection[{$\sim$\-Stos\-Tab}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ virtual {\bf Stos\-Tab}$<$ Typ $>$\-::$\sim${\bf Stos\-Tab} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_stos_tab_a580b0a918a829377698f475a5f75457b}
+
+
+Destruktor obiektu. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_stos_tab_a1b3c30902f28bf819ea5864c85ebede9}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Pokaz@{\-\_\-\-Pokaz}}
+\index{\-\_\-\-Pokaz@{\-\_\-\-Pokaz}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Pokaz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Pokaz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_a1b3c30902f28bf819ea5864c85ebede9}
+
+
+Metoda wypisujaca elemeny Stosu. 
+
+Metoda ma za zadanie wypisac wszystkie elementy znajdujace sie obecnie na liscie danych 
+
+Implements \hyperlink{class_struktury_a9a4290d332a6a613f92d4d4bfe2577ae}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_a43e5e031570e69dc27fc11feca969645}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Pop@{\-\_\-\-Pop}}
+\index{\-\_\-\-Pop@{\-\_\-\-Pop}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Pozycja = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_a43e5e031570e69dc27fc11feca969645}
+
+
+Metoda sciagajaca element ze stosu. 
+
+Metoda ma za zadanie sciagnac ostatni element stosu, w przypadku gdy tablica jest do połowy pusta nastepuje utworzenie nowej tablicy o dwa razy mniejszym rozmiarze 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Pozycja} & -\/ numer elementy kotry zostanie usuniety z listy i zostanie zwrocona jego wartosc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca wybrany przez uzytkownika element 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_struktury_a536345360bdb841d5462b578fe758b73}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_a73c95fc8151510c21c5567e85296ea31}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Push@{\-\_\-\-Push}}
+\index{\-\_\-\-Push@{\-\_\-\-Push}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Push (
+\begin{DoxyParamCaption}
+\item[{Typ}]{k, }
+\item[{unsigned int}]{Pozycja = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_a73c95fc8151510c21c5567e85296ea31}
+
+
+Metoda dodajaca elemet do tablicy. 
+
+Metoda ma za zadanie dodac nowy element na koncu stosu, w przypadku zapelnienia tablicy nastepuje utworzenie nowej tablicy i przepisanie elementow
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em k} & -\/ wartosc jaka chcemy dodac do listy \\
+\hline
+\mbox{\tt in}  & {\em Pozycja} & -\/ Pozycja na ktorej chcemy dodac wartosc \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_struktury_aac09c019a75dd7bfda2f313733300c4c}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_a51b2da61d6c4c2085646b84395c2d3c0}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}}
+\index{\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Rozmiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_a51b2da61d6c4c2085646b84395c2d3c0}
+
+
+Metoda zwracajaca rozmiar listy. 
+
+Metoda zwraca informacje o obecnej ilosci danych w strukturze
+
+\begin{DoxyReturn}{Returns}
+Zwraca ilosc elementow listy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_struktury_a3ed3c70e26cefc242633abc13097acce}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_a6ce0e7f4dabae776f69fb0540ff7d8a4}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Zamien@{\-\_\-\-Zamien}}
+\index{\-\_\-\-Zamien@{\-\_\-\-Zamien}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Zamien}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Zamien (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_a6ce0e7f4dabae776f69fb0540ff7d8a4}
+
+
+Metoda zamieniajaca Metoda ma za zadanie zamienic miejscami elementy wybrane przez argumenty wywolania. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/ Adres elementu podlegajacy zamianie \\
+\hline
+\mbox{\tt in}  & {\em j} & -\/ Adres elementu podlegajacy zamianie \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_iterable_a631b741c6f81ae09f823c86f9eed9f7b}{Iterable$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_aec0cb259c6f044fa7d3b367dc1baca5c}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}}
+\index{\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_aec0cb259c6f044fa7d3b367dc1baca5c}
+Metoda zwalniajaca pamiec
+
+Metoda ma za zadanie zwolnij pamiec zajmowana przez dane, dopoki ilosc elementow listy nie wynosi 0 wykonywana jest metoda \-\_\-\-Pop, aby oproznic stos i zwolnic pamiec 
+
+Implements \hyperlink{class_struktury_aa85ab98de0f8bb1c257e6d1723d107f5}{Struktury$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_ad19a954bb9cc9c32b42e4046c422984a}{\index{Stos\-Tab@{Stos\-Tab}!Adres@{Adres}}
+\index{Adres@{Adres}!StosTab@{Stos\-Tab}}
+\subsubsection[{Adres}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ\& {\bf Stos\-Tab}$<$ Typ $>$\-::Adres (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_ad19a954bb9cc9c32b42e4046c422984a}
+
+
+Metoda zwracajaca referencje. 
+
+Metoda ma za zadanie zwrocic referencje do pola kontenera zadanego poprzez argument metody 
+
+Implements \hyperlink{class_iterable_a7e56512db9ef2691198e1914a4ddb300}{Iterable$<$ Typ $>$}.
+
+\hypertarget{class_stos_tab_aeae02936cdfdb3df20084174817b85dd}{\index{Stos\-Tab@{Stos\-Tab}!Wartosc@{Wartosc}}
+\index{Wartosc@{Wartosc}!StosTab@{Stos\-Tab}}
+\subsubsection[{Wartosc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ const Typ {\bf Stos\-Tab}$<$ Typ $>$\-::Wartosc (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_stos_tab_aeae02936cdfdb3df20084174817b85dd}
+
+
+Metoda zwracajaca wartosc. 
+
+Metoda ma za zadanei zwrocic wartosc,kryjaca sie pod danym indeksem dla dowolnego kontenera posiadajacego interfejs.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/\-Indeks z ktorego zostanie odczytana wartosc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca wartosc, kryjaca sie pod danym indeksem konteneru 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_iterable_a6b75a7c8c41e1f13e6eff2276af62aeb}{Iterable$<$ Typ $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_stos_tab_ab6a9150fc50f2eb508a6c8026816631b}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-L@{\-\_\-\-L}}
+\index{\-\_\-\-L@{\-\_\-\-L}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ Typ$\ast$ {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-L\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_tab_ab6a9150fc50f2eb508a6c8026816631b}
+
+
+Pole klasy \hyperlink{class_stos_tab}{Stos\-Tab}. 
+
+Pole zawiera wskaznik na typ calkowity, sluzy do alokacji pamieci na dynamiczna tablice \hypertarget{class_stos_tab_abb7d52d46fdaf90dc2f3acb421bf7af6}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Rozmiar\-L@{\-\_\-\-Rozmiar\-L}}
+\index{\-\_\-\-Rozmiar\-L@{\-\_\-\-Rozmiar\-L}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Rozmiar\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Rozmiar\-L\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_tab_abb7d52d46fdaf90dc2f3acb421bf7af6}
+
+
+Pole Klasy \hyperlink{class_stos_tab}{Stos\-Tab}. 
+
+Pole przechowuje informacje o ilosci obecnie znajdujacych sie elementow na liscie danych \hypertarget{class_stos_tab_a4db33c7f5b5f57b4d755a1beb59852dc}{\index{Stos\-Tab@{Stos\-Tab}!\-\_\-\-Rozmiar\-T@{\-\_\-\-Rozmiar\-T}}
+\index{\-\_\-\-Rozmiar\-T@{\-\_\-\-Rozmiar\-T}!StosTab@{Stos\-Tab}}
+\subsubsection[{\-\_\-\-Rozmiar\-T}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ unsigned int {\bf Stos\-Tab}$<$ Typ $>$\-::\-\_\-\-Rozmiar\-T\hspace{0.3cm}{\ttfamily [private]}}}\label{class_stos_tab_a4db33c7f5b5f57b4d755a1beb59852dc}
+
+
+Pole Klasy \hyperlink{class_stos_tab}{Stos\-Tab}. 
+
+Pole przechowuje informacje o obecnycm rozmiarze tablicy danych 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_stos_tab_8hh}{Stos\-Tab.\-hh}\end{DoxyCompactItemize}

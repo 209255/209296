@@ -1,0 +1,99 @@
+\hypertarget{class_i_obserwowany}{\section{I\-Obserwowany Class Reference}
+\label{class_i_obserwowany}\index{I\-Obserwowany@{I\-Obserwowany}}
+}
+
+
+Interfejs dla Obserwatora.  
+
+
+
+
+{\ttfamily \#include $<$I\-Obserwowany.\-hh$>$}
+
+Inheritance diagram for I\-Obserwowany\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_obserwowany}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_obserwowany_a3e7c49a1b168ed5a3f84bd0c5ae27513}{\-\_\-\-Dodaj\-Obserwator} (\hyperlink{class_i_obserwator}{I\-Obserwator} $\ast$O)=0
+\begin{DoxyCompactList}\small\item\em Metoda dodajaca obserwator. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_obserwowany_a6e91b84d0502f038d287152a5d860aff}{\-\_\-\-Usun\-Obserwator} (\hyperlink{class_i_obserwator}{I\-Obserwator} $\ast$O)=0
+\begin{DoxyCompactList}\small\item\em Metoda usuwajaca obserwator. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_obserwowany_addbe1bee0cae92b0c1348b2c6d0b525c}{\-\_\-\-Powiadom\-Obserwatorow} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda informujaca obserwatorow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfejs dla Obserwatora. 
+
+Klasa modeluje pojecie abstrakcyjnego interfejsu dla klasy bedacej obiektem obserwowanym 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_obserwowany_a3e7c49a1b168ed5a3f84bd0c5ae27513}{\index{I\-Obserwowany@{I\-Obserwowany}!\-\_\-\-Dodaj\-Obserwator@{\-\_\-\-Dodaj\-Obserwator}}
+\index{\-\_\-\-Dodaj\-Obserwator@{\-\_\-\-Dodaj\-Obserwator}!IObserwowany@{I\-Obserwowany}}
+\subsubsection[{\-\_\-\-Dodaj\-Obserwator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Obserwowany\-::\-\_\-\-Dodaj\-Obserwator (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Obserwator} $\ast$}]{O}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_i_obserwowany_a3e7c49a1b168ed5a3f84bd0c5ae27513}
+
+
+Metoda dodajaca obserwator. 
+
+Metoda ma za zadanie dodac nowego obserwatora do listy obserwatorow danego obiektu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em O} & -\/ wskaznik na dodawany obserwator \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_struktury_benchmark_a63247cc5616565e429f5abd09d887630}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_i_obserwowany_addbe1bee0cae92b0c1348b2c6d0b525c}{\index{I\-Obserwowany@{I\-Obserwowany}!\-\_\-\-Powiadom\-Obserwatorow@{\-\_\-\-Powiadom\-Obserwatorow}}
+\index{\-\_\-\-Powiadom\-Obserwatorow@{\-\_\-\-Powiadom\-Obserwatorow}!IObserwowany@{I\-Obserwowany}}
+\subsubsection[{\-\_\-\-Powiadom\-Obserwatorow}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Obserwowany\-::\-\_\-\-Powiadom\-Obserwatorow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_i_obserwowany_addbe1bee0cae92b0c1348b2c6d0b525c}
+
+
+Metoda informujaca obserwatorow. 
+
+Metoda ma za zadanie poinformowac wszystkich obserwatorow o zmianach, ktore sa istotne dla nich, jakie zostaly wykonane na obiekcie obserwowanym 
+
+Implemented in \hyperlink{class_struktury_benchmark_af5aa09efcf9a1727e0868930b97ede49}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_i_obserwowany_a6e91b84d0502f038d287152a5d860aff}{\index{I\-Obserwowany@{I\-Obserwowany}!\-\_\-\-Usun\-Obserwator@{\-\_\-\-Usun\-Obserwator}}
+\index{\-\_\-\-Usun\-Obserwator@{\-\_\-\-Usun\-Obserwator}!IObserwowany@{I\-Obserwowany}}
+\subsubsection[{\-\_\-\-Usun\-Obserwator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\-Obserwowany\-::\-\_\-\-Usun\-Obserwator (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-Obserwator} $\ast$}]{O}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_i_obserwowany_a6e91b84d0502f038d287152a5d860aff}
+
+
+Metoda usuwajaca obserwator. 
+
+Metoda ma za zadanei usunac zadanego poprzez argument obserwatora z listy obserwatorow danego obiektu
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em O} & -\/ wskaznik na obserwator,ktory ma zostac usuniety \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_struktury_benchmark_af08fe671ed7528428ffcb8a4daf65197}{Struktury\-Benchmark$<$ Typ $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_i_obserwowany_8hh}{I\-Obserwowany.\-hh}\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\hypertarget{class_hyb_sort}{\section{Hyb\-Sort$<$ Typ $>$ Class Template Reference}
+\label{class_hyb_sort}\index{Hyb\-Sort$<$ Typ $>$@{Hyb\-Sort$<$ Typ $>$}}
+}
+
+
+Modeluje sortowania hybrydowego.  
+
+
+
+
+{\ttfamily \#include $<$Hyb\-Sort.\-hh$>$}
+
+Inheritance diagram for Hyb\-Sort$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hyb_sort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hyb_sort_af12772bd67fad3bed145474a48b4c8b3}{\-\_\-\-Sort} (\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$Kontener)
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca sortowanie hybrydowe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_hyb_sort_a3a202fcd27870bb2b56bb256586cacdc}{Mediana} (Typ $\ast$W) const 
+\begin{DoxyCompactList}\small\item\em Mediana Metoda wyznaczajaca mediana dla tablicy 3 elementowej. Jest to metoda pomocnicza, wykorzystywana przy optymalizacji doboru pivotu w sortowaniu szybkim. \end{DoxyCompactList}\item 
+int \hyperlink{class_hyb_sort_ac6196e148240080a240ca990c7f740bb}{Partycjowanie} (int p, int k, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Zotymalizowane Sortowanie Szybkie. \end{DoxyCompactList}\item 
+void \hyperlink{class_hyb_sort_afdf20a6c2fc2101bf9b1851919f910b7}{Wstaw\-\_\-\-Sort} (int l, int p, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Sortowanie przez Wstawianie Metoda ma za zadanie posortowac tablice przyjmowana jako argument. \end{DoxyCompactList}\item 
+void \hyperlink{class_hyb_sort_aafe7b17d8af23857d648f8f35a281809}{Sortowanie\-\_\-\-Hybrydowe} (int l, int h, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda sortowania hybrydowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Hyb\-Sort$<$ Typ $>$}
+
+Modeluje sortowania hybrydowego. 
+
+Klasa zawiera implementacje algorytmu sortowania hybrydowego 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hyb_sort_af12772bd67fad3bed145474a48b4c8b3}{\index{Hyb\-Sort@{Hyb\-Sort}!\-\_\-\-Sort@{\-\_\-\-Sort}}
+\index{\-\_\-\-Sort@{\-\_\-\-Sort}!HybSort@{Hyb\-Sort}}
+\subsubsection[{\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Hyb\-Sort}$<$ Typ $>$\-::\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{Kontener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_hyb_sort_af12772bd67fad3bed145474a48b4c8b3}
+
+
+Metoda inicjalizujaca sortowanie hybrydowe. 
+
+Metoda ma za zadanie zainicjalizowac algorytm sortowania hybrydowego dla wybranej struktury danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Kontener} & -\/ rodzaj kontenera,ktory zostanie posortowany \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_sortable_aca218e19355fb5d0e6ac7b29ea17dc59}{I\-Sortable$<$ Typ $>$}.
+
+\hypertarget{class_hyb_sort_a3a202fcd27870bb2b56bb256586cacdc}{\index{Hyb\-Sort@{Hyb\-Sort}!Mediana@{Mediana}}
+\index{Mediana@{Mediana}!HybSort@{Hyb\-Sort}}
+\subsubsection[{Mediana}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int {\bf Hyb\-Sort}$<$ Typ $>$\-::Mediana (
+\begin{DoxyParamCaption}
+\item[{Typ $\ast$}]{W}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_hyb_sort_a3a202fcd27870bb2b56bb256586cacdc}
+
+
+Mediana Metoda wyznaczajaca mediana dla tablicy 3 elementowej. Jest to metoda pomocnicza, wykorzystywana przy optymalizacji doboru pivotu w sortowaniu szybkim. 
+
+\begin{DoxyReturn}{Returns}
+Zwraca indeks na ktorym znajduje sie mediana w tablicy wejsciowej 
+\end{DoxyReturn}
+\hypertarget{class_hyb_sort_ac6196e148240080a240ca990c7f740bb}{\index{Hyb\-Sort@{Hyb\-Sort}!Partycjowanie@{Partycjowanie}}
+\index{Partycjowanie@{Partycjowanie}!HybSort@{Hyb\-Sort}}
+\subsubsection[{Partycjowanie}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ int {\bf Hyb\-Sort}$<$ Typ $>$\-::Partycjowanie (
+\begin{DoxyParamCaption}
+\item[{int}]{p, }
+\item[{int}]{k, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_hyb_sort_ac6196e148240080a240ca990c7f740bb}
+
+
+Zotymalizowane Sortowanie Szybkie. 
+
+Metoda modeluje algorytm sorotwanie szybkiego z zaimplementowanym algorytmem doboru pivotu, tak aby nie zostal wybrany najmniejszy element w danym podzbiorze.
+
+\mbox{[}in\mbox{]} lewy -\/ poczatkowy indeks pozbioru 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em prawy} & -\/ koncowy indeks podzbioru \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hyb_sort_aafe7b17d8af23857d648f8f35a281809}{\index{Hyb\-Sort@{Hyb\-Sort}!Sortowanie\-\_\-\-Hybrydowe@{Sortowanie\-\_\-\-Hybrydowe}}
+\index{Sortowanie\-\_\-\-Hybrydowe@{Sortowanie\-\_\-\-Hybrydowe}!HybSort@{Hyb\-Sort}}
+\subsubsection[{Sortowanie\-\_\-\-Hybrydowe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Hyb\-Sort}$<$ Typ $>$\-::Sortowanie\-\_\-\-Hybrydowe (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{int}]{h, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_hyb_sort_aafe7b17d8af23857d648f8f35a281809}
+
+
+Metoda sortowania hybrydowego. 
+
+Metoda ta jest implementacja algorytmu sortowania hybrydowego, bedacego polaczeniem sortowania szybkiego i sortowania przez wstawianie Po zakonczeniu rekurencyjnych wywolan Partycjowania, tablica jest podzielona na szereg malych podzbiorow o o rozmiarze nie przekraczajacemu ustalonego progu. Zbioru sa porozdzielana elementami ktore wykorzystywane byly jako elementy osiowe. Dla czesciowo posortowanej tablicy wywolywane jest sortowanie przez wstawianie, ktore jest wydajne dla tablic o malych rozmiarach
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l} & -\/ indeks poczatkowego elementu pozbioru \\
+\hline
+\mbox{\tt in}  & {\em h} & -\/ indeks koncowego elementu podzbioru \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hyb_sort_afdf20a6c2fc2101bf9b1851919f910b7}{\index{Hyb\-Sort@{Hyb\-Sort}!Wstaw\-\_\-\-Sort@{Wstaw\-\_\-\-Sort}}
+\index{Wstaw\-\_\-\-Sort@{Wstaw\-\_\-\-Sort}!HybSort@{Hyb\-Sort}}
+\subsubsection[{Wstaw\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf Hyb\-Sort}$<$ Typ $>$\-::Wstaw\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{int}]{p, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_hyb_sort_afdf20a6c2fc2101bf9b1851919f910b7}
+
+
+Sortowanie przez Wstawianie Metoda ma za zadanie posortowac tablice przyjmowana jako argument. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em T} & -\/ Wskaznik na tablice z danymi wejsciowymi \\
+\hline
+\mbox{\tt in}  & {\em l} & -\/ Poczatkowy indeks elementu sortowanego podzbioru \\
+\hline
+\mbox{\tt in}  & {\em p} & -\/ koncowy indeks elementu sortowanego podzbioru \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_hyb_sort_8hh}{Hyb\-Sort.\-hh}\end{DoxyCompactItemize}

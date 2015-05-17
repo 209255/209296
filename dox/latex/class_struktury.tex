@@ -1,0 +1,140 @@
+\hypertarget{class_struktury}{\section{Struktury$<$ Typ $>$ Class Template Reference}
+\label{class_struktury}\index{Struktury$<$ Typ $>$@{Struktury$<$ Typ $>$}}
+}
+
+
+Modeluje pojecie \hyperlink{class_struktury}{Struktury} danych, klasa bazowa dla Stosu,Kolejki i Listy,zarowno w implemenetacji wskaznikowej jak i tablicowej.  
+
+
+
+
+{\ttfamily \#include $<$I\-Struktury.\-hh$>$}
+
+Inheritance diagram for Struktury$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_struktury}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_struktury_aac09c019a75dd7bfda2f313733300c4c}{\-\_\-\-Push} (Typ k, unsigned int Pozycja)=0
+\begin{DoxyCompactList}\small\item\em Metoda dodajaca kolejny element struktury. \end{DoxyCompactList}\item 
+virtual Typ \hyperlink{class_struktury_a536345360bdb841d5462b578fe758b73}{\-\_\-\-Pop} (unsigned int Pozycja)=0
+\begin{DoxyCompactList}\small\item\em Metoda usuwajaca element. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{class_struktury_a3ed3c70e26cefc242633abc13097acce}{\-\_\-\-Rozmiar} () const =0
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca rozmiar \hyperlink{class_struktury}{Struktury}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_struktury_a9a4290d332a6a613f92d4d4bfe2577ae}{\-\_\-\-Pokaz} () const =0
+\begin{DoxyCompactList}\small\item\em Metoda wyswietlajaca dane. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_struktury_aa85ab98de0f8bb1c257e6d1723d107f5}{\-\_\-\-Zwolnij} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda zwalniajaca pamiec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Struktury$<$ Typ $>$}
+
+Modeluje pojecie \hyperlink{class_struktury}{Struktury} danych, klasa bazowa dla Stosu,Kolejki i Listy,zarowno w implemenetacji wskaznikowej jak i tablicowej. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_struktury_a9a4290d332a6a613f92d4d4bfe2577ae}{\index{Struktury@{Struktury}!\-\_\-\-Pokaz@{\-\_\-\-Pokaz}}
+\index{\-\_\-\-Pokaz@{\-\_\-\-Pokaz}!Struktury@{Struktury}}
+\subsubsection[{\-\_\-\-Pokaz}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual void {\bf Struktury}$<$ Typ $>$\-::\-\_\-\-Pokaz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_struktury_a9a4290d332a6a613f92d4d4bfe2577ae}
+
+
+Metoda wyswietlajaca dane. 
+
+Metoda ma za zadanie wyswietlic wszytskie dane nalezace do struktury 
+
+Implemented in \hyperlink{class_list_arr2x_a1de6b30e511fef970573d06989bdbf30}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_a1b3c30902f28bf819ea5864c85ebede9}{Stos\-Tab$<$ Typ $>$}.
+
+\hypertarget{class_struktury_a536345360bdb841d5462b578fe758b73}{\index{Struktury@{Struktury}!\-\_\-\-Pop@{\-\_\-\-Pop}}
+\index{\-\_\-\-Pop@{\-\_\-\-Pop}!Struktury@{Struktury}}
+\subsubsection[{\-\_\-\-Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual Typ {\bf Struktury}$<$ Typ $>$\-::\-\_\-\-Pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Pozycja}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_struktury_a536345360bdb841d5462b578fe758b73}
+
+
+Metoda usuwajaca element. 
+
+Metoda ma za zadanie usunac element i w zaleznosci od implementowanej struktury bedzie to usuwany element usuwany z poczatk,końca lub w przypadku listy z dowolnego jej miejsca
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Pozycja} & -\/ Numer elementu ,ktory zostanie dodany. Argument ma znaczenie tylko w przypadku listy i domyślnie jest ustawiony, tak aby element był dodawany zawsze na poczatku listy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca wartosc elementu z odpowiedniego dla wybranej struktury miejsca 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_list_arr2x_a4383548c83e707ba59d8d49ab051e8f8}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_a43e5e031570e69dc27fc11feca969645}{Stos\-Tab$<$ Typ $>$}.
+
+\hypertarget{class_struktury_aac09c019a75dd7bfda2f313733300c4c}{\index{Struktury@{Struktury}!\-\_\-\-Push@{\-\_\-\-Push}}
+\index{\-\_\-\-Push@{\-\_\-\-Push}!Struktury@{Struktury}}
+\subsubsection[{\-\_\-\-Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual void {\bf Struktury}$<$ Typ $>$\-::\-\_\-\-Push (
+\begin{DoxyParamCaption}
+\item[{Typ}]{k, }
+\item[{unsigned int}]{Pozycja}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_struktury_aac09c019a75dd7bfda2f313733300c4c}
+
+
+Metoda dodajaca kolejny element struktury. 
+
+Metoda ma za zadanie dodac kolejny element do naszej struktury oraz zapisac w nim odpowiednia wartosc.\-W zaleznosci od implementowanej struktury element bedzie dodawany na poczatku lub na koncu struktury danych.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em k} & -\/ wartosc typu calkowitnego, ktora bedzie umieszona w strukturze \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_stos_tab_a73c95fc8151510c21c5567e85296ea31}{Stos\-Tab$<$ Typ $>$}, and \hyperlink{class_list_arr2x_aac4d1cdaa29d7d3d0a85aa469281d784}{List\-Arr2x$<$ Typ $>$}.
+
+\hypertarget{class_struktury_a3ed3c70e26cefc242633abc13097acce}{\index{Struktury@{Struktury}!\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}}
+\index{\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}!Struktury@{Struktury}}
+\subsubsection[{\-\_\-\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual unsigned int {\bf Struktury}$<$ Typ $>$\-::\-\_\-\-Rozmiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_struktury_a3ed3c70e26cefc242633abc13097acce}
+
+
+Metoda zwracajaca rozmiar \hyperlink{class_struktury}{Struktury}. 
+
+Metoda ma zadanie zwrocic bierzaca liczbe elementow nalezacych do danej struktury \begin{DoxyReturn}{Returns}
+-\/ Bierzaca liczba elementow \hyperlink{class_struktury}{Struktury} danych 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_list_arr2x_aa9d38356df7fec58f282ec00148bd6db}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_a51b2da61d6c4c2085646b84395c2d3c0}{Stos\-Tab$<$ Typ $>$}.
+
+\hypertarget{class_struktury_aa85ab98de0f8bb1c257e6d1723d107f5}{\index{Struktury@{Struktury}!\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}}
+\index{\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}!Struktury@{Struktury}}
+\subsubsection[{\-\_\-\-Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual void {\bf Struktury}$<$ Typ $>$\-::\-\_\-\-Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_struktury_aa85ab98de0f8bb1c257e6d1723d107f5}
+
+
+Metoda zwalniajaca pamiec. 
+
+Metoda ma za zadanie zwolnic pamiec uzywana przy zapelnienianiu danej struktry danymi 
+
+Implemented in \hyperlink{class_list_arr2x_aec30c6d499f26d03e94e001e1358ee18}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_aec0cb259c6f044fa7d3b367dc1baca5c}{Stos\-Tab$<$ Typ $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_i_struktury_8hh}{I\-Struktury.\-hh}\end{DoxyCompactItemize}

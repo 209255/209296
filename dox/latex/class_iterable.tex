@@ -1,0 +1,122 @@
+\hypertarget{class_iterable}{\section{Iterable$<$ Typ $>$ Class Template Reference}
+\label{class_iterable}\index{Iterable$<$ Typ $>$@{Iterable$<$ Typ $>$}}
+}
+
+
+Interfejs \hyperlink{class_iterable}{Iterable}.  
+
+
+
+
+{\ttfamily \#include $<$Iterable.\-hh$>$}
+
+Inheritance diagram for Iterable$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_iterable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const Typ \hyperlink{class_iterable_a6b75a7c8c41e1f13e6eff2276af62aeb}{Wartosc} (unsigned int i) const =0
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca wartosc. \end{DoxyCompactList}\item 
+virtual Typ \& \hyperlink{class_iterable_a7e56512db9ef2691198e1914a4ddb300}{Adres} (unsigned int i)=0
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca referencje. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_iterable_a631b741c6f81ae09f823c86f9eed9f7b}{\-\_\-\-Zamien} (unsigned int i, unsigned int j)=0
+\begin{DoxyCompactList}\small\item\em Metoda zamieniajaca. \end{DoxyCompactList}\item 
+virtual unsigned int \hyperlink{class_iterable_ab5962acaeaa36a245b18a7c66fac972f}{\-\_\-\-Rozmiar} () const =0
+\begin{DoxyCompactList}\small\item\em Metoda informujaca o rozmiarze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class Iterable$<$ Typ $>$}
+
+Interfejs \hyperlink{class_iterable}{Iterable}. 
+
+Klasa modeluje pojecie abstrakcyjnego interfejsu iterable, dzieki ktoremu algorytmu sortujace maja dostep do kontenera z danymi poprzez odczyt danego pola i mozliwosci zamiany elementow miejscami 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_iterable_ab5962acaeaa36a245b18a7c66fac972f}{\index{Iterable@{Iterable}!\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}}
+\index{\-\_\-\-Rozmiar@{\-\_\-\-Rozmiar}!Iterable@{Iterable}}
+\subsubsection[{\-\_\-\-Rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual unsigned int {\bf Iterable}$<$ Typ $>$\-::\-\_\-\-Rozmiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_iterable_ab5962acaeaa36a245b18a7c66fac972f}
+
+
+Metoda informujaca o rozmiarze. 
+
+Metoda ma za zadanie zwrocic informajce o rozmiarze kontenera 
+
+Implemented in \hyperlink{class_list_arr2x_aa9d38356df7fec58f282ec00148bd6db}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_a51b2da61d6c4c2085646b84395c2d3c0}{Stos\-Tab$<$ Typ $>$}.
+
+\hypertarget{class_iterable_a631b741c6f81ae09f823c86f9eed9f7b}{\index{Iterable@{Iterable}!\-\_\-\-Zamien@{\-\_\-\-Zamien}}
+\index{\-\_\-\-Zamien@{\-\_\-\-Zamien}!Iterable@{Iterable}}
+\subsubsection[{\-\_\-\-Zamien}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual void {\bf Iterable}$<$ Typ $>$\-::\-\_\-\-Zamien (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i, }
+\item[{unsigned int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_iterable_a631b741c6f81ae09f823c86f9eed9f7b}
+
+
+Metoda zamieniajaca. 
+
+Metoda ma za zadanie zamienic elementy miejscami 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/ indeks,pod ktorym wartosc z konteneru zostanie zamieniona miejscem \\
+\hline
+\mbox{\tt in}  & {\em j} & -\/ indeks,pod ktorym wartosc z konteneru zostanie zamieniona miejscem \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_stos_tab_a6ce0e7f4dabae776f69fb0540ff7d8a4}{Stos\-Tab$<$ Typ $>$}, and \hyperlink{class_list_arr2x_a5864b6c097b593e0c126a79837f8fb19}{List\-Arr2x$<$ Typ $>$}.
+
+\hypertarget{class_iterable_a7e56512db9ef2691198e1914a4ddb300}{\index{Iterable@{Iterable}!Adres@{Adres}}
+\index{Adres@{Adres}!Iterable@{Iterable}}
+\subsubsection[{Adres}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual Typ\& {\bf Iterable}$<$ Typ $>$\-::Adres (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_iterable_a7e56512db9ef2691198e1914a4ddb300}
+
+
+Metoda zwracajaca referencje. 
+
+Metoda ma za zadanie zwrocic referencje do pola kontenera zadanego poprzez argument metody 
+
+Implemented in \hyperlink{class_list_arr2x_a18b7381c3fff0f489bd21dca90870f6f}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_ad19a954bb9cc9c32b42e4046c422984a}{Stos\-Tab$<$ Typ $>$}.
+
+\hypertarget{class_iterable_a6b75a7c8c41e1f13e6eff2276af62aeb}{\index{Iterable@{Iterable}!Wartosc@{Wartosc}}
+\index{Wartosc@{Wartosc}!Iterable@{Iterable}}
+\subsubsection[{Wartosc}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ$>$ virtual const Typ {\bf Iterable}$<$ Typ $>$\-::Wartosc (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_iterable_a6b75a7c8c41e1f13e6eff2276af62aeb}
+
+
+Metoda zwracajaca wartosc. 
+
+Metoda ma za zadanei zwrocic wartosc,kryjaca sie pod danym indeksem dla dowolnego kontenera posiadajacego interfejs.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & -\/\-Indeks z ktorego zostanie odczytana wartosc\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zwraca wartosc, kryjaca sie pod danym indeksem konteneru 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_list_arr2x_a1d441a5e86d979c8093543218faa13b3}{List\-Arr2x$<$ Typ $>$}, and \hyperlink{class_stos_tab_aeae02936cdfdb3df20084174817b85dd}{Stos\-Tab$<$ Typ $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_iterable_8hh}{Iterable.\-hh}\end{DoxyCompactItemize}

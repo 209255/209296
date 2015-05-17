@@ -1,0 +1,122 @@
+\hypertarget{class_m_sort}{\section{M\-Sort$<$ Typ $>$ Class Template Reference}
+\label{class_m_sort}\index{M\-Sort$<$ Typ $>$@{M\-Sort$<$ Typ $>$}}
+}
+
+
+Modeluje sortowanie przez scalanie.  
+
+
+
+
+{\ttfamily \#include $<$M\-Sort.\-hh$>$}
+
+Inheritance diagram for M\-Sort$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_m_sort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_m_sort_a90bfe37f7a17b529b97abba47495ab9a}{\-\_\-\-Sort} (\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$Kontener)
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca sortowanie przez scalanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_m_sort_a2bc5e52492763e452c81d252a2e16a46}{Msort} (Typ $\ast$T, int p, int k, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda Dzielaca tablice. \end{DoxyCompactList}\item 
+void \hyperlink{class_m_sort_a04a2f5f2f3afc5337fe07e9f387dc291}{Merge} (Typ $\ast$Temp, int l, int s, int p, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda Dzielaca tablice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class M\-Sort$<$ Typ $>$}
+
+Modeluje sortowanie przez scalanie. 
+
+Klasa zawiera implementacje algorytmu sortowania przez scalanie 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_m_sort_a90bfe37f7a17b529b97abba47495ab9a}{\index{M\-Sort@{M\-Sort}!\-\_\-\-Sort@{\-\_\-\-Sort}}
+\index{\-\_\-\-Sort@{\-\_\-\-Sort}!MSort@{M\-Sort}}
+\subsubsection[{\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf M\-Sort}$<$ Typ $>$\-::\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{Kontener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_m_sort_a90bfe37f7a17b529b97abba47495ab9a}
+
+
+Metoda inicjalizujaca sortowanie przez scalanie. 
+
+Metoda ma za zadanie zainicjalizowac algorytm sortowania przez scalanie dla wybranej struktury danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Kontener} & -\/ rodzaj kontenera,ktory zostanie posortowany \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_sortable_aca218e19355fb5d0e6ac7b29ea17dc59}{I\-Sortable$<$ Typ $>$}.
+
+\hypertarget{class_m_sort_a04a2f5f2f3afc5337fe07e9f387dc291}{\index{M\-Sort@{M\-Sort}!Merge@{Merge}}
+\index{Merge@{Merge}!MSort@{M\-Sort}}
+\subsubsection[{Merge}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf M\-Sort}$<$ Typ $>$\-::Merge (
+\begin{DoxyParamCaption}
+\item[{Typ $\ast$}]{Temp, }
+\item[{int}]{l, }
+\item[{int}]{s, }
+\item[{int}]{p, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_m_sort_a04a2f5f2f3afc5337fe07e9f387dc291}
+
+
+Metoda Dzielaca tablice. 
+
+Metoda ma za zadanie przekopiowac zawartosc zbiotu glownego do tablicy tymczasowej.\-Nastepnie operujac na kopii ustawia wskazniki na poczatki kolejnych zbiorow i porownywane sa wskaane wartosci. Mniejsze wpisujemy do zbioru glownego i przesuwamy odpowiedni wskaznik Czynnos wykonujemy rekurencyjnie az do momentu gdy jeden ze wskaznikow osiagnie koniec zbioru
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Temp} & -\/ Wskaznik na tablice pomocnicza \\
+\hline
+\mbox{\tt in}  & {\em l} & -\/ Poczatkowy indeks tablicy \\
+\hline
+\mbox{\tt in}  & {\em s} & -\/ Srodkowy indeks tablicy \\
+\hline
+\mbox{\tt in}  & {\em p} & -\/ Koncowy indks tablicy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_m_sort_a2bc5e52492763e452c81d252a2e16a46}{\index{M\-Sort@{M\-Sort}!Msort@{Msort}}
+\index{Msort@{Msort}!MSort@{M\-Sort}}
+\subsubsection[{Msort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf M\-Sort}$<$ Typ $>$\-::Msort (
+\begin{DoxyParamCaption}
+\item[{Typ $\ast$}]{T, }
+\item[{int}]{p, }
+\item[{int}]{k, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_m_sort_a2bc5e52492763e452c81d252a2e16a46}
+
+
+Metoda Dzielaca tablice. 
+
+Metoda ma za zadanie przekopiowac zawartosc zbiotu glownego do tablicy tymczasowej.\-Nastepnie operujac na kopii ustawia wskazniki na poczatki kolejnych zbiorow i porownywane sa wskaane wartosci. Mniejsze wpisujemy do zbioru glownego i przesuwamy odpowiedni wskaznik Czynnos wykonujemy rekurencyjnie az do momentu gdy jeden ze wskaznikow osiagnie koniec zbioru
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Temp} & -\/ Wskaznik na tablice pomocnicza \\
+\hline
+\mbox{\tt in}  & {\em l} & -\/ Poczatkowy indeks tablicy \\
+\hline
+\mbox{\tt in}  & {\em s} & -\/ Srodkowy indeks tablicy \\
+\hline
+\mbox{\tt in}  & {\em p} & -\/ Koncowy indks tablicy \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_m_sort_8hh}{M\-Sort.\-hh}\end{DoxyCompactItemize}

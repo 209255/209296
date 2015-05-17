@@ -1,5 +1,7 @@
 #ifndef MSORT_HH
 #define MSORT_HH
+#include "ISortable.hh"
+#include "Iterable.hh"
 //************************************************************** 
 /*!
  *\file Sortowanie przez scalanie

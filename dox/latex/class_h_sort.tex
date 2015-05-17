@@ -1,0 +1,129 @@
+\hypertarget{class_h_sort}{\section{H\-Sort$<$ Typ $>$ Class Template Reference}
+\label{class_h_sort}\index{H\-Sort$<$ Typ $>$@{H\-Sort$<$ Typ $>$}}
+}
+
+
+Modeluje sortowanie przez kopcowanie.  
+
+
+
+
+{\ttfamily \#include $<$H\-Sort.\-hh$>$}
+
+Inheritance diagram for H\-Sort$<$ Typ $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_h_sort}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_h_sort_a02c33b82d229214ebd19787b7c9ead2d}{\-\_\-\-Sort} (\hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$Kontener)
+\begin{DoxyCompactList}\small\item\em Metoda inicjalizujaca sortowanie przez kopcowanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_h_sort_a1b59bf69e07408aa29281c3bb09da883}{Sortowanie\-Kopiec} (int Rozmiar, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda sortowania przez Kopcowanie. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_sort_a062c4a39d5f9afa05ea07ff846a720e7}{Kopiec} (int Rozmiar, const int i, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda skladajaca kopiec. \end{DoxyCompactList}\item 
+void \hyperlink{class_h_sort_afba35e9a48f3d856b5fd090e8e44b372}{Buduj\-Kopiec} (int Rozmiar, \hyperlink{class_iterable}{Iterable}$<$ Typ $>$ $\ast$K)
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca kopiec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Typ$>$class H\-Sort$<$ Typ $>$}
+
+Modeluje sortowanie przez kopcowanie. 
+
+Klasa zawiera implementacje algorytmu sortowania przez kopcowanie 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_h_sort_a02c33b82d229214ebd19787b7c9ead2d}{\index{H\-Sort@{H\-Sort}!\-\_\-\-Sort@{\-\_\-\-Sort}}
+\index{\-\_\-\-Sort@{\-\_\-\-Sort}!HSort@{H\-Sort}}
+\subsubsection[{\-\_\-\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf H\-Sort}$<$ Typ $>$\-::\-\_\-\-Sort (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{Kontener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_h_sort_a02c33b82d229214ebd19787b7c9ead2d}
+
+
+Metoda inicjalizujaca sortowanie przez kopcowanie. 
+
+Metoda ma za zadanie zainicjalizowac algorytm sortowania przez kopcowania dla wybranej struktury danych
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Kontener} & -\/ rodzaj kontenera,ktory zostanie posortowany \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_sortable_aca218e19355fb5d0e6ac7b29ea17dc59}{I\-Sortable$<$ Typ $>$}.
+
+\hypertarget{class_h_sort_afba35e9a48f3d856b5fd090e8e44b372}{\index{H\-Sort@{H\-Sort}!Buduj\-Kopiec@{Buduj\-Kopiec}}
+\index{Buduj\-Kopiec@{Buduj\-Kopiec}!HSort@{H\-Sort}}
+\subsubsection[{Buduj\-Kopiec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf H\-Sort}$<$ Typ $>$\-::Buduj\-Kopiec (
+\begin{DoxyParamCaption}
+\item[{int}]{Rozmiar, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_h_sort_afba35e9a48f3d856b5fd090e8e44b372}
+
+
+Metoda tworzaca kopiec. 
+
+Metoda ma za zadanie utworzyc abstrakycjny kopiec z tablicy o podanym poprzez argument rozmiarze
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Rozmiar} & -\/ Rozmiar kopca \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_h_sort_a062c4a39d5f9afa05ea07ff846a720e7}{\index{H\-Sort@{H\-Sort}!Kopiec@{Kopiec}}
+\index{Kopiec@{Kopiec}!HSort@{H\-Sort}}
+\subsubsection[{Kopiec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf H\-Sort}$<$ Typ $>$\-::Kopiec (
+\begin{DoxyParamCaption}
+\item[{int}]{Rozmiar, }
+\item[{const int}]{i, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_h_sort_a062c4a39d5f9afa05ea07ff846a720e7}
+
+
+Metoda skladajaca kopiec. 
+
+Metoda ma za zadanie poprze porownywanie i ustawianie elementow odtworzenie porzadku kopcowego.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Rozmiar} & -\/ Rozmar kopca \\
+\hline
+\mbox{\tt in}  & {\em i} & -\/ indeks ostatniego elementu podzbioru \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_h_sort_a1b59bf69e07408aa29281c3bb09da883}{\index{H\-Sort@{H\-Sort}!Sortowanie\-Kopiec@{Sortowanie\-Kopiec}}
+\index{Sortowanie\-Kopiec@{Sortowanie\-Kopiec}!HSort@{H\-Sort}}
+\subsubsection[{Sortowanie\-Kopiec}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Typ $>$ void {\bf H\-Sort}$<$ Typ $>$\-::Sortowanie\-Kopiec (
+\begin{DoxyParamCaption}
+\item[{int}]{Rozmiar, }
+\item[{{\bf Iterable}$<$ Typ $>$ $\ast$}]{K}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_h_sort_a1b59bf69e07408aa29281c3bb09da883}
+
+
+Metoda sortowania przez Kopcowanie. 
+
+Metoda realizujaca sortowanie rosnace,wykorzystujac przy tym kopiec.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Rozmiar} & -\/ Rozmiar kopca do zbudowania, ilość danych do posortowania. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_h_sort_8hh}{H\-Sort.\-hh}\end{DoxyCompactItemize}

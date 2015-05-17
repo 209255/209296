@@ -1,5 +1,7 @@
 #ifndef HSORT_HH
 #define HSORT_HH
+#include "ISortable.hh"
+#include "Iterable.hh"
 //************************************************************** 
 /*!
  *\file Sortowanie przez kopcowanie

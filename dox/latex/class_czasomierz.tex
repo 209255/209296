@@ -1,0 +1,176 @@
+\hypertarget{class_czasomierz}{\section{Czasomierz Class Reference}
+\label{class_czasomierz}\index{Czasomierz@{Czasomierz}}
+}
+
+
+Modeluje pojecie Czasomierza.  
+
+
+
+
+{\ttfamily \#include $<$Czasomierz.\-hh$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_czasomierz_aa49ccbbc365ff5e54b41f4ec4d769038}{Czasomierz} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_czasomierz_a26f594c73a3b382d1695f14a5682ca7c}{\-\_\-\-Rozpocznij\-Pomiar} ()
+\begin{DoxyCompactList}\small\item\em Metoda zaczynajaca pomiar. \end{DoxyCompactList}\item 
+void \hyperlink{class_czasomierz_a91e1a8e33b5e1eb7a5036eed57fb13a3}{\-\_\-\-Zakoncz\-Pomiar} ()
+\begin{DoxyCompactList}\small\item\em Metoda konczaca pomiar. \end{DoxyCompactList}\item 
+void \hyperlink{class_czasomierz_aecc4b89376b85367ab0e44fecb4ca6df}{\-\_\-\-Aktualizuj\-Czas} ()
+\begin{DoxyCompactList}\small\item\em Metoda Aktualizujaca czas danej proby. \end{DoxyCompactList}\item 
+long double \hyperlink{class_czasomierz_a80be3a3d837f8ca28e1a6bc2f231f0d7}{\-\_\-\-Czas\-Trwania} () const 
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca calkowity czas Proby. \end{DoxyCompactList}\item 
+void \hyperlink{class_czasomierz_a1f2c55e5be7f93f3db9b02eb5757cc78}{\-\_\-\-Reset} ()
+\begin{DoxyCompactList}\small\item\em Metoda resetujaca \hyperlink{class_czasomierz}{Czasomierz}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_czasomierz_ab5977fad1080924fe85f70157de7b4db}{\-\_\-\-Status\-Pracy} () const 
+\item 
+double \hyperlink{class_czasomierz_a02353d27a6e73f00e41c4c0b40990d58}{\-\_\-\-Pojedynczy\-Pomiar} () const 
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca czas pojedynczego pomiaru. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+clock\-\_\-t \hyperlink{class_czasomierz_aba798db3d70227410bfafbb01a52d755}{\-\_\-\-Start}
+\begin{DoxyCompactList}\small\item\em Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. \end{DoxyCompactList}\item 
+clock\-\_\-t \hyperlink{class_czasomierz_a1d791b2017e7f992a2206155982055af}{\-\_\-\-Koniec}
+\begin{DoxyCompactList}\small\item\em Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. \end{DoxyCompactList}\item 
+long double \hyperlink{class_czasomierz_ae09344cf8ca5613cd557cb4fcf9aa046}{\-\_\-\-Aktualny}
+\begin{DoxyCompactList}\small\item\em Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_czasomierz_a5eb9aa3fd9f0fb8af343f2865d490e64}{\-\_\-\-Status}
+\begin{DoxyCompactList}\small\item\em Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modeluje pojecie Czasomierza. 
+
+Klasa ma za zadanie mierzyc czas wykonywania danego algorytmu oraz przechowywac informacje o srednich czasach pomiarow dla wybranej ilosci danych przy okreslonej liczbie powtorzen testu 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_czasomierz_aa49ccbbc365ff5e54b41f4ec4d769038}{\index{Czasomierz@{Czasomierz}!Czasomierz@{Czasomierz}}
+\index{Czasomierz@{Czasomierz}!Czasomierz@{Czasomierz}}
+\subsubsection[{Czasomierz}]{\setlength{\rightskip}{0pt plus 5cm}Czasomierz\-::\-Czasomierz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_czasomierz_aa49ccbbc365ff5e54b41f4ec4d769038}
+
+
+Konstruktor obiektu. 
+
+Konstruktor klasy \hyperlink{class_czasomierz}{Czasomierz}, zerujacy wszystkie pola tej klasy 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_czasomierz_aecc4b89376b85367ab0e44fecb4ca6df}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Aktualizuj\-Czas@{\-\_\-\-Aktualizuj\-Czas}}
+\index{\-\_\-\-Aktualizuj\-Czas@{\-\_\-\-Aktualizuj\-Czas}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Aktualizuj\-Czas}]{\setlength{\rightskip}{0pt plus 5cm}void Czasomierz\-::\-\_\-\-Aktualizuj\-Czas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_czasomierz_aecc4b89376b85367ab0e44fecb4ca6df}
+
+
+Metoda Aktualizujaca czas danej proby. 
+
+Metoda ma za zadanie zaktualizowac czas danej proby, za sprawa dodadania do poprzedniej sumy pomiarow, czas ktory przypada na najnowszy pomiar \hypertarget{class_czasomierz_a80be3a3d837f8ca28e1a6bc2f231f0d7}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Czas\-Trwania@{\-\_\-\-Czas\-Trwania}}
+\index{\-\_\-\-Czas\-Trwania@{\-\_\-\-Czas\-Trwania}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Czas\-Trwania}]{\setlength{\rightskip}{0pt plus 5cm}long double Czasomierz\-::\-\_\-\-Czas\-Trwania (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_czasomierz_a80be3a3d837f8ca28e1a6bc2f231f0d7}
+
+
+Metoda zwracajaca calkowity czas Proby. 
+
+Metoda ma za zadanie zwrocic calkowity czas przypadajacy na dana probe \hypertarget{class_czasomierz_a02353d27a6e73f00e41c4c0b40990d58}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Pojedynczy\-Pomiar@{\-\_\-\-Pojedynczy\-Pomiar}}
+\index{\-\_\-\-Pojedynczy\-Pomiar@{\-\_\-\-Pojedynczy\-Pomiar}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Pojedynczy\-Pomiar}]{\setlength{\rightskip}{0pt plus 5cm}double Czasomierz\-::\-\_\-\-Pojedynczy\-Pomiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_czasomierz_a02353d27a6e73f00e41c4c0b40990d58}
+
+
+Metoda zwracajaca czas pojedynczego pomiaru. 
+
+Metoda ma za zadanie zwrocic czas trwania pojedynczego testu \hypertarget{class_czasomierz_a1f2c55e5be7f93f3db9b02eb5757cc78}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Reset@{\-\_\-\-Reset}}
+\index{\-\_\-\-Reset@{\-\_\-\-Reset}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Czasomierz\-::\-\_\-\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_czasomierz_a1f2c55e5be7f93f3db9b02eb5757cc78}
+
+
+Metoda resetujaca \hyperlink{class_czasomierz}{Czasomierz}. 
+
+Metoda ma za zadanie wyzerowac pola przechowujace informacje o czasie systemowym zapisanym na poczatku i na koncu pomiaru. Zmienia status czasomierza na wolny \hypertarget{class_czasomierz_a26f594c73a3b382d1695f14a5682ca7c}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Rozpocznij\-Pomiar@{\-\_\-\-Rozpocznij\-Pomiar}}
+\index{\-\_\-\-Rozpocznij\-Pomiar@{\-\_\-\-Rozpocznij\-Pomiar}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Rozpocznij\-Pomiar}]{\setlength{\rightskip}{0pt plus 5cm}void Czasomierz\-::\-\_\-\-Rozpocznij\-Pomiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_czasomierz_a26f594c73a3b382d1695f14a5682ca7c}
+
+
+Metoda zaczynajaca pomiar. 
+
+Metoda ma za zadanie odczytac czas systemowy w momencie jej wywolania i zapisania tej informacji w odpowiednim polu klasy. Zmienia rowniez status pracy czasomierza na zajety. \hypertarget{class_czasomierz_ab5977fad1080924fe85f70157de7b4db}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Status\-Pracy@{\-\_\-\-Status\-Pracy}}
+\index{\-\_\-\-Status\-Pracy@{\-\_\-\-Status\-Pracy}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Status\-Pracy}]{\setlength{\rightskip}{0pt plus 5cm}bool Czasomierz\-::\-\_\-\-Status\-Pracy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_czasomierz_ab5977fad1080924fe85f70157de7b4db}
+informujaca o stanie czasomierza
+
+Metoda ma za zadanie poinformowanie w jakim stanie znajduje sie obecnie czasomierz \hypertarget{class_czasomierz_a91e1a8e33b5e1eb7a5036eed57fb13a3}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Zakoncz\-Pomiar@{\-\_\-\-Zakoncz\-Pomiar}}
+\index{\-\_\-\-Zakoncz\-Pomiar@{\-\_\-\-Zakoncz\-Pomiar}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Zakoncz\-Pomiar}]{\setlength{\rightskip}{0pt plus 5cm}void Czasomierz\-::\-\_\-\-Zakoncz\-Pomiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_czasomierz_a91e1a8e33b5e1eb7a5036eed57fb13a3}
+
+
+Metoda konczaca pomiar. 
+
+Metoda ma za zadanie odczytac czas systemowy w momencie jej wywolania i zapisania tej informacji w odpowiednim polu klasy. Zmienia status pracy czasomierza na wolny 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_czasomierz_ae09344cf8ca5613cd557cb4fcf9aa046}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Aktualny@{\-\_\-\-Aktualny}}
+\index{\-\_\-\-Aktualny@{\-\_\-\-Aktualny}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Aktualny}]{\setlength{\rightskip}{0pt plus 5cm}long double Czasomierz\-::\-\_\-\-Aktualny\hspace{0.3cm}{\ttfamily [private]}}}\label{class_czasomierz_ae09344cf8ca5613cd557cb4fcf9aa046}
+
+
+Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. 
+
+Pole przechowuje czas w ms, odpowiadajacy czasowi aktualnego pomiaru dla danej ilosci danych \hypertarget{class_czasomierz_a1d791b2017e7f992a2206155982055af}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Koniec@{\-\_\-\-Koniec}}
+\index{\-\_\-\-Koniec@{\-\_\-\-Koniec}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Koniec}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t Czasomierz\-::\-\_\-\-Koniec\hspace{0.3cm}{\ttfamily [private]}}}\label{class_czasomierz_a1d791b2017e7f992a2206155982055af}
+
+
+Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. 
+
+Pole przechowuje informacje, ktora jest czas systemu w chwili zakonczenia pomiaru \hypertarget{class_czasomierz_aba798db3d70227410bfafbb01a52d755}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Start@{\-\_\-\-Start}}
+\index{\-\_\-\-Start@{\-\_\-\-Start}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Start}]{\setlength{\rightskip}{0pt plus 5cm}clock\-\_\-t Czasomierz\-::\-\_\-\-Start\hspace{0.3cm}{\ttfamily [private]}}}\label{class_czasomierz_aba798db3d70227410bfafbb01a52d755}
+
+
+Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. 
+
+Pole przechowuje informacje, ktora jest czas systemu w chwili uruchomienia Stopera \hypertarget{class_czasomierz_a5eb9aa3fd9f0fb8af343f2865d490e64}{\index{Czasomierz@{Czasomierz}!\-\_\-\-Status@{\-\_\-\-Status}}
+\index{\-\_\-\-Status@{\-\_\-\-Status}!Czasomierz@{Czasomierz}}
+\subsubsection[{\-\_\-\-Status}]{\setlength{\rightskip}{0pt plus 5cm}bool Czasomierz\-::\-\_\-\-Status\hspace{0.3cm}{\ttfamily [private]}}}\label{class_czasomierz_a5eb9aa3fd9f0fb8af343f2865d490e64}
+
+
+Pole klasy \hyperlink{class_czasomierz}{Czasomierz}. 
+
+Pole przechowuje informacje o stanie Czasomierza,tzn czy obecnie odmierza czas czy nie 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_czasomierz_8hh}{Czasomierz.\-hh}\item 
+/home/bartolomeo/209296/prj/src/\hyperlink{_czasomierz_8cpp}{Czasomierz.\-cpp}\end{DoxyCompactItemize}

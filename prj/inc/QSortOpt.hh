@@ -1,7 +1,8 @@
 #ifndef QSORTOPT_HH
 #define QSORTOPT_HH
 #define ILE 3
-
+#include "ISortable.hh"
+#include "Iterable.hh"
 //************************************************************** 
 /*!
  *\file Sortowanie szybkie z opytymalizacja
@@ -35,26 +36,34 @@ class QSortOpt:public ISortable<Typ>
    *\param[in] prawy - koncowy indeks podzbioru
    */
 //**************************************************************
+  int Partycjowanie(int p,int k,Iterable<Typ> *K)
+ {
+   Typ Index[] = { K -> Wartosc(p), K -> Wartosc((p+k)/2)
+		   ,K -> Wartosc(k)}; 
+   Typ Pivot = Mediana(Index);
+   int i = p; 
+   int j = k;
+   while(1)
+     {
+       while(K ->Wartosc(j) > Pivot) j--;
+       while(K ->Wartosc(i) < Pivot) i++;
+	if( i < j ){
+	  K ->_Zamien(i,j);
+	  i++; j--;}
+	
+	else return j;
+     }
+ }
+//**************************************************************  
   void QsortOpt(int lewy, int prawy1,Iterable<Typ> *K)
   {
-    Typ Index[] = { K -> Wartosc(lewy), K -> Wartosc((lewy+prawy1)/2)
-		    ,K -> Wartosc(prawy1)}; 
-    Typ Pivot = Mediana(Index);
-    int i = lewy;
-    int j = prawy1;
-    do
+    int p;
+    if(lewy < prawy1)
       {
-	while(K -> Wartosc(i) < Pivot) i++;
-	while(K -> Wartosc(j) > Pivot) j--;
-	if( i <= j )
-	{
-	  K ->_Zamien(i,j);
-	  ++i;--j;
-	}
+	p = Partycjowanie(lewy,prawy1,K);
+	QsortOpt(lewy,p,K);
+	QsortOpt(p+1,prawy1,K);
       }
-    while( i <= j );
-    if(j > lewy) QsortOpt(lewy,j,K);
-    if(i < prawy1) QsortOpt(i,prawy1,K);
   }
 //**************************************************************
 /*!

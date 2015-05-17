@@ -1,0 +1,136 @@
+\hypertarget{class_benchmark_interfejs}{\section{Benchmark\-Interfejs Class Reference}
+\label{class_benchmark_interfejs}\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}}
+}
+
+
+Modeluje pojecie Interfejsu Benchmark'u.  
+
+
+
+
+{\ttfamily \#include $<$Benchmark\-Interfejs.\-hh$>$}
+
+Inheritance diagram for Benchmark\-Interfejs\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_benchmark_interfejs}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_benchmark_interfejs_a614b8d69d8af00260210da6308769947}{\-\_\-\-Test} () const =0
+\begin{DoxyCompactList}\small\item\em Metoda Wykonujaca pojedyncza operacje. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_interfejs_a7980830be212d0ea0ffd2e12b083cd06}{\-\_\-\-Wczytaj} (string Plik\-Wart)=0
+\begin{DoxyCompactList}\small\item\em Metoda wczytujaca dane z pliku Metoda ma za zadanie wczytac dane z pliku wejsciowego. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_interfejs_a25ad3aa17a7faa3489d82b9f7c763cce}{\-\_\-\-Zaladuj} (const unsigned int n) const =0
+\begin{DoxyCompactList}\small\item\em Metoda wypelniajaca Metoda ma za zadanie wypelnic dany kontener danymi. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_interfejs_a8a1165914a09368530183ffb968541f1}{\-\_\-\-Zwolnij} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda zwalniajaca Pamiec. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_benchmark_interfejs_a69c431ffaa9d2ab995458cc8c6ae5c1f}{\-\_\-\-Generator} () const =0
+\begin{DoxyCompactList}\small\item\em Metoda generujaca dane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modeluje pojecie Interfejsu Benchmark'u. 
+
+Klasa bazowa dla implementowania benchmarku dla kolejnych struktur danych 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_benchmark_interfejs_a69c431ffaa9d2ab995458cc8c6ae5c1f}{\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}!\-\_\-\-Generator@{\-\_\-\-Generator}}
+\index{\-\_\-\-Generator@{\-\_\-\-Generator}!BenchmarkInterfejs@{Benchmark\-Interfejs}}
+\subsubsection[{\-\_\-\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-Interfejs\-::\-\_\-\-Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_benchmark_interfejs_a69c431ffaa9d2ab995458cc8c6ae5c1f}
+
+
+Metoda generujaca dane. 
+
+Metoda ma za zadanie wygenerowac pseudolosowe dane i zapisac je do pliku 
+
+Implemented in \hyperlink{class_struktury_benchmark_aa5a6c92b86be3cd99177322c92329164}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_benchmark_interfejs_a614b8d69d8af00260210da6308769947}{\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}!\-\_\-\-Test@{\-\_\-\-Test}}
+\index{\-\_\-\-Test@{\-\_\-\-Test}!BenchmarkInterfejs@{Benchmark\-Interfejs}}
+\subsubsection[{\-\_\-\-Test}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-Interfejs\-::\-\_\-\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_benchmark_interfejs_a614b8d69d8af00260210da6308769947}
+
+
+Metoda Wykonujaca pojedyncza operacje. 
+
+Metoda ma za zadanie wykonan pojedyncza operacja, ktorej czas jest rejestrowany 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Ilosc} & -\/ Liczba danych poddana testowi \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_struktury_benchmark_a437a5c4b2a1811f3067d1117ac2c2c0e}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_benchmark_interfejs_a7980830be212d0ea0ffd2e12b083cd06}{\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}!\-\_\-\-Wczytaj@{\-\_\-\-Wczytaj}}
+\index{\-\_\-\-Wczytaj@{\-\_\-\-Wczytaj}!BenchmarkInterfejs@{Benchmark\-Interfejs}}
+\subsubsection[{\-\_\-\-Wczytaj}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-Interfejs\-::\-\_\-\-Wczytaj (
+\begin{DoxyParamCaption}
+\item[{string}]{Plik\-Wart}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_benchmark_interfejs_a7980830be212d0ea0ffd2e12b083cd06}
+
+
+Metoda wczytujaca dane z pliku Metoda ma za zadanie wczytac dane z pliku wejsciowego. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Plik\-In} & -\/ Nazwa pliku wejsciowego \\
+\hline
+\mbox{\tt in}  & {\em n} & -\/ liczba wczytywanych danych \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_struktury_benchmark_a949e7eef56ff1dce1be1afac5fccc306}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_benchmark_interfejs_a25ad3aa17a7faa3489d82b9f7c763cce}{\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}!\-\_\-\-Zaladuj@{\-\_\-\-Zaladuj}}
+\index{\-\_\-\-Zaladuj@{\-\_\-\-Zaladuj}!BenchmarkInterfejs@{Benchmark\-Interfejs}}
+\subsubsection[{\-\_\-\-Zaladuj}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-Interfejs\-::\-\_\-\-Zaladuj (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_benchmark_interfejs_a25ad3aa17a7faa3489d82b9f7c763cce}
+
+
+Metoda wypelniajaca Metoda ma za zadanie wypelnic dany kontener danymi. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & -\/ ilosc danych \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_struktury_benchmark_a263ee44187c7efb212d031e97cd39bb1}{Struktury\-Benchmark$<$ Typ $>$}.
+
+\hypertarget{class_benchmark_interfejs_a8a1165914a09368530183ffb968541f1}{\index{Benchmark\-Interfejs@{Benchmark\-Interfejs}!\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}}
+\index{\-\_\-\-Zwolnij@{\-\_\-\-Zwolnij}!BenchmarkInterfejs@{Benchmark\-Interfejs}}
+\subsubsection[{\-\_\-\-Zwolnij}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Benchmark\-Interfejs\-::\-\_\-\-Zwolnij (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_benchmark_interfejs_a8a1165914a09368530183ffb968541f1}
+
+
+Metoda zwalniajaca Pamiec. 
+
+Metoda ma za zadanie zwolnic pamiec przeznaczona na dane przechowywane w kontenerze 
+
+Implemented in \hyperlink{class_struktury_benchmark_a81596424109f9dbe028c3ad3496d04a1}{Struktury\-Benchmark$<$ Typ $>$}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/bartolomeo/209296/prj/inc/\hyperlink{_benchmark_interfejs_8hh}{Benchmark\-Interfejs.\-hh}\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\selectlanguage{polish}
+\setlength{\parindent}{5mm} %ustawi rozmiar wcie˛cia na pocza˛tku kaz˙dego akapitu na 0mm,
+\setlength{\parskip}{4mm} %
+\title{Sprawozdanie z ćwiczenia laboratoryjnego VII\newline Refaktoryzacja}
+\date{17.05.2015}
+\author{Bartłomiej Ankowski}
+\begin{document}
+\maketitle
+\pagestyle{empty}
+%\pagestyle{headings}
+\tableofcontents
+\section{Wstęp}
+Celem tego laboratorium było zapoznanie się z zasadami projektowania oprogramowania obiektowego.
+W tym celu zapoznano nas z zasadami SOLID. Naszym zadaniem była refaktoryzacja wcześniej pisanych programów
+pod kątem wyżej wymienionych zasad.
+\section{Realizacja Obserwatora}
+Pierwszym zadaniem było zastosowanie wzorca projektowego jakim jest obserwator.
+W tym celu został zamodelowany Interfejs dla obiektów, które będą obserwowane i dla obiektow obserwujących.
+W ramach realizjacji tego podpunktu zostały stworzone dwie nowe klasy w stosunku do poprzedniej wersji programu.Ze starej klasy Benchmarkujacej zostały "wyciete" metody odpowiedzialne za przechowywanie wyników.
+Stworzono również klasę modelującą stoper.Spełniona została w tym momemcie zasada pojedynczej odpowiedzialności.
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.2]{Obserwator.png}
+\caption{Obserwator}
+\end{center}
+\end{figure}
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.3]{Obserwowany.png}
+\caption{Obserwowany}
+\end{center}
+\end{figure}
+\section{Realizacja Interfejsu Sortowań}
+Kolejnym celem było umożliwienie zastosowania wcześniej zaimplementowanych algorytmów sortowań dla 
+dowolnej kontenera danych. Wcześniejsza implementacja łamała zasadę segregowania interfejsów oraz Open/closed. W celu naprawy tego błedu został stworzony interfejs ISortable, który następnie jest dziedziczony do każdego wyodrębnionego algorytmu sortowania.
+Interfejs zawiera metodę Sort, która jako argument przyjmuje wskaźnik na kontener na którym ma zostać przeprowadzone sortowanie, co umożliwia obsługe dowolnego konteneru.
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.6]{Sortowania.png}
+\caption{Sortowania}
+\end{center}
+\end{figure}
+
+\section{Realizacja Interfejsu Iterable}
+W celu umożliwienia algorytmom sortowania wglądu do pól kontenera, został stworzony interfejs Iterable,
+ktory jest dziedziczony przez zaimplementowane pojemniki danych. Jego zadaniem jest odczyt wartości jaka kryje sie pod danym indeksem oraz zwrócenie referencji w celu modyfikacji danego pola.
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.4]{Iterable.png}
+\caption{Iterable}
+\end{center}
+\end{figure}
+\section{Wnioski}
+\begin{itemize}
+\item Zakładany cel został osiągniety.Wprowadzenie dodatkowych interfejsów umożliwiło przeprowadzenie sortowań dla zaimplementowanych kontenerów.Zmiany w kodzie zostały tak przeprowadzone, aby program był
+zaprojektowany zgodnie z zasadami SOLID.Warty odnotowania jest fakt, że ścisłe związanie algorytmu sortowania z kontenerem wystepuję w bibliotecę STL, w przypadku zaimplementowanej w niej liście.
+Zatem takie rozwiązanie również posiada swoje plusy, z pewnościa jest nim wydajność.
+Niestety kosztem uniwersalności.
+\item Należy się również zastanowić nad zaimplementowanym interfejsem Benchmarku. W tej realizacji jest łamana zasada Open/closed, ponieważ w celu obslugi dowolnej struktury danych jest przechowywany wskaźnik na Interfejs jaki dana struktura posiada.Wskaźnik ten każdorazowo wymaga zmiany, jeśli testowana jest nowa struktura.\newline
+Możliwe, że lepszy rozwiązaniem byłoby stworzenie jeszcze jednego interfejsu, np Itest.
+Posiadałby metodę test, która byłaby implementowana w testowanej strukturze.
+Wywołanie odbywałoby się poprzez wskaźnik na ten interfejs w Benchmarku.
+\end{itemize}
+\end{document}

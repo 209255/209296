@@ -2,6 +2,9 @@
 #define HYBSORT_HH
 #define PROG 13
 #define ILE 3
+#include "QSortOpt.hh"
+#include "ISortable.hh"
+#include "Iterable.hh"
 //************************************************************** 
 /*!
  *\file Sortowania hybrydowego
@@ -21,19 +24,42 @@
 //************************************************************** 
 
 template <class Typ>
-class HybSort:public ISortable<Typ>
+class HybSort:public ISortable<Typ> 
 {
 //**************************************************************
+/*!
+ *\brief Mediana
+ * Metoda wyznaczajaca mediana dla tablicy 3 elementowej.
+ * Jest to metoda pomocnicza, wykorzystywana  przy optymalizacji
+ * doboru pivotu w sortowaniu szybkim
+ * \return Zwraca indeks na ktorym znajduje sie mediana 
+ * w tablicy wejsciowej
+ */
+//**************************************************************
+  int Mediana(Typ *W)const
+  {
+    if((W[0] <= W[1]) && (W[0] <= W[2])) {
+      if(W[1] <= W[2])  return W[1]; 
+      else return W[2];
+    }
+    
+    if((W[1] <= W[0]) && (W[1] <= W[2])) {
+      if(W[0] <= W[2])  return W[0];
+      else return W[2];
+    }
+    return W[1];
+  }
+//**************************************************************
   /*!
-   *\brief Metoda segregujaca
+   *\brief Zotymalizowane Sortowanie Szybkie
    *
-   * Metoda ma za zadanie wybor elementu, ktory ma byc uzyty do podzialu
-   * i przenosi wszytskie elementy mniejsze na lewo od tego elementu, 
-   * a wieksze elementy na prawo od wybranego elementu
-   *\param[in] p - poczatkowy indeks podzbiotru
-   *\param[in] k - koncowy indeks podzbioru
-   *\return
+   * Metoda modeluje algorytm sorotwanie szybkiego
+   * z zaimplementowanym algorytmem doboru pivotu, 
+   * tak aby nie zostal wybrany najmniejszy 
+   * element w danym podzbiorze.
    *
+   *\parma[in] lewy - poczatkowy indeks pozbioru
+   *\param[in] prawy - koncowy indeks podzbioru
    */
 //**************************************************************
   int Partycjowanie(int p,int k,Iterable<Typ> *K)
@@ -54,30 +80,6 @@ class HybSort:public ISortable<Typ>
 	else return j;
      }
  }
-  //**************************************************************
-/*!
- *\brief Mediana
- * Metoda wyznaczajaca mediana dla tablicy 3 elementowej.
- * Jest to metoda pomocnicza, wykorzystywana  przy optymalizacji
- * doboru pivotu w sortowaniu szybkim
- * \return Zwraca indeks na ktorym znajduje sie mediana 
- * w tablicy wejsciowej
- */
-//**************************************************************
-  Typ Mediana(Typ *W)
-  {
-    if((W[0] <= W[1]) && (W[0] <= W[2])) {
-      if(W[1] <= W[2])  return W[1]; 
-      else return W[2];
-    }
-    
-    if((W[1] <= W[0]) && (W[1] <= W[2])) {
-    if(W[0] <= W[2])  return W[0];
-    else return W[2];
-    }
-    return W[1];
-  }
-   
 //**************************************************************
  /*!
   *\brief Sortowanie przez Wstawianie 

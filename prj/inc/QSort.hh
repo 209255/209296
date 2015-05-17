@@ -1,5 +1,7 @@
 #ifndef QSORT_HH
 #define QSORT_HH
+#include "ISortable.hh"
+#include "Iterable.hh"
 //************************************************************** 
 /*!
  *\file Sortowanie Szybkie
